@@ -1,6 +1,6 @@
 /**
  * Rule-based answers built straight from data/admission-info.json.
- * Used when Gemini is overloaded, out of quota or too slow, so the student always gets an answer.
+ * Used when the AI models are unavailable or too slow, so the student always gets an answer.
  * Only copies values from the dataset; never calculates or guesses.
  */
 import { admission, bdt, contact, eligibility, fees, links, programs, retrieveContext, toLangDigits, type Topic } from "./admission-data";

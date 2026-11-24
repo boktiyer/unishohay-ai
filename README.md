@@ -6,13 +6,13 @@ Students can ask about departments, fees, eligibility, the admission procedure a
 
 ## Features
 
-- **AI chat** (`/chat`): streaming answers powered by Google Gemini, with Markdown rendering, copy and regenerate buttons, and a stop button. It also has:
+- **AI chat** (`/chat`): streaming answers powered by open-source models (gpt-oss, Llama, DeepSeek) via Vercel AI Gateway, with Markdown rendering, copy and regenerate buttons, and a stop button. It also has:
   - chat history in localStorage, with rename and delete
   - New Chat and Clear Conversation buttons
   - voice input through the Web Speech API
   - suggested questions
   - follow-up understanding, so "what about the fee for that one?" works
-- **Grounded answers**: before each Gemini call, the server picks the relevant sections of the dataset using Bangla and English keyword matching and program matching. Answers built from the dataset show a *Source: Official Admission Data* badge. Answers about fees or eligibility also show a *Please confirm with the Admission Office* note.
+- **Grounded answers**: before each AI call, the server picks the relevant sections of the dataset using Bangla and English keyword matching and program matching. Answers built from the dataset show a *Source: Official Admission Data* badge. Answers about fees or eligibility also show a *Please confirm with the Admission Office* note.
 - **Same-language replies**: the assistant answers in Bangla if the student writes in Bangla, and in English otherwise.
 - **Admission Guide** (`/admission-guide`): admission steps, eligibility, fees and important information, all read from the JSON file.
 - **Tools** (`/tools`): these are calculated from the JSON with plain rules, not by the AI.
@@ -34,26 +34,23 @@ app/
   chat/page.tsx            AI chat
   admission-guide/page.tsx Admission guide
   tools/page.tsx           Eligibility checker, fee calculator, comparison, checklist
-  api/chat/route.ts        Streaming Gemini endpoint (server-only, holds the API key)
+  api/chat/route.ts        Streaming AI endpoint (server-only)
   icon.svg, opengraph-image.tsx
 components/                Navbar, Footer, ChatWindow, ChatInput, MessageBubble, Sidebar, AdmissionChecklist, ...
 data/admission-info.json   Official admission dataset (edit this to update the bot)
 lib/admission-data.ts      Data access, retrieval (BN+EN keyword matching), eligibility rules
-lib/gemini.ts              Gemini client and system instruction
+lib/ai.ts                  Model list and system instruction
 lib/i18n.ts                UI strings (Bangla / English) and suggested questions
 types/index.ts             Shared types
 ```
 
-## 1. Get a Gemini API key (free)
+## 1. AI model (open-source, no API key)
 
-1. Go to https://aistudio.google.com/apikey and sign in with a Google account.
-2. Click **Create API key** and copy the key.
-3. Open `.env.local` in the project root and fill in the values:
-   ```
-   GEMINI_API_KEY=your_key_here
-   GEMINI_MODEL=gemini-3.8-flash
-   ```
-   `GEMINI_MODEL` can be any Gemini Flash model that has a free tier, for example `gemini-3.8-flash` or `gemini-flash-latest`. The key is read only on the server. It is never sent to the browser.
+The chat runs on open-weight models (`openai/gpt-oss-120b`, with `meta/llama-4-maverick` and `deepseek/deepseek-v4-flash` as automatic fallbacks) through [Vercel AI Gateway](https://vercel.com/docs/ai-gateway). On Vercel, authentication is automatic, so no API key is needed. AI Gateway includes free monthly credits, which cover a lot of usage with these low-cost models.
+
+To change models, set `AI_MODELS` to a comma-separated list (first = primary). For local development outside Vercel, run `vercel env pull` or set `AI_GATEWAY_API_KEY`.
+
+If every model is unavailable, the app still answers directly from the official dataset.
 
 ## 2. Run locally
 
@@ -81,7 +78,7 @@ git push -u origin main
 
 1. Sign in at https://vercel.com with GitHub and click **Add New → Project**.
 2. Import the repository. Vercel detects Next.js automatically.
-3. Under **Environment Variables**, add `GEMINI_API_KEY` and `GEMINI_MODEL`. You can also add `NEXT_PUBLIC_SITE_URL` with your Vercel URL so the Open Graph image links are correct.
+3. Optionally, under **Environment Variables**, add `NEXT_PUBLIC_SITE_URL` with your Vercel URL so the Open Graph image links are correct.
 4. Click **Deploy**. Whenever you change environment variables later, redeploy.
 
 ## Admission data: maintenance note
