@@ -25,7 +25,7 @@ export default function PageShell({ title, sub, children }: { title: string; sub
 export function Card({ icon: Icon, title, children, className = "" }: { icon: LucideIcon; title: string; children: React.ReactNode; className?: string }) {
   return (
     <section
-      className={`glass rounded-3xl p-5 sm:p-7 ${className}`}
+      className={`glass min-w-0 rounded-3xl p-5 sm:p-7 ${className}`}
     >
       <h2 className="mb-5 flex items-center gap-3 text-xl font-bold">
         <span className="bg-brand-gradient grid h-10 w-10 place-items-center rounded-xl text-white"><Icon size={19} /></span>

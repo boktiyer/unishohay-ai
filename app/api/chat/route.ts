@@ -61,7 +61,7 @@ export async function POST(req: Request) {
     temperature: 0.2,
     maxOutputTokens: 1200,
   };
-  // Minimal thinking = much faster first token. Dropped automatically if a model rejects it.
+  // Low thinking = much faster first token (MINIMAL is rejected by gemini-3.8-flash). Dropped automatically if a model rejects it.
   let useFastThinking = true;
 
   // Free-tier Gemini often returns 503 (overloaded) or 429 (per-model quota).
@@ -71,9 +71,9 @@ export async function POST(req: Request) {
   const now = Date.now();
   let candidates = MODELS.filter((m) => (exhaustedUntil.get(m) ?? 0) < now);
   if (!candidates.length) candidates = [...MODELS];
-  // Give Gemini at most ~6s to start answering; after that, answer straight from the dataset.
+  // Give Gemini at most ~8s to start answering; after that, answer straight from the dataset.
   const started = Date.now();
-  const DEADLINE_MS = 6000;
+  const DEADLINE_MS = 8000;
   const callModel = async (model: string, config: object) => {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), Math.max(1500, DEADLINE_MS - (Date.now() - started)));
@@ -88,7 +88,7 @@ export async function POST(req: Request) {
     for (const model of [...candidates]) {
       if (Date.now() - started > DEADLINE_MS) break outer;
       try {
-        const config = useFastThinking ? { ...baseConfig, thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL } } : baseConfig;
+        const config = useFastThinking ? { ...baseConfig, thinkingConfig: { thinkingLevel: ThinkingLevel.LOW } } : baseConfig;
         stream = await callModel(model, config);
         break outer;
       } catch (err) {
@@ -122,6 +122,7 @@ export async function POST(req: Request) {
         "X-Sourced": fb.sourced ? "1" : "0",
         "X-Confirm": fb.confirm ? "1" : "0",
         "X-Fallback": "1",
+        "X-Sources": fb.sourced ? fb.topics.slice(0, 3).join(",") : "contact",
       },
     });
   }
@@ -149,6 +150,7 @@ export async function POST(req: Request) {
       "Cache-Control": "no-cache, no-transform",
       "X-Sourced": retrieval.sourced ? "1" : "0",
       "X-Confirm": retrieval.confirm ? "1" : "0",
+      "X-Sources": retrieval.sourced ? retrieval.topics.slice(0, 3).join(",") : "",
     },
   });
 }

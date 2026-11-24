@@ -13,7 +13,7 @@ const bangla = Hind_Siliguri({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://unishohay-ai.vercel.app"),
   title: { default: "UnishohayAI - PCIU Admission Assistant", template: "%s | UnishohayAI" },
   description:
     "AI-powered bilingual (Bangla & English) admission assistant for Port City International University, Chattogram. Ask about departments, fees, eligibility and the admission process.",

@@ -1,7 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import { Check, Copy, Database, Info, RefreshCw, TriangleAlert, User, Zap } from "lucide-react";
+import { Check, Copy, Database, Info, RefreshCw, ThumbsDown, ThumbsUp, TriangleAlert, User, Zap } from "lucide-react";
+import { formatDate, TOPICS, VERIFIED, type Topic } from "@/lib/admission-data";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -14,10 +15,12 @@ interface Props {
   streaming: boolean;
   canRegenerate: boolean;
   onRegenerate: () => void;
+  onRate: (rating: "up" | "down") => void;
 }
 
-export default function MessageBubble({ message, streaming, canRegenerate, onRegenerate }: Props) {
-  const { t } = useLang();
+export default function MessageBubble({ message, streaming, canRegenerate, onRegenerate, onRate }: Props) {
+  const { t, lang } = useLang();
+  const sources = (message.sources ?? []).filter((s): s is Topic => s in TOPICS);
   const [copied, setCopied] = useState(false);
   const isUser = message.role === "user";
 
@@ -75,9 +78,19 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
 
         {!isUser && message.content && !streaming && (
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-slate-500 dark:text-slate-400">
-            {message.sourced && !message.error && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-brand/10 px-2 py-0.5 font-medium text-brand dark:text-brand-violet">
-                <Database size={12} /> {t("source")}
+            {sources.length > 0 && !message.error && (
+              <span className="inline-flex w-full flex-wrap items-center gap-1 text-[11px]">
+                <Database size={12} className="text-brand dark:text-brand-violet" />
+                <span>{t("source_label")}:</span>
+                {sources.map((s, i) => (
+                  <span key={s}>
+                    <a href={TOPICS[s].url} target="_blank" rel="noreferrer" className="font-medium text-brand underline-offset-2 hover:underline dark:text-brand-violet">
+                      {TOPICS[s].label[lang]}
+                    </a>
+                    {i < sources.length - 1 ? "," : ""}
+                  </span>
+                ))}
+                <span>· {t("verified")} {formatDate(VERIFIED, lang)}</span>
               </span>
             )}
             {message.fallback && (
@@ -94,6 +107,26 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
               <button onClick={copy} className="inline-flex items-center gap-1 hover:text-brand" aria-label={t("copy")}>
                 {copied ? <Check size={13} /> : <Copy size={13} />} {copied ? t("copied") : t("copy")}
               </button>
+            )}
+            {!message.error && (
+              <span className="inline-flex items-center gap-1">
+                {(["up", "down"] as const).map((r) => {
+                  const Icon = r === "up" ? ThumbsUp : ThumbsDown;
+                  return (
+                    <button
+                      key={r}
+                      onClick={() => onRate(r)}
+                      disabled={!!message.rating}
+                      aria-label={t(r === "up" ? "helpful" : "not_helpful")}
+                      title={t(r === "up" ? "helpful" : "not_helpful")}
+                      className={clsx("rounded p-1 transition hover:text-brand disabled:cursor-default", message.rating === r && "text-brand dark:text-brand-violet", message.rating && message.rating !== r && "opacity-30")}
+                    >
+                      <Icon size={13} fill={message.rating === r ? "currentColor" : "none"} />
+                    </button>
+                  );
+                })}
+                {message.rating && <span>{t("thanks_feedback")}</span>}
+              </span>
             )}
             {canRegenerate && (
               <button onClick={onRegenerate} className="inline-flex items-center gap-1 hover:text-brand" aria-label={t("regenerate")}>

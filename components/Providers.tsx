@@ -24,6 +24,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem("unishohay-lang");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- read browser-only state after mount so server and client HTML match
     if (saved === "bn" || saved === "en") setLangState(saved);
   }, []);
 

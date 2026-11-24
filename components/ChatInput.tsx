@@ -34,6 +34,7 @@ export default function ChatInput({ onSend, onStop, loading }: Props) {
 
   useEffect(() => {
     const w = window as unknown as { SpeechRecognition?: SpeechRecCtor; webkitSpeechRecognition?: SpeechRecCtor };
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- read browser-only state after mount so server and client HTML match
     setSpeechCtor(() => w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null);
     return () => recRef.current?.stop();
   }, []);

@@ -1,9 +1,9 @@
 {
   "demo_data": false,
-  "dataset_note": "Built from official PCIU web pages (portcity.edu.bd), retrieved 2026-11-24. Fields set to null are NOT_AVAILABLE and must never be guessed. PCIU runs on trimesters. Fees and dates change every intake: update this file before each demo.",
+  "dataset_note": "Built from official PCIU web pages (portcity.edu.bd), collected 2026-11-25. null = not published: never guess. PCIU uses trimesters. Fees and dates change every intake: update this file before each demo.",
   "university": {
     "source_url": "https://www.portcity.edu.bd",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "name": "Port City International University",
     "short_name": "PCIU",
     "type": "Private university",
@@ -17,15 +17,25 @@
     "website": "https://www.portcity.edu.bd",
     "online_admission_portal": "http://119.18.149.45/PCIUOnlineAdmission",
     "facebook": "https://www.facebook.com/Port-City-International-University-492646557443546/",
-    "phone": null,
+    "phone": [
+      "+88 02333369877",
+      "+88 02333369899"
+    ],
     "email": null,
     "admission_office_hours": null,
     "about": "Since its establishment, PCIU has focused on helping students face the challenges of an ever-advancing world. It provides a supportive environment for undergraduate and postgraduate students, with dedicated academics guiding their research and academic endeavors, and aims to maintain a global standard in quality education and research.",
-    "vision_mission": "PCIU is described as a new-generation private university committed to excellence in higher education and research. Its vision is to become a global-standard center of excellence through education, research and service, and its mission is transformative education that changes society."
+    "vision_mission": "PCIU is described as a new-generation private university committed to excellence in higher education and research. Its vision is to become a global-standard center of excellence through education, research and service, and its mission is transformative education that changes society.",
+    "mobiles": [
+      "01851120791",
+      "01773225500",
+      "01773225511"
+    ],
+    "permanent_campus_address": "Plot# S-1, CDA Kolpolok Residential Area, Bakalia, Chattogram",
+    "tagline": "Excellence in Higher Education"
   },
   "departments": {
     "source_url": "https://portcity.edu.bd/HomePage/DepatmentDetails/29/Portfolio/bachelor-s-degree-programs",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "programs": [
       {
         "id": "bba",
@@ -159,7 +169,7 @@
   },
   "eligibility": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/54/Page/admission-admission-requirement",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "bachelors_categories": {
       "arts_law_social_science_business": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent. O-Level/A-Level alternative: minimum 5 subjects in O-Level and 2 in A-Level, with grade B in 4 subjects and C in 3 subjects.",
       "science_and_engineering": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent. O-Level/A-Level alternative: minimum 5 subjects in O-Level and 2 in A-Level, with grade B in 4 subjects and C in 3 subjects from science group."
@@ -242,7 +252,7 @@
   },
   "tuition_fees": {
     "source_url": "https://portcity.edu.bd/HomePage/DepatmentDetails/29/Portfolio/bachelor-s-degree-programs",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "currency": "BDT",
     "admission_fee": 18000,
     "admission_fee_refundable": false,
@@ -253,7 +263,8 @@
         "total_credits": 130,
         "tuition_per_credit": 2300,
         "total_fee_hsc": 317000,
-        "total_fee_diploma": null
+        "total_fee_diploma": null,
+        "credits_conflict_note": "Fee page says 130 credits; the Dean office page says 127. Confirm with the Admission Office."
       },
       "llb": {
         "total_credits": 133,
@@ -425,13 +436,13 @@
       "M.S.S. in Economics"
     ],
     "trimester_fee_international_students_bdt": 5000,
-    "per_semester_fee": null,
     "per_year_fee": null,
-    "hostel_and_other_fees": null
+    "hostel_and_other_fees": null,
+    "per_trimester_fee": null
   },
   "payment_policy": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/59/Page/admission-payment-policy",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "rules": [
       "Admission fee is due at the time of admission and is non-refundable.",
       "50% of a trimester's tuition/course fee is due 10 days before the mid-term examination; the remaining 50% is due 10 days before the final examination.",
@@ -496,7 +507,7 @@
   },
   "admission_dates": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "intake": "Class start January 2027",
     "admission_starts": "2026-09-14",
     "bachelors": {
@@ -515,7 +526,7 @@
   },
   "scholarships": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/37/Page/admission-scolarship-and-financial-assistance",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "items": [
       "Scholarships are awarded to 6% of total students: 3% for children of freedom fighters and 3% for meritorious and poor students from remote underdeveloped areas.",
       "Scholarships are based on S.S.C. and H.S.C. results.",
@@ -526,7 +537,7 @@
   },
   "admission_procedure": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "steps": [
       {
         "en": "Check that you meet the minimum academic requirement for your program.",
@@ -579,7 +590,7 @@
   },
   "required_documents": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/55/Page/admission-documents-required-for-admission",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "bachelors": {
       "at_form_submission": [
         "Filled out application form",
@@ -610,7 +621,7 @@
   },
   "campus_life": {
     "source_url": "https://www.portcity.edu.bd",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "facilities": {
       "library": {
         "name": "Ratnagarva Begum Ashrafunnesa Library",
@@ -749,7 +760,7 @@
   },
   "faqs": {
     "source_url": "https://www.portcity.edu.bd",
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "items": [
       {
         "q_en": "How much is the admission fee?",
@@ -788,5 +799,1095 @@
         "a_bn": "ব্যাংকে জমা (ডাচ-বাংলা বা এক্সিম ব্যাংক, স্লিপে স্টুডেন্ট আইডি লিখে), রকেট (বিলার ২৯৯৪) বা বিকাশ (মার্চেন্ট ০১৮৮১০৭৫০২০)।"
       }
     ]
+  },
+  "chatbot_rules": [
+    "Answer only from this data and the existing admission data. If a value is null or listed under not_found, say it is not published and refer to the Admission Office.",
+    "Use 'trimester' (Bangla: ট্রাইমেস্টার), never 'semester'.",
+    "Never guess department chairmen, email addresses, late-fee amounts, or waiver percentages.",
+    "Master's totals already include the BDT 18,000 non-refundable admission fee.",
+    "When two official pages disagree (see data_conflicts), tell the student both figures and ask them to confirm with the office.",
+    "For payment account numbers always also link the official payment policy page.",
+    "Reply in the language the student used (Bangla or English)."
+  ],
+  "university_profile": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/42/Page/the-university-about-the-university",
+    "name": "Port City International University (PCIU)",
+    "tagline": "Excellence in Higher Education",
+    "type": "Private university, UGC and Government approved",
+    "location": "Khulshi, Chattogram",
+    "founded": "2012-11-18",
+    "founded_under": "Private University Act 2010, with approval of the Ministry of Education",
+    "founder": "Mr. AKM Enamul Hoque Shameem",
+    "board_of_trustees_chairman_note": "History page says Mrs. Thamina Khatun took charge as Chairman of the PCIU Trust in June 2021 and was still named as chairman in 2023.",
+    "academic_journey_started": "2013-05-17 with 69 students (MBA 31, BBA 9, CSE 15, English 2, Journalism 8, LLB 4)",
+    "founding_anniversary": "Celebrated every year on 17 May",
+    "vision": "To become a leading global university where students, faculty and staff contribute to development and benefit from advances in higher learning and research.",
+    "mission": [
+      "Transformative education that inspires and nurtures creative individuals ready to make a difference.",
+      "Advanced research that extends the boundary of knowledge and improves quality of life.",
+      "Dedicated service that contributes to social, economic and national development."
+    ],
+    "strategy": [
+      "Recruit and retain high-quality people.",
+      "Attract academically sound students with passion, commitment and leadership potential from diverse backgrounds.",
+      "Provide a globally oriented educational experience.",
+      "Focus on high-impact research.",
+      "Build links between industry and academia.",
+      "Develop global profile and joint programs with universities abroad.",
+      "Adopt best practice in governance and management."
+    ],
+    "guiding_values": [
+      "Excellence in higher education and research",
+      "Accountability and responsible stewardship",
+      "Inclusiveness, dignity and respect",
+      "Quality and service",
+      "Innovation and creativity"
+    ],
+    "campus_policies": [
+      "Non-political campus",
+      "Non-smoking campus",
+      "Equal opportunity: no discrimination by colour, race, religion or nationality"
+    ],
+    "academic_quality": [
+      "OBE (Outcome Based Education) curriculum followed from the Fall 2021 trimester (26th batch onward), as per UGC directives.",
+      "CSE department was evaluated by BAETE on 3-5 December 2023.",
+      "A Workshop on accreditation preparation was organised with BAC on 13 May 2024.",
+      "IQAC (Institutional Quality Assurance Cell) and Program Self Assessment Committees (PSAC) exist."
+    ],
+    "international_activities": "Two international conferences held: ICQSD-2016 (Quality for Sustainable Development) and ICSDTIR-2021 (Sustainable Development in Technology for the 4th Industrial Revolution). A good number of foreign students study at PCIU and a language center helps them with communication skills.",
+    "extracurricular": [
+      "Sports Forum",
+      "Debate Forum",
+      "Cultural Forum (PCCF)",
+      "IT Forum",
+      "Student Forum",
+      "Robotics club",
+      "Departmental clubs (for example PCIU Media Club under Journalism and Media Studies)",
+      "Annual sports",
+      "Industrial visits"
+    ],
+    "tuition_philosophy": "The university says it keeps tuition fees at a minimum level for low and middle income families and gives merit scholarships and financial assistance, especially under the Freedom Fighter quota."
+  },
+  "history_timeline": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/56/Page/the-university-historical-outline",
+    "note": "The history page stops at mid-2024. It does not list events after that.",
+    "milestones": [
+      {
+        "date": "2012-11-18",
+        "event": "PCIU founded in Chattogram."
+      },
+      {
+        "date": "2013-05-17",
+        "event": "Classes started with 69 students."
+      },
+      {
+        "date": "2013-08-17",
+        "event": "Prof. Dr. Nural Anwar joined as first Vice Chancellor."
+      },
+      {
+        "date": "2014-07-13",
+        "event": "PCIU Medical Center inaugurated."
+      },
+      {
+        "date": "2016-01-27",
+        "event": "Digital Library inaugurated."
+      },
+      {
+        "date": "2017-03-22",
+        "event": "Land purchased for permanent campus."
+      },
+      {
+        "date": "2018-08-10",
+        "event": "Library named after Ratnagarva Begum Ashrafunnesa."
+      },
+      {
+        "date": "2019-03-31",
+        "event": "1st Convocation held."
+      },
+      {
+        "date": "2020-05-10",
+        "event": "Online classes started during Covid-19."
+      },
+      {
+        "date": "2021-10-23",
+        "event": "On-campus classes resumed after the pandemic."
+      },
+      {
+        "date": "2022-11-26",
+        "event": "2nd Convocation held."
+      },
+      {
+        "date": "2023-12-03",
+        "event": "CSE department evaluated by BAETE (3-5 Dec 2023)."
+      }
+    ],
+    "previous_vice_chancellor_note": "History page lists Prof. Dr. Md. Nural Anwar as Vice Chancellor from November 2021. The current Vice Chancellor per the leadership pages is Prof. Dr. Mohammad Tayub Chowdhury."
+  },
+  "leadership": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/48/Page/the-university-management-offices-office-of-the-dean",
+    "vice_chancellor": {
+      "name": "Prof. Dr. Mohammad Tayub Chowdhury",
+      "title": "Vice Chancellor"
+    },
+    "founder_and_former_chairman": "Mr. AKM Enamul Hoque Shameem",
+    "deans": [
+      {
+        "name": "Prof. Dr. Engr. Mafzal Ahmed",
+        "faculty": "Faculty of Science and Engineering"
+      },
+      {
+        "name": "Prof. Dr. Md. Fashiul Alam",
+        "faculty": "Faculty of Business Studies"
+      },
+      {
+        "name": "Prof. Mainul Hasan Chowdhury",
+        "faculty": "Faculties of Humanities, Social Sciences and Law"
+      }
+    ],
+    "department_chairmen": null,
+    "department_chairmen_note": "Not published in site text. Bot must say: please confirm with the department.",
+    "management_offices": [
+      "Office of the Founding Chairman",
+      "Vice Chancellor",
+      "Treasurer",
+      "Dean",
+      "Registrar",
+      "Controller of Examinations",
+      "Admission",
+      "Accounts",
+      "IT",
+      "Library",
+      "Lawyer and Auditor",
+      "IQAC",
+      "Planning and Development",
+      "Proctorial Bodies"
+    ],
+    "governing_bodies": [
+      "Board of Trustees",
+      "Syndicate",
+      "Academic Council"
+    ]
+  },
+  "faculties_and_departments": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/8/C/academic-faculty-and-department",
+    "faculties": [
+      {
+        "name": "Faculty of Business Studies",
+        "departments": [
+          {
+            "name": "Department of Business Administration",
+            "programs": [
+              "BBA",
+              "MBA",
+              "Executive MBA"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Faculty of Humanities, Social Sciences & Law",
+        "departments": [
+          {
+            "name": "Department of English",
+            "programs": [
+              "B.A. (Hons) in English",
+              "M.A. in English"
+            ]
+          },
+          {
+            "name": "Department of Law",
+            "programs": [
+              "LL.B. (Hons)",
+              "LL.M."
+            ]
+          },
+          {
+            "name": "Department of Journalism and Media Studies",
+            "programs": [
+              "B.S.S. in Broadcast & Print Journalism",
+              "M.S.S. in Broadcast & Print Journalism"
+            ]
+          }
+        ],
+        "note": "M.S.S. in Economics is listed in admission pages, but no Economics department appears in the department list."
+      },
+      {
+        "name": "Faculty of Science and Engineering",
+        "departments": [
+          {
+            "name": "Department of Computer Science and Engineering",
+            "programs": [
+              "B.Sc. in CSE",
+              "M.Sc. in CSE (MCSE)"
+            ]
+          },
+          {
+            "name": "Department of Electrical and Electronic Engineering",
+            "programs": [
+              "B.Sc. in EEE"
+            ]
+          },
+          {
+            "name": "Department of Civil Engineering",
+            "programs": [
+              "B.Sc. in Civil Engineering"
+            ]
+          },
+          {
+            "name": "Department of Textile Engineering",
+            "programs": [
+              "B.Sc. in Textile Engineering"
+            ]
+          },
+          {
+            "name": "Department of Fashion Design and Technology",
+            "programs": [
+              "B.Sc. in Fashion Design & Technology"
+            ]
+          },
+          {
+            "name": "Department of Natural Science",
+            "programs": [],
+            "note": "Service department (Math, Statistics, Physics, Chemistry, History). No degree program."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/12/Page/contact-us",
+    "city_campus_address": "7-14, Nikunja Housing Society, South Khulshi, Chattogram",
+    "permanent_campus_address": "Plot# S-1, CDA Kolpolok Residential Area, Bakalia, Chattogram",
+    "admission_form_office": "Admission office, 7-14 Nikunja Housing Society, South Khulshi, Chattogram",
+    "phones": [
+      "+88 02333369877",
+      "+88 02333369899"
+    ],
+    "mobiles": [
+      "01851120791",
+      "01773225500",
+      "01773225511"
+    ],
+    "fax": "+880312869966",
+    "email": null,
+    "email_note": "Hidden by Cloudflare on the site. Copy by hand from the contact page.",
+    "admission_office_hours": null,
+    "facebook_page": "https://www.facebook.com/Port-City-International-University-492646557443546/",
+    "student_portal": "https://studentportal.portcity.edu.bd",
+    "online_admission": "http://119.18.149.45/PCIUOnlineAdmission",
+    "webmail": "https://outlook.office.com"
+  },
+  "admission_extra": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/35/Page/admission-admission-test",
+    "selection_basis": "Admission test, previous academic results, moral character and other related factors. Direct admission is not a fundamental right. The admission test includes a written exam and a viva voce.",
+    "written_test_exemption": "Applicants with total GPA 7.00 or above in SSC and HSC combined may skip the written test, but must attend the viva voce and the English Placement Test. The English section of the admission test counts as the Placement Test. Students who want a scholarship based on admission test performance may still sit for the written test.",
+    "admission_form": {
+      "fee_bdt": 500,
+      "where": "Admission office, 7-14 Nikunja Housing Society, South Khulshi, Chattogram, or the online admission portal",
+      "fee_waiver_note": "The FAQ says a student in hardship can request an application fee waiver using a university form or a letter signed by a college official. The waiver amount is not published."
+    },
+    "written_test_marks": [
+      {
+        "program_group": "BBA",
+        "total": 100,
+        "parts": {
+          "English (SAT based)": 40,
+          "Aptitude Test": 10,
+          "Quantitative (Basic Arithmetic & Basic Geometry)": 20,
+          "SSC & HSC": 30
+        }
+      },
+      {
+        "program_group": "Engineering and Science related undergraduate programs",
+        "total": 100,
+        "parts": {
+          "English (SAT based)": 30,
+          "Physics / Chemistry": 20,
+          "Math / Biology": 20,
+          "SSC & HSC": 30
+        }
+      },
+      {
+        "program_group": "Arts, Law and Social Science related undergraduate programs",
+        "total": 100,
+        "parts": {
+          "English (SAT based)": 40,
+          "Aptitude Test": 10,
+          "General Knowledge": 20,
+          "SSC & HSC": 30
+        }
+      },
+      {
+        "program_group": "B.A. in English",
+        "total": 100,
+        "parts": {
+          "English (SAT based)": 70,
+          "Aptitude Test": 30
+        }
+      },
+      {
+        "program_group": "MBA (Regular)",
+        "total": 50,
+        "parts": {
+          "English (SAT based)": 30,
+          "Quantitative Skill & Analytical Ability": 10,
+          "General Knowledge": 10
+        }
+      }
+    ],
+    "masters_minimum_qualifications": {
+      "source_url": "https://www.portcity.edu.bd/HomePage/DepatmentDetails/69/C/admission-related-faq",
+      "general": [
+        "Minimum GPA 2.50 or second division in both SSC and HSC (or equivalent) from the relevant group",
+        "Or O-Level (5 subjects) and A-Level (2 subjects) with grade B in 4 subjects and C in 3 subjects from the relevant group",
+        "Minimum second class or equivalent CGPA in the Bachelor's degree from the relevant subject or group"
+      ],
+      "by_program": [
+        {
+          "program": "MBA; M.A. in English (Prel. & Final); M.S.S. in Broadcast & Print Journalism (Prel. & Final); M.S.S. in Economics (Prel. & Final)",
+          "requirement": "Graduates (B.A./B.Sc./B.Com./B.S.S. or equivalent) or a Master's degree from any discipline"
+        },
+        {
+          "program": "LL.M. (Final)",
+          "requirement": "4-year Bachelor of Laws from any recognized university"
+        },
+        {
+          "program": "LL.M. (Preliminary & Final)",
+          "requirement": "3-year Bachelor's degree and 2-year Bachelor of Laws from any recognized university"
+        },
+        {
+          "program": "M.A. in English (Final)",
+          "requirement": "B.A. (Hons.) in English or 4-year Bachelor's degree in English"
+        },
+        {
+          "program": "M.S.S. in Economics (Final)",
+          "requirement": "4-year Bachelor's degree in Economics"
+        },
+        {
+          "program": "M.S.S. in Broadcast & Print Journalism (Final)",
+          "requirement": "4-year Bachelor's degree in Journalism"
+        },
+        {
+          "program": "M.Sc. in CSE (MCSE)",
+          "requirement": "B.Sc. in CSE or other relevant subjects"
+        }
+      ]
+    },
+    "masters_direct_admission": {
+      "last_date": "2026-12-09",
+      "programs": [
+        "MBA (BBA graduates)",
+        "Executive MBA",
+        "LL.M. (Prel. & Final)",
+        "LL.M. (Final)",
+        "M.A. in English (Prel. & Final)",
+        "M.A. in English (Final)",
+        "M.S.S. in Broadcast & Print Journalism (Prel. & Final)",
+        "M.S.S. in Broadcast & Print Journalism (Final)",
+        "M.S.S. in Economics (Prel. & Final)",
+        "M.S.S. in Economics (Final)",
+        "M.Sc. in CSE (MCSE)"
+      ],
+      "note": "Direct admission still requires a viva voce.",
+      "admission_starts": "2026-09-14",
+      "written_test_date": null,
+      "class_start": "January 2027",
+      "orientation": null
+    },
+    "masters_required_documents": {
+      "at_form_submission": [
+        "Filled out application form",
+        "Attested photocopies of SSC or equivalent marksheet and certificate/testimonial",
+        "Attested photocopies of HSC or equivalent marksheet and certificate/testimonial",
+        "Attested photocopies of graduation marksheet and certificate/testimonial",
+        "Attested photocopies of master's degree marksheet and certificate/testimonial (if applicable)",
+        "Attested photocopies of National ID or Birth Certificate or Passport",
+        "Job experience certificate (if necessary)"
+      ],
+      "at_admission": [
+        "Original marksheet and certificate/testimonial of all degrees must be shown",
+        "Attested photocopies of SSC or equivalent marksheet and certificate/testimonial",
+        "4 copies of passport-size attested and 3 copies of stamp-size colour photographs",
+        "Student must be physically present at the time of admission"
+      ]
+    },
+    "new_student_registration_note": "New students collect account clearance by paying registration fees in the Accounts Section, then submit it with the filled Student Insurance Form (given during admission) to the department office."
+  },
+  "masters_programs_and_fees": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/DepatmentDetails/30/Portfolio/master-s-degree-programs",
+    "currency": "BDT",
+    "admission_fee": 18000,
+    "admission_fee_refundable": false,
+    "admission_form_fee": 500,
+    "totals_include_admission_fee": true,
+    "program_list": [
+      "MBA",
+      "Executive MBA",
+      "LL.M. (Preliminary & Final)",
+      "LL.M. (Final)",
+      "M.A. in English (Preliminary & Final)",
+      "M.A. in English (Final)",
+      "M.S.S. in Broadcast & Print Journalism (Preliminary & Final)",
+      "M.S.S. in Broadcast & Print Journalism (Final)",
+      "M.S.S. in Economics (Preliminary & Final)",
+      "M.Sc. in CSE (MCSE)"
+    ],
+    "programs": [
+      {
+        "name": "MBA",
+        "tuition_per_credit": 1700,
+        "total_credit_range": "42 to 66 depending on background",
+        "fresh_graduates_by_background": [
+          {
+            "background": "B.A., B.Sc., B.S.S. (Pass)",
+            "credits": 66,
+            "total_fee": 130200
+          },
+          {
+            "background": "B.A./B.Sc./B.S.S. (Hons.), M.A., M.S.S.",
+            "credits": 60,
+            "total_fee": 120000
+          },
+          {
+            "background": "B.Sc. Engr., B.Com. (Hons.), M.Sc.",
+            "credits": 54,
+            "total_fee": 109800
+          },
+          {
+            "background": "M.Com.",
+            "credits": 48,
+            "total_fee": 99600
+          },
+          {
+            "background": "M.Com. with Hons.",
+            "credits": 42,
+            "total_fee": 89400
+          },
+          {
+            "background": "BBA",
+            "credits": 42,
+            "total_fee": 89400
+          }
+        ],
+        "job_experience_note": "Credits are reduced for 2, 3 and 4 years of business-related job experience (Pass background: 60 / 54 / 48). Total fees are not printed.",
+        "job_experience_total_fee": null
+      },
+      {
+        "name": "LL.M. (Final)",
+        "credits": 36,
+        "tuition_per_credit": 1500,
+        "total_fee": 72000
+      },
+      {
+        "name": "M.A. in English (Final)",
+        "credits": 42,
+        "tuition_per_credit": 1300,
+        "total_fee": 72600
+      },
+      {
+        "name": "M.S.S. in Broadcast & Print Journalism (Final)",
+        "credits": 30,
+        "tuition_per_credit": 1300,
+        "total_fee": 57000
+      },
+      {
+        "name": "M.Sc. in CSE (MCSE)",
+        "tuition_per_credit": 1500,
+        "by_background": [
+          {
+            "background": "B.Sc. in CSE/CSI/CS (4 years)",
+            "credits": 36,
+            "total_fee": 72000,
+            "tracks": "Thesis or Project"
+          },
+          {
+            "background": "B.Sc. in CSE/CSI/CS (3 years), EEE, Applied Physics (4 years)",
+            "credits": 48,
+            "total_fee": 90000,
+            "tracks": "Thesis or Project"
+          },
+          {
+            "background": "Applied Physics (3 years), M.Sc. (Physics/Math)",
+            "credits": 54,
+            "total_fee": 99000,
+            "tracks": "Thesis or Project"
+          },
+          {
+            "background": "B.Sc. (Pass with Math Physics)",
+            "credits": 66,
+            "total_fee": 117000,
+            "tracks": "Project only"
+          }
+        ]
+      }
+    ],
+    "fee_not_published": [
+      "LL.M. (Prel. & Final)",
+      "M.A. in English (Prel.)",
+      "M.S.S. Journalism (Prel.)",
+      "Executive MBA",
+      "M.S.S. in Economics"
+    ],
+    "international_students": {
+      "trimester_fee_bdt": 5000,
+      "note": "Listed on the master's fee page for international students. Unclear whether it applies to bachelor's."
+    }
+  },
+  "other_fees_and_charges": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/29/Page/academic-examination-policy",
+    "currency": "BDT",
+    "items": [
+      {
+        "name": "Admission form",
+        "amount": 500
+      },
+      {
+        "name": "Admission fee (non-refundable)",
+        "amount": 18000
+      },
+      {
+        "name": "Repeat a course",
+        "amount": null,
+        "note": "Same as regular tuition fee for that course."
+      },
+      {
+        "name": "Incomplete exam, per course",
+        "amount": 500
+      },
+      {
+        "name": "Improvement exam, per credit hour",
+        "amount": 600,
+        "note": "Exam policy page. The FAQ page says 40% of course fee for mid-term and 60% for final. See data_conflicts."
+      },
+      {
+        "name": "Re-examination / script scrutiny, per course (non-refundable)",
+        "amount": 1000,
+        "note": "Apply to the Controller of Examinations within 7 days of result publication."
+      },
+      {
+        "name": "Transcript, single trimester",
+        "amount": 100
+      },
+      {
+        "name": "Transcript, more than one trimester",
+        "amount": 500
+      },
+      {
+        "name": "Provisional certificate",
+        "amount": 500
+      },
+      {
+        "name": "Urgent document (ready in 4 days)",
+        "amount": null,
+        "note": "Double the normal charge. Normal request needs at least 7 days notice."
+      },
+      {
+        "name": "Library late fine, per book per day",
+        "amount": 10
+      },
+      {
+        "name": "Library card replacement",
+        "amount": 100
+      },
+      {
+        "name": "Lost library bag-counter token fine",
+        "amount": 100
+      }
+    ]
+  },
+  "scholarship_extra": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/37/Page/admission-scolarship-and-financial-assistance",
+    "tuition_waiver_percentage_or_amount": null,
+    "note": "The site gives the share of students who get scholarships (6%), not the waiver per student.",
+    "history_figures": [
+      {
+        "date": "2013",
+        "total_bdt": 13636900,
+        "students": 323
+      },
+      {
+        "date": "2023-02-11",
+        "total_bdt": 38166789,
+        "students": 1594
+      },
+      {
+        "date": "2023-11-29",
+        "total_bdt": 26650184,
+        "students": 994
+      }
+    ],
+    "other_awards_mentioned": [
+      "Ratnagarva Begum Ashrafunnesa Foundation Scholarship (Tk 591,000 to 167 students, Nov 2021)",
+      "Scholarship on extra-curricular activities (Mujib Borsho, Dec 2021)"
+    ],
+    "history_note": "Figures come from the history page. They show past awards, not current waiver rules."
+  },
+  "payment_policy_extra": {
+    "official_page": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/59/Page/admission-payment-policy",
+    "late_fee_amount": null,
+    "installment_plan_beyond_50_50": null,
+    "exam_clearance": "To get exam clearance (needed for the admit card) pay the fees at the Accounts Section by the schedule date. The Accounts Section issues the clearance. Keep it for the exam.",
+    "admit_card": "Collect admit cards at least two days before exams start. Admit cards are issued only after dues are paid."
+  },
+  "academic_rules": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/80/C/academic-rules-and-grading-system",
+    "term_system": "Trimester",
+    "grading_scale": [
+      {
+        "marks": "80% and above",
+        "letter": "A+",
+        "grade_point": 4,
+        "meaning": "Outstanding"
+      },
+      {
+        "marks": "75% to less than 80%",
+        "letter": "A",
+        "grade_point": 3.75,
+        "meaning": "Excellent"
+      },
+      {
+        "marks": "70% to less than 75%",
+        "letter": "A-",
+        "grade_point": 3.5,
+        "meaning": "Very Good"
+      },
+      {
+        "marks": "65% to less than 70%",
+        "letter": "B+",
+        "grade_point": 3.25,
+        "meaning": "Good"
+      },
+      {
+        "marks": "60% to less than 65%",
+        "letter": "B",
+        "grade_point": 3,
+        "meaning": "Satisfactory"
+      },
+      {
+        "marks": "55% to less than 60%",
+        "letter": "B-",
+        "grade_point": 2.75,
+        "meaning": "Above Average"
+      },
+      {
+        "marks": "50% to less than 55%",
+        "letter": "C+",
+        "grade_point": 2.5,
+        "meaning": "Average"
+      },
+      {
+        "marks": "45% to less than 50%",
+        "letter": "C",
+        "grade_point": 2.25,
+        "meaning": "Below Average"
+      },
+      {
+        "marks": "40% to less than 45%",
+        "letter": "D",
+        "grade_point": 2,
+        "meaning": "Pass"
+      },
+      {
+        "marks": "Less than 40%",
+        "letter": "F",
+        "grade_point": 0,
+        "meaning": "Fail"
+      }
+    ],
+    "special_grades": {
+      "I": "Incomplete",
+      "W": "Withdraw"
+    },
+    "gpa_calculation": "GPA/CGPA is the credit-weighted average of grade points of courses passed or completed. 'D' or higher counts as earned credit. 'F' is not counted in GPA and the course must be repeated.",
+    "course_evaluation_theory": {
+      "case_or_assignment": "5% + 5%",
+      "class_test": "5% + 5%",
+      "midterm": "30%",
+      "attendance": "10%",
+      "trimester_final": "40%",
+      "note": "For a 3-credit course at least four class tests are taken and the best three count. For 1 or 2-credit courses at least three are taken and the best two count."
+    },
+    "course_evaluation_lab": {
+      "attendance": "10%",
+      "lab_reports": "10% + 10%",
+      "midterm": "30% (continuous performance 10, lab exam 10, viva 10)",
+      "final": "40% (continuous performance 15, lab exam 15, viva 10)"
+    },
+    "attendance_marks": [
+      {
+        "attendance": "90-100%",
+        "marks": 10
+      },
+      {
+        "attendance": "85-89%",
+        "marks": 9
+      },
+      {
+        "attendance": "80-84%",
+        "marks": 8
+      },
+      {
+        "attendance": "75-79%",
+        "marks": 7
+      },
+      {
+        "attendance": "70-74%",
+        "marks": 6
+      },
+      {
+        "attendance": "65-69%",
+        "marks": 5
+      },
+      {
+        "attendance": "60-64%",
+        "marks": 4
+      },
+      {
+        "attendance": "55-59%",
+        "marks": 3
+      },
+      {
+        "attendance": "50-54%",
+        "marks": 2
+      },
+      {
+        "attendance": "Below 50%",
+        "marks": 0
+      }
+    ],
+    "class_attendance_rule": "Maximum 30% absence in a course in one trimester may be exempted in an emergency. A student may be dropped from a course for three consecutive absences without sufficient reason. The FAQ says minimum 70% attendance is needed to sit for exams.",
+    "result_publication": "Results are published within one week of the last trimester final exam, as letter grade and grade point only. No numerical scores or mark breakdown are given. Results are available on the student portal.",
+    "academic_probation": "A student with GPA below 2.50 is placed on probation for one trimester. If the GPA does not improve in that trimester, the student has to leave the university.",
+    "missed_exam": "Missing a class test, midterm or final without valid reason gives zero in that component.",
+    "repeat_policy": [
+      "A student with grade F, or who skips both midterm and final, must repeat the course in the next trimester it is offered, paying the regular tuition fee.",
+      "Courses with C or D may be repeated. Courses with C+ or above cannot be repeated.",
+      "A course cannot be repeated more than three times. A repeat course cannot be withdrawn, and both midterm and final must be taken."
+    ],
+    "incomplete_policy": "If a student misses the midterm or final with a valid reason (serious illness, accident, death of a parent), grade I is given. The missed exam must be taken once in the next trimester the course is offered, otherwise it becomes F. Fee is Tk 500 per course. Apply with the improvement form from the department, pay at Accounts, then submit to the department office.",
+    "improvement_policy": "Courses with grades D to B+ can be improved once. A student may sit one or both of midterm and final. Maximum 6 credit hours per trimester. Students with Grade B or less may apply for improvement (FAQ). If two exams fall in the same slot, the improvement exam is free.",
+    "credit_transfer": "Decided by the university Equivalence Committee. Only the number of transferred credit hours is shown, with no course names or grades, and not counted in CGPA.",
+    "minimum_cgpa_for_certificate": 2.5,
+    "registration_validity": "Registration is valid up to six years. To extend, send a written application to the Registrar through the Dean and Head of Department.",
+    "late_admission_attendance": "Attendance percentage is counted from the date the student starts attending classes.",
+    "internship_supervisor": "After completing the minimum credits, the department holds a meeting and publishes a list of students with supervisors.",
+    "certificate_issuing": "Transcripts and provisional certificates: apply to the Controller of Examinations with the payment receipt at least 7 days ahead.",
+    "exam_rules_summary": [
+      "Wear ID card and show admit card.",
+      "No bags, books, mobile phones or electronic devices in the exam hall.",
+      "Late students may enter only during the first hour and get no extra time.",
+      "No leaving the room in the first hour. In the second hour a student may leave once for up to five minutes.",
+      "Unfair means (copying, communicating, changing scripts, impersonation and similar) lead to punishment from a warning up to expulsion."
+    ]
+  },
+  "student_services_faq": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/DepatmentDetails/66/C/registration-related-faq",
+    "registration_new_students": "Pay registration fees at the Accounts Section to get account clearance, then submit it with the Student Insurance Form at the department office.",
+    "registration_existing_students": "Pay at the Accounts Section, give the clearance (keep a photocopy) to your batch coordinator, then check the student portal.",
+    "change_add_drop_course": "Possible within 7 days after the last date of registration. Meet your batch coordinator.",
+    "drop_trimester_before_registration": "If you could not pay and did not register, drop the trimester in the student portal.",
+    "drop_trimester_after_registration": "Write an application to the department office. Submit the signed application to the Dean's office within 2 weeks of the last registration date, then to the Registrar for final approval. Check the portal one week later.",
+    "previous_syllabus": "Apply to the Head of Department to register under the previous syllabus.",
+    "late_registration": "Follow the instructions on the notice board and contact the department office.",
+    "extra_courses": "Apply to the Dean through the Head of Department.",
+    "check_result": "Use the student portal result page: https://studentportal.portcity.edu.bd/result/latestresult (previous results: https://studentportal.portcity.edu.bd/Result/PreviousResult).",
+    "transcript": "Collect the transcript from the Exam section.",
+    "certificate_verification": "https://studentportal.portcity.edu.bd/verify/certificate"
+  },
+  "campus_rules": {
+    "source_url": "https://www.portcity.edu.bd/HomePage/DepatmentDetails/81/C/rules-and-regulations-for-students",
+    "dress_code_avoid": [
+      "Entering without wearing ID card properly",
+      "Sleeveless or hanging t-shirt/chemise",
+      "Ragged or slashed jeans/trousers",
+      "Dirty clothes",
+      "Half-pants or skirts",
+      "Ordinary slippers",
+      "Provocative clothing"
+    ],
+    "minor_offenses": [
+      "No ID card on campus",
+      "Smoking on campus",
+      "Misuse of university property",
+      "Tampering with notices",
+      "Acts causing panic in class or campus"
+    ],
+    "major_offenses_examples": [
+      "Carrying weapons or explosives",
+      "Drugs or intoxicating drinks",
+      "Physical assault",
+      "Stealing",
+      "Forgery",
+      "Gambling",
+      "Disrespect to faculty or staff",
+      "Disturbing peace or blocking classes"
+    ],
+    "disciplinary_actions": [
+      "Cancellation of a trimester",
+      "Temporary suspension",
+      "Expulsion"
+    ],
+    "disciplinary_body": "Disciplinary Committee decides whether an offense is major or minor and decides the penalty."
+  },
+  "facilities": {
+    "library": {
+      "name": "Ratnagarva Begum Ashrafunnesa Library",
+      "hours": "8:30 am to 8:30 pm except holidays",
+      "borrowing": "2 different books at a time for 10 days. Late fine Tk 10 per day per book.",
+      "rules": [
+        "Library card is required and cannot be handed to anyone else.",
+        "Bags, files, folders and personal books are not allowed inside. Use the bag counter with a token.",
+        "Reference materials and newspapers are for library use only.",
+        "No food except drinking water. Silence in the reading room.",
+        "Lost book: replace it or pay three times the market price plus fine.",
+        "Card replacement costs Tk 100."
+      ],
+      "e_library": "https://www.portcity.edu.bd/E_library/ELibraryList",
+      "digital_library_inaugurated": "2016-01-27"
+    },
+    "medical_center": {
+      "location": "4th floor, SAC Building",
+      "services": [
+        "Medical consultation and referral to specialists",
+        "First aid for all PCIU employees",
+        "Emergency management and evacuation by PCIU ambulance",
+        "Emergency medicine supply",
+        "Nursing support",
+        "Verification of medical documents for trimester drop and refund",
+        "Verification of staff medical documents"
+      ],
+      "doctors": [
+        {
+          "name": "Dr. MD. Ashequl Wahhab Chowdhury",
+          "role": "Chief Medical Officer",
+          "qualification": "MBBS, CCD (Diabetology) BIRDEM, MD Tropical Medicine (course) Chittagong Medical College"
+        },
+        {
+          "name": "Dr. Fatimatuj Johra (Omi)",
+          "role": "Medical Officer",
+          "qualification": "MBBS (CU)"
+        },
+        {
+          "name": "Dr. Samar Kanti Shil",
+          "role": "Medical Officer",
+          "qualification": "MBBS (CU)"
+        }
+      ],
+      "emergency_phones": [
+        "031-2869877",
+        "031-2869899"
+      ],
+      "urgent_care_24h": {
+        "tel": "031-2869877",
+        "mobile": "01773225500"
+      },
+      "information_mobiles": [
+        "01773225500",
+        "01773225511",
+        "01851120791"
+      ],
+      "note": "Doctor personal numbers on the site are placeholders (0000), so they are not included."
+    },
+    "labs_and_labs_note": "Lab list page exists at https://www.portcity.edu.bd/HomePage/ListPrimary/57/C/facilities-lab but its contents were not read.",
+    "forums_and_clubs": [
+      "Student Forum",
+      "Cultural Forum (PCCF)",
+      "Debate Forum",
+      "Sports Forum",
+      "IT Forum",
+      "Robotics club",
+      "PCIU Media Club"
+    ],
+    "other": [
+      "Campus Life page",
+      "Alumni portal",
+      "Industrial visits",
+      "Sexual Harassment Prevention Committee",
+      "Practical class videos",
+      "Career page and Student CV Portal (http://www.studentcvportal.com)"
+    ]
+  },
+  "recent_news_snapshot": {
+    "retrieved": "2026-11-25",
+    "items": [
+      {
+        "date": "2026-11-09",
+        "title": "Learning beyond the classroom: JRN-32 Journalism students visited Dainik Purbokone on 5 November 2026."
+      },
+      {
+        "date": "2026-05-19",
+        "title": "Workshop on Drone Photography and Videography organised by PCIU Media Club."
+      },
+      {
+        "date": "2026-04-11",
+        "title": "PCIU Sports Forum Rapid Chess Tournament 2026."
+      }
+    ]
+  },
+  "useful_links": {
+    "official_site": "https://www.portcity.edu.bd/",
+    "admission_schedule": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
+    "admission_requirement": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/54/Page/admission-admission-requirement",
+    "admission_test": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/35/Page/admission-admission-test",
+    "direct_admission": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/33/Page/admission-direct-admission",
+    "tuition_fees": "https://www.portcity.edu.bd/HomePage/ListPrimary/32/C/admission-tuition-and-others-fees",
+    "payment_policy": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/59/Page/admission-payment-policy",
+    "scholarship": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/37/Page/admission-scolarship-and-financial-assistance",
+    "faq": "https://www.portcity.edu.bd/HomePage/ListPrimary/60/C/admission-frequently-asked-questions",
+    "academic_calendar": "https://www.portcity.edu.bd/HomePage/AcademicCalender",
+    "class_schedule": "https://www.portcity.edu.bd/HomePage/ListPrimary/23/C/academic-class-schedule",
+    "exam_schedule": "https://www.portcity.edu.bd/HomePage/ListPrimary/24/C/academic-exam-schedule",
+    "student_portal": "https://studentportal.portcity.edu.bd",
+    "contact": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/12/Page/contact-us",
+    "logo_url": "https://www.portcity.edu.bd/img/header-logo-new_Header%20Logo_PCIU-LOGO.png",
+    "campus_photo_url": "https://www.portcity.edu.bd/img/sliderimages/beautiful-campus_slider-pciu-campus.jpg",
+    "image_note": "Images belong to PCIU. Save them into public/images instead of hot-linking and credit PCIU."
+  },
+  "data_conflicts": [
+    "BBA credits: fee page says 130 (your site uses 130), the Dean's office page says 127. Confirm with the Admission Office.",
+    "Improvement exam fee: the exam policy page says Tk 600 per credit hour, the FAQ page says 40% of the course fee for mid-term and 60% for final. The bot should show both and ask the student to confirm with the Controller of Examinations.",
+    "M.S.S. in Economics is in the admission/direct-admission pages but has no fee on the master's fee page and no Economics department in the department list.",
+    "The first admission schedule page listed direct-admission programs without M.S.S. in Economics. The Direct Admission page includes it. This file uses the Direct Admission page.",
+    "Some policy pages say 'semester'. The admission pages use 'trimester'.",
+    "The history page ends in mid-2024, so it does not show newer events.",
+    "LL.M. (Preliminary & Final) eligibility: the admission requirement page says a 3-year Bachelor of Laws; the admission FAQ page says a 3-year Bachelor's degree and a 2-year Bachelor of Laws. Confirm with the Admission Office."
+  ],
+  "not_found": [
+    "Department chairmen names",
+    "Contact email addresses",
+    "Admission office opening hours",
+    "Late payment fee amount",
+    "Scholarship waiver percentage per student",
+    "Orientation date for January 2027 intake",
+    "Class schedule, exam schedule and academic calendar contents (pages exist but were not read)",
+    "Lab list, forum details, hostel/transport information (no hostel or transport page was found in the menu)"
+  ],
+  "faq_additions": [
+    {
+      "q_en": "Who is the Vice Chancellor of PCIU?",
+      "q_bn": "পিসিআইইউ-এর ভাইস চ্যান্সেলর কে?",
+      "a_en": "The Vice Chancellor is Prof. Dr. Mohammad Tayub Chowdhury.",
+      "a_bn": "ভাইস চ্যান্সেলর প্রফেসর ড. মোহাম্মদ তায়েব চৌধুরী।"
+    },
+    {
+      "q_en": "When was PCIU founded?",
+      "q_bn": "পিসিআইইউ কবে প্রতিষ্ঠিত হয়?",
+      "a_en": "PCIU was founded on 18 November 2012 by Mr. AKM Enamul Hoque Shameem. Classes started on 17 May 2013 with 69 students.",
+      "a_bn": "পিসিআইইউ ২০১২ সালের ১৮ নভেম্বর জনাব একেএম এনামুল হক শামীম প্রতিষ্ঠা করেন। ২০১৩ সালের ১৭ মে ৬৯ জন শিক্ষার্থী নিয়ে ক্লাস শুরু হয়।"
+    },
+    {
+      "q_en": "Where are the PCIU campuses?",
+      "q_bn": "পিসিআইইউ-এর ক্যাম্পাস কোথায়?",
+      "a_en": "City campus: 7-14 Nikunja Housing Society, South Khulshi, Chattogram. Permanent campus: Plot# S-1, CDA Kolpolok Residential Area, Bakalia, Chattogram.",
+      "a_bn": "সিটি ক্যাম্পাস: ৭-১৪ নিকুঞ্জ হাউজিং সোসাইটি, দক্ষিণ খুলশী, চট্টগ্রাম। স্থায়ী ক্যাম্পাস: প্লট# এস-১, সিডিএ কল্পলোক আবাসিক এলাকা, বাকলিয়া, চট্টগ্রাম।"
+    },
+    {
+      "q_en": "What is the PCIU phone number?",
+      "q_bn": "পিসিআইইউ-এর ফোন নম্বর কত?",
+      "a_en": "Phones: +88 02333369877, +88 02333369899. Mobiles: 01851120791, 01773225500, 01773225511. The email address is not available in my data.",
+      "a_bn": "ফোন: +৮৮ ০২৩৩৩৩৬৯৮৭৭, +৮৮ ০২৩৩৩৩৬৯৮৯৯। মোবাইল: ০১৮৫১১২০৭৯১, ০১৭৭৩২২৫৫০০, ০১৭৭৩২২৫৫১১। ইমেইল ঠিকানা আমার ডাটায় নেই।"
+    },
+    {
+      "q_en": "What is the fee for an MBA?",
+      "q_bn": "MBA-এর মোট ফি কত?",
+      "a_en": "MBA tuition is BDT 1,700 per credit. A BBA graduate needs 42 credits, total BDT 89,400 including the BDT 18,000 admission fee. Credits and totals vary by background, up to 66 credits and BDT 130,200.",
+      "a_bn": "MBA-এর টিউশন প্রতি ক্রেডিট ১,৭০০ টাকা। BBA গ্র্যাজুয়েটদের ৪২ ক্রেডিট লাগে, ভর্তি ফি ১৮,০০০ টাকাসহ মোট ৮৯,৪০০ টাকা। ব্যাকগ্রাউন্ড অনুযায়ী ক্রেডিট ও ফি বদলায়, সর্বোচ্চ ৬৬ ক্রেডিট ও ১,৩০,২০০ টাকা।"
+    },
+    {
+      "q_en": "Who can apply for master's programs?",
+      "q_bn": "মাস্টার্সে কারা আবেদন করতে পারবে?",
+      "a_en": "You need at least GPA 2.50 or second division in SSC and HSC, and second class or equivalent CGPA in your bachelor's degree from a relevant subject. MBA, M.A. English (Prel. & Final), M.S.S. Journalism (Prel. & Final) and M.S.S. Economics (Prel. & Final) accept graduates from any discipline. Final programs need a relevant 4-year degree.",
+      "a_bn": "SSC ও HSC-তে ন্যূনতম GPA ২.৫০ বা দ্বিতীয় বিভাগ এবং প্রাসঙ্গিক বিষয়ে স্নাতকে দ্বিতীয় শ্রেণি বা সমমান CGPA লাগবে। MBA, M.A. English (Prel. & Final), M.S.S. Journalism (Prel. & Final) ও M.S.S. Economics (Prel. & Final)-এ যেকোনো বিষয়ের স্নাতকরা আবেদন করতে পারেন। Final প্রোগ্রামে প্রাসঙ্গিক ৪ বছরের ডিগ্রি লাগে।"
+    },
+    {
+      "q_en": "What is the written test marks distribution for CSE?",
+      "q_bn": "CSE-এর লিখিত ভর্তি পরীক্ষার নম্বর বণ্টন কেমন?",
+      "a_en": "Engineering and science programs have 100 marks: English 30, Physics/Chemistry 20, Math/Biology 20, and SSC & HSC results 30.",
+      "a_bn": "ইঞ্জিনিয়ারিং ও সায়েন্স প্রোগ্রামে ১০০ নম্বর: ইংরেজি ৩০, পদার্থবিজ্ঞান/রসায়ন ২০, গণিত/জীববিজ্ঞান ২০ এবং SSC ও HSC ফলাফল ৩০।"
+    },
+    {
+      "q_en": "What is the written test for BBA?",
+      "q_bn": "BBA-এর লিখিত পরীক্ষায় কত নম্বর থাকে?",
+      "a_en": "100 marks: English 40, Aptitude 10, Quantitative (basic arithmetic and geometry) 20, and SSC & HSC results 30.",
+      "a_bn": "১০০ নম্বর: ইংরেজি ৪০, অ্যাপটিটিউড ১০, কোয়ান্টিটেটিভ (মৌলিক পাটিগণিত ও জ্যামিতি) ২০ এবং SSC ও HSC ফলাফল ৩০।"
+    },
+    {
+      "q_en": "What is the minimum attendance to sit for exams?",
+      "q_bn": "পরীক্ষায় বসতে ন্যূনতম কত শতাংশ উপস্থিতি লাগে?",
+      "a_en": "At least 70% attendance is required. Up to 30% absence may be excused in an emergency.",
+      "a_bn": "ন্যূনতম ৭০% উপস্থিতি লাগে। জরুরি অবস্থায় ৩০% পর্যন্ত অনুপস্থিতি মওকুফ হতে পারে।"
+    },
+    {
+      "q_en": "How is GPA calculated and what is the grading scale?",
+      "q_bn": "গ্রেডিং সিস্টেম কেমন?",
+      "a_en": "80% and above is A+ (4.00), 75-79 is A (3.75), 70-74 is A- (3.50), 65-69 is B+ (3.25), 60-64 is B (3.00), 55-59 is B- (2.75), 50-54 is C+ (2.50), 45-49 is C (2.25), 40-44 is D (2.00), below 40 is F. GPA below 2.50 means probation for one trimester.",
+      "a_bn": "৮০% বা তার বেশি A+ (৪.০০), ৭৫-৭৯ A (৩.৭৫), ৭০-৭৪ A- (৩.৫০), ৬৫-৬৯ B+ (৩.২৫), ৬০-৬৪ B (৩.০০), ৫৫-৫৯ B- (২.৭৫), ৫০-৫৪ C+ (২.৫০), ৪৫-৪৯ C (২.২৫), ৪০-৪৪ D (২.০০), ৪০-এর নিচে F। GPA ২.৫০-এর নিচে হলে এক ট্রাইমেস্টার প্রবেশনে থাকতে হয়।"
+    },
+    {
+      "q_en": "How do I get my admit card?",
+      "q_bn": "এডমিট কার্ড কীভাবে পাব?",
+      "a_en": "Pay your exam fees at the Accounts Section by the schedule date to get exam clearance, then collect the admit card at least two days before the exam. Admit cards are given only after dues are cleared.",
+      "a_bn": "নির্ধারিত তারিখের মধ্যে অ্যাকাউন্টস সেকশনে পরীক্ষার ফি জমা দিলে এক্সাম ক্লিয়ারেন্স পাবেন। পরীক্ষা শুরুর অন্তত দুই দিন আগে এডমিট কার্ড নিতে হবে। বকেয়া পরিশোধ না করলে এডমিট কার্ড দেওয়া হয় না।"
+    },
+    {
+      "q_en": "How can I check my result?",
+      "q_bn": "ফলাফল কীভাবে দেখব?",
+      "a_en": "Open the student portal result page at studentportal.portcity.edu.bd/result/latestresult and enter your student ID. Results are published within one week of the last final exam as letter grade and grade point only.",
+      "a_bn": "studentportal.portcity.edu.bd/result/latestresult-এ গিয়ে স্টুডেন্ট আইডি দিন। শেষ ফাইনাল পরীক্ষার এক সপ্তাহের মধ্যে ফলাফল প্রকাশ হয়, শুধু লেটার গ্রেড ও গ্রেড পয়েন্ট দেওয়া হয়।"
+    },
+    {
+      "q_en": "What is the fee for an improvement exam?",
+      "q_bn": "ইমপ্রুভমেন্ট পরীক্ষার ফি কত?",
+      "a_en": "The exam policy page says Tk 600 per credit hour, while the FAQ page says 40% of the course fee for the midterm and 60% for the final. Please confirm with the Controller of Examinations. Only courses with grade D to B+ can be improved, once, up to 6 credits per trimester.",
+      "a_bn": "পরীক্ষা নীতিমালায় প্রতি ক্রেডিট ৬০০ টাকা লেখা আছে, আর FAQ পেজে মিডটার্মে কোর্স ফির ৪০% এবং ফাইনালে ৬০% বলা হয়েছে। পরীক্ষা নিয়ন্ত্রকের অফিসে নিশ্চিত হয়ে নিন। শুধু D থেকে B+ গ্রেডের কোর্স একবার ইমপ্রুভ করা যায়, প্রতি ট্রাইমেস্টারে সর্বোচ্চ ৬ ক্রেডিট।"
+    },
+    {
+      "q_en": "What is the fee for a transcript or certificate?",
+      "q_bn": "ট্রান্সক্রিপ্ট বা সার্টিফিকেটের ফি কত?",
+      "a_en": "Transcript: Tk 100 for a single trimester, Tk 500 for more than one. Provisional certificate: Tk 500. Apply to the Controller of Examinations at least 7 days ahead. Urgent delivery on the 4th day costs double.",
+      "a_bn": "ট্রান্সক্রিপ্ট: এক ট্রাইমেস্টারের জন্য ১০০ টাকা, একাধিকের জন্য ৫০০ টাকা। প্রভিশনাল সার্টিফিকেট ৫০০ টাকা। অন্তত ৭ দিন আগে পরীক্ষা নিয়ন্ত্রকের কাছে আবেদন করতে হবে। জরুরি হলে ৪র্থ দিনে পাওয়া যায়, তবে ফি দ্বিগুণ।"
+    },
+    {
+      "q_en": "How can I drop a trimester?",
+      "q_bn": "ট্রাইমেস্টার ড্রপ কীভাবে করব?",
+      "a_en": "Before registration, drop it in the student portal. After registration, write an application to the department office, get the Dean's approval within 2 weeks of the last registration date, then the Registrar's final approval.",
+      "a_bn": "রেজিস্ট্রেশনের আগে হলে স্টুডেন্ট পোর্টালে ড্রপ করুন। রেজিস্ট্রেশনের পর হলে বিভাগীয় অফিসে আবেদন দিন, শেষ রেজিস্ট্রেশন তারিখের ২ সপ্তাহের মধ্যে ডিনের অনুমোদন নিন, তারপর রেজিস্ট্রারের চূড়ান্ত অনুমোদন লাগবে।"
+    },
+    {
+      "q_en": "What are the library hours?",
+      "q_bn": "লাইব্রেরি কখন খোলা থাকে?",
+      "a_en": "The Ratnagarva Begum Ashrafunnesa Library is open 8:30 am to 8:30 pm except holidays. You can borrow 2 books for 10 days, with a Tk 10 per day fine for late return.",
+      "a_bn": "রত্নগর্ভা বেগম আশরাফুন্নেসা লাইব্রেরি ছুটির দিন ছাড়া সকাল ৮:৩০ থেকে রাত ৮:৩০ পর্যন্ত খোলা। ১০ দিনের জন্য ২টি বই নেওয়া যায়, দেরিতে ফেরত দিলে প্রতিদিন ১০ টাকা জরিমানা।"
+    },
+    {
+      "q_en": "Is there a medical center on campus?",
+      "q_bn": "ক্যাম্পাসে কি মেডিকেল সেন্টার আছে?",
+      "a_en": "Yes. The medical center is on the 4th floor of the SAC Building with an ambulance and doctors. Emergency: 031-2869877 or 031-2869899. 24-hour urgent care mobile: 01773225500.",
+      "a_bn": "হ্যাঁ। মেডিকেল সেন্টার SAC ভবনের ৪র্থ তলায়, অ্যাম্বুলেন্স ও চিকিৎসক আছেন। জরুরি: ০৩১-২৮৬৯৮৭৭ বা ০৩১-২৮৬৯৮৯৯। ২৪ ঘণ্টা জরুরি সেবার মোবাইল: ০১৭৭৩২২৫৫০০।"
+    },
+    {
+      "q_en": "Is PCIU a smoking or political campus?",
+      "q_bn": "পিসিআইইউ ক্যাম্পাসে কি ধূমপান বা রাজনীতি চলে?",
+      "a_en": "No. PCIU is a non-smoking and non-political campus.",
+      "a_bn": "না। পিসিআইইউ ধূমপানমুক্ত ও রাজনীতিমুক্ত ক্যাম্পাস।"
+    },
+    {
+      "q_en": "What is the dress code?",
+      "q_bn": "ড্রেস কোড কী?",
+      "a_en": "Wear your ID card and dress decently. Avoid sleeveless tops, ragged or slashed jeans, half-pants, skirts, ordinary slippers, dirty clothes and provocative clothing.",
+      "a_bn": "আইডি কার্ড পরে শালীন পোশাকে আসতে হবে। হাতাবিহীন টপ, ছেঁড়া জিন্স, হাফ প্যান্ট, স্কার্ট, সাধারণ স্লিপার, নোংরা বা উত্তেজক পোশাক এড়িয়ে চলুন।"
+    },
+    {
+      "q_en": "Do foreign students study at PCIU?",
+      "q_bn": "পিসিআইইউ-তে কি বিদেশি শিক্ষার্থী আছে?",
+      "a_en": "Yes. The university says a good number of foreign students study there and a language center helps them improve communication skills. The master's fee page lists BDT 5,000 per trimester for international students, but it is unclear whether this applies to bachelor's.",
+      "a_bn": "হ্যাঁ। বিশ্ববিদ্যালয়ের তথ্য অনুযায়ী বেশ কিছু বিদেশি শিক্ষার্থী পড়ছেন এবং যোগাযোগ দক্ষতা বাড়াতে ল্যাঙ্গুয়েজ সেন্টার আছে। মাস্টার্স ফি পেজে আন্তর্জাতিক শিক্ষার্থীদের জন্য প্রতি ট্রাইমেস্টারে ৫,০০০ টাকা লেখা আছে, তবে এটি বাচেলরে প্রযোজ্য কি না পরিষ্কার নয়।"
+    }
+  ],
+  "knowledge_base_meta": {
+    "description": "Complete extra knowledge for the UnishohayAI PCIU chatbot. Merge each top-level key into data/admission-info.json (keys that already exist on your site, such as bachelor fees and eligibility, were left out on purpose).",
+    "collected_from": "https://www.portcity.edu.bd/",
+    "last_verified": "2026-11-25",
+    "language_note": "Official site says 'trimester'. Some policy pages still say 'semester'. The bot should say trimester."
   }
 }

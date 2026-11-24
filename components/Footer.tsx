@@ -1,6 +1,7 @@
 "use client";
 
-import { ExternalLink, MapPin } from "lucide-react";
+import { ExternalLink, MapPin, Phone } from "lucide-react";
+import { contact } from "@/lib/admission-data";
 import Link from "next/link";
 import { admission } from "@/lib/admission-data";
 import { LogoFull } from "./Logo";
@@ -28,8 +29,11 @@ export default function Footer() {
           <h3 className="mb-3 font-semibold">{t("footer_official")}</h3>
           <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
             <li><a className="inline-flex items-center gap-1.5 hover:text-brand" href={u.website} target="_blank" rel="noreferrer">{t("website")} <ExternalLink size={13} /></a></li>
-            <li><a className="inline-flex items-center gap-1.5 hover:text-brand" href={u.online_admission_portal} target="_blank" rel="noreferrer">{t("portal")} <ExternalLink size={13} /></a></li>
-            <li className="flex gap-1.5"><MapPin size={15} className="mt-0.5 shrink-0" /> {u.address}</li>
+            <li><a className="inline-flex items-center gap-1.5 hover:text-brand" title={t("portal_note")} href={u.online_admission_portal} target="_blank" rel="noreferrer">{t("portal")} <ExternalLink size={13} /></a></li>
+            <li className="text-xs">{t("portal_note")}</li>
+            <li className="flex gap-1.5"><MapPin size={15} className="mt-0.5 shrink-0" /> <span><b>{t("city_campus")}:</b> {contact.city_campus_address}</span></li>
+            <li className="flex gap-1.5"><MapPin size={15} className="mt-0.5 shrink-0" /> <span><b>{t("permanent_campus")}:</b> {contact.permanent_campus_address}</span></li>
+            <li className="flex gap-1.5"><Phone size={15} className="mt-0.5 shrink-0" /> <span>{[...contact.phones, ...contact.mobiles].map((n, i) => <a key={n} href={`tel:${n.replace(/\s/g, "")}`} className="hover:text-brand">{n}{i < contact.phones.length + contact.mobiles.length - 1 ? ", " : ""}</a>)}</span></li>
           </ul>
         </div>
       </div>

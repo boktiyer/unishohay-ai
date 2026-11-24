@@ -38,6 +38,7 @@ export function LangToggle() {
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- read browser-only state after mount so server and client HTML match
   useEffect(() => setMounted(true), []);
   const dark = mounted && resolvedTheme === "dark";
   return (
@@ -55,7 +56,6 @@ export default function Navbar() {
   const { t } = useLang();
   const path = usePathname();
   const [open, setOpen] = useState(false);
-  useEffect(() => setOpen(false), [path]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/95 md:bg-white/70 md:backdrop-blur-xl dark:border-white/5 dark:bg-night/95 md:dark:bg-night/70">
@@ -87,7 +87,7 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-slate-200/60 px-4 py-2 md:hidden dark:border-white/5">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className={clsx("block rounded-lg px-3 py-2.5 font-medium", path === l.href && "bg-brand/10 text-brand")}>
+            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className={clsx("block rounded-lg px-3 py-2.5 font-medium", path === l.href && "bg-brand/10 text-brand")}>
               {t(l.key)}
             </Link>
           ))}

@@ -2,12 +2,13 @@
 
 import clsx from "clsx";
 import {
-  ArrowRight, BookOpen, Calculator, ChevronDown, Clock, Database, GraduationCap,
-  Languages, MessageSquare, Search, ShieldCheck, Sparkles, Wallet, Zap,
+  ArrowRight, BookOpen, Calculator, CalendarCheck, ChevronDown, Clock, Database, GraduationCap,
+  Languages, MessageSquare, Search, ShieldCheck, Sparkles, Wallet,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { admission } from "@/lib/admission-data";
+import { allFaqs, formatDate, toLangDigits, VERIFIED } from "@/lib/admission-data";
+import Countdown from "./Countdown";
 import type { DictKey } from "@/lib/i18n";
 import { LogoMark } from "./Logo";
 import { useLang } from "./Providers";
@@ -35,7 +36,7 @@ function ChatMockup() {
   const a =
     lang === "bn"
       ? "সিএসই প্রোগ্রামে মোট ১৫৬ ক্রেডিট, প্রতি ক্রেডিট ২,৩০০ টাকা। মোট ফি **৩,৭৬,৮০০ টাকা** (এইচএসসি) — ভর্তি ফি সহ।"
-      : "CSE has 156 credits at BDT 2,300 per credit. Total fee is **BDT 376,800** (HSC background), including the admission fee.";
+      : "CSE has 156 credits at BDT 2,300 per credit. Total fee is **BDT 3,76,800** (HSC background), including the admission fee.";
   const [before, bold, after] = a.split("**");
   return (
     <div
@@ -63,7 +64,7 @@ export default function Landing() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const stats: [typeof Clock, string, DictKey][] = [
-    [Clock, "24/7", "stat_1"], [Languages, "2", "stat_2"], [Zap, "<3s", "stat_3"], [ShieldCheck, "100%", "stat_4"],
+    [Clock, "24/7", "stat_1"], [Languages, toLangDigits(2, lang), "stat_2"], [GraduationCap, toLangDigits("9 + 10", lang), "stat_3"], [CalendarCheck, formatDate(VERIFIED, lang), "stat_4"],
   ];
   const features: [typeof Clock, DictKey, DictKey][] = [
     [GraduationCap, "f1_t", "f1_d"], [Wallet, "f2_t", "f2_d"], [BookOpen, "f3_t", "f3_d"],
@@ -75,6 +76,8 @@ export default function Landing() {
 
   return (
     <main>
+      <Countdown />
+
       {/* Hero */}
       <section className="relative isolate">
         <GlowBg />
@@ -109,6 +112,7 @@ export default function Landing() {
             </div>
           ))}
         </div>
+        <p className="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">{t("data_note")}</p>
       </section>
 
       {/* Features */}
@@ -144,7 +148,7 @@ export default function Landing() {
       <section className="mx-auto max-w-3xl px-4 pb-24 sm:px-6">
         <SectionTitle title={t("faq_title")} />
         <div className="space-y-3">
-          {admission.faqs.items.map((f, i) => {
+          {allFaqs.slice(0, 12).map((f, i) => {
             const open = openFaq === i;
             return (
               <div key={i} className="glass overflow-hidden rounded-2xl">

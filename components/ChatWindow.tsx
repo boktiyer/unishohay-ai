@@ -3,7 +3,7 @@
 import { ArrowUpRight, Eraser, PanelLeft } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { detectLang } from "@/lib/admission-data";
-import { dict, suggestions } from "@/lib/i18n";
+import { dict, quickQuestions, suggestions } from "@/lib/i18n";
 import type { ChatMessage, Conversation } from "@/types";
 import ChatInput from "./ChatInput";
 import { LogoFull } from "./Logo";
@@ -42,7 +42,7 @@ function SuggestedQuestions({ onPick }: { onPick: (q: string) => void }) {
 }
 
 export default function ChatWindow() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [convs, setConvs] = useState<Conversation[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
@@ -59,6 +59,7 @@ export default function ChatWindow() {
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]") as Conversation[];
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- read browser-only state after mount so server and client HTML match
       if (Array.isArray(saved)) setConvs(saved);
     } catch {
       /* corrupted storage: start fresh */
@@ -101,7 +102,7 @@ export default function ChatWindow() {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || dict[detectLang(lastText)].network_error);
       }
-      patchMsg(convId, aId, () => ({ sourced: res.headers.get("X-Sourced") === "1", confirm: res.headers.get("X-Confirm") === "1", fallback: res.headers.get("X-Fallback") === "1" }));
+      patchMsg(convId, aId, () => ({ sourced: res.headers.get("X-Sourced") === "1", confirm: res.headers.get("X-Confirm") === "1", fallback: res.headers.get("X-Fallback") === "1", sources: (res.headers.get("X-Sources") || "").split(",").filter(Boolean) }));
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -138,6 +139,19 @@ export default function ChatWindow() {
     run(id, [...messages, userMsg]);
   };
 
+  const rate = (msgId: string, rating: "up" | "down") => {
+    if (!activeId) return;
+    const idx = messages.findIndex((m) => m.id === msgId);
+    const answer = messages[idx];
+    const question = [...messages.slice(0, idx)].reverse().find((m) => m.role === "user");
+    patchMsg(activeId, msgId, () => ({ rating }));
+    fetch("/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ rating, question: question?.content, answer: answer?.content, sources: answer?.sources?.join(",") }),
+    }).catch(() => {});
+  };
+
   const regenerate = () => {
     if (!activeId || loading) return;
     const lastUser = messages.map((m) => m.role).lastIndexOf("user");
@@ -158,6 +172,7 @@ export default function ChatWindow() {
     const q = new URLSearchParams(window.location.search).get("q");
     if (q) {
       window.history.replaceState(null, "", "/chat");
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- read browser-only state after mount so server and client HTML match
       send(q);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -213,6 +228,7 @@ export default function ChatWindow() {
                     streaming={m.id === streamingId}
                     canRegenerate={m.id === lastAssistantId && !loading}
                     onRegenerate={regenerate}
+                    onRate={(r) => rate(m.id, r)}
                   />
                 ))}
               </>
@@ -222,6 +238,18 @@ export default function ChatWindow() {
         </div>
 
         <div className="mx-auto w-full max-w-3xl px-3 pb-3 sm:px-6 sm:pb-5">
+          <div className="-mx-1 mb-2 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none]">
+            {quickQuestions[lang].map((q) => (
+              <button
+                key={q.label}
+                onClick={() => send(q.question)}
+                disabled={loading}
+                className="shrink-0 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-brand-violet/50 hover:text-brand disabled:opacity-50 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
+              >
+                {q.label}
+              </button>
+            ))}
+          </div>
           <ChatInput onSend={send} onStop={stop} loading={loading} />
           <p className="mt-2 text-center text-[11px] text-slate-400">{t("disclaimer")}</p>
         </div>

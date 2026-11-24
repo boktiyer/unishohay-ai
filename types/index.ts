@@ -12,6 +12,9 @@ export interface ChatMessage {
   error?: boolean;
   /** AI was busy: answer was built directly from the dataset */
   fallback?: boolean;
+  /** Topic keys (see TOPICS in lib/admission-data.ts) the answer was built from */
+  sources?: string[];
+  rating?: "up" | "down";
 }
 
 export interface Conversation {

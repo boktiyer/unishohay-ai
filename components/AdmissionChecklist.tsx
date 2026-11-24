@@ -17,6 +17,7 @@ export default function AdmissionChecklist() {
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(KEY) || "null");
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- read browser-only state after mount so server and client HTML match
       if (Array.isArray(saved) && saved.length === steps.length) setDone(saved);
     } catch {
       /* ignore */

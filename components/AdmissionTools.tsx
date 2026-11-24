@@ -1,11 +1,11 @@
 "use client";
 
 import clsx from "clsx";
-import { ArrowUpRight, Calculator, CircleCheck, CircleX, GitCompare, HelpCircle, Info, UserCheck } from "lucide-react";
+import { ArrowUpRight, Calculator, CircleCheck, CircleX, GitCompare, GraduationCap, HelpCircle, Info, UserCheck } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import {
-  admission, checkEligibility, eligibility, fees, formatBDT, programName, programs, toLangDigits,
+  admission, checkEligibility, comparablePrograms, fees, formatBDT, programName, programs, toLangDigits, type ComparableProgram,
   type Background, type EligibilityResult,
 } from "@/lib/admission-data";
 import AdmissionChecklist from "./AdmissionChecklist";
@@ -138,52 +138,91 @@ function Row({ k, v, strong }: { k: string; v: string; strong?: boolean }) {
   );
 }
 
+/** Grouped <select> of every program with a published fee (bachelor's + master's by background). */
+function AnyProgramSelect({ value, onChange, label, only }: { value: string; onChange: (v: string) => void; label: string; only?: "bachelor" | "master" }) {
+  const { t, lang } = useLang();
+  const groups = (["bachelor", "master"] as const).filter((g) => !only || g === only);
+  return (
+    <label className="block text-sm font-medium">
+      {label}
+      <select value={value} onChange={(e) => onChange(e.target.value)} className="input mt-1.5">
+        {groups.map((g) => (
+          <optgroup key={g} label={t(g === "bachelor" ? "level_bachelor" : "level_master")}>
+            {comparablePrograms.filter((p) => p.level === g).map((p) => <option key={p.id} value={p.id}>{p.name[lang]}</option>)}
+          </optgroup>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function MastersFeeCalculator() {
+  const { t, lang } = useLang();
+  const bdt = useBdt();
+  const first = comparablePrograms.find((p) => p.level === "master")!;
+  const [id, setId] = useState(first.id);
+  const p = comparablePrograms.find((x) => x.id === id) ?? first;
+  const mf = admission.masters_programs_and_fees;
+  return (
+    <Card icon={GraduationCap} title={t("masters_calc")}>
+      <AnyProgramSelect label={t("program")} value={id} onChange={setId} only="master" />
+      <dl className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200 text-sm dark:divide-white/10 dark:border-white/10">
+        <Row k={t("admission_fee")} v={`${bdt(mf.admission_fee)} (${t("non_refundable")})`} />
+        <Row k={t("credits")} v={toLangDigits(p.credits, lang)} />
+        <Row k={t("per_credit")} v={bdt(p.perCredit)} />
+        <Row k={t("total")} v={bdt(p.total)} strong />
+      </dl>
+      <p className="mt-3 flex gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+        <Info size={13} className="mt-0.5 shrink-0" /> {t("masters_fees")}. {p.note ? t("job_note") : ""} {t("fee_not_pub")}: {mf.fee_not_published.join(", ")}. {t("confirm_note")}.
+      </p>
+    </Card>
+  );
+}
+
 function DepartmentComparison() {
   const { t, lang } = useLang();
   const bdt = useBdt();
   const [a, setA] = useState("cse");
-  const [b, setB] = useState("eee");
-  const ids = [a, b];
-  const gpa = (id: string) => {
-    const e = eligibility[id];
-    return e.min_ssc_gpa == null ? t("na") : `${toLangDigits(e.min_ssc_gpa.toFixed(2), lang)} / ${toLangDigits((e.min_hsc_gpa ?? 0).toFixed(2), lang)}`;
-  };
-  const rows: [string, (id: string) => string][] = [
-    [t("credits"), (id) => toLangDigits(fees[id].total_credits, lang)],
-    [t("per_credit"), (id) => bdt(fees[id].tuition_per_credit)],
-    [t("total_hsc"), (id) => bdt(fees[id].total_fee_hsc)],
-    [t("total_diploma"), (id) => bdt(fees[id].total_fee_diploma)],
-    [t("min_gpa"), gpa],
+  const [b, setB] = useState(comparablePrograms.find((p) => p.level === "master")!.id);
+  const items = [a, b].map((id) => comparablePrograms.find((p) => p.id === id)!);
+  const rows: [string, (p: ComparableProgram) => string][] = [
+    [t("level"), (p) => t(p.level === "bachelor" ? "level_bachelor" : "level_master")],
+    [t("credits"), (p) => toLangDigits(p.credits, lang) + (p.note && p.level === "bachelor" ? " *" : "")],
+    [t("per_credit"), (p) => bdt(p.perCredit)],
+    [t("total"), (p) => bdt(p.total)],
+    [t("total_diploma"), (p) => (p.level === "bachelor" ? bdt(p.totalDiploma) : "—")],
+    [t("min_gpa"), (p) => (p.minGpa ? toLangDigits(p.minGpa, lang) : p.level === "master" ? t("masters_elig") + ": " + t("view_guide") : t("na"))],
   ];
-  const name = (id: string) => programName(programs.find((p) => p.id === id)!, lang);
+  const note = items.find((p) => p.note && p.level === "bachelor")?.note;
 
   return (
     <Card icon={GitCompare} title={t("compare")} className="lg:col-span-2">
       <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{t("select_two")}</p>
       <div className="grid gap-4 sm:grid-cols-2">
-        <ProgramSelect label="A" value={a} onChange={setA} />
-        <ProgramSelect label="B" value={b} onChange={setB} />
+        <AnyProgramSelect label="A" value={a} onChange={setA} />
+        <AnyProgramSelect label="B" value={b} onChange={setB} />
       </div>
-      <div className="mt-5 overflow-x-auto">
-        <table className="w-full min-w-[480px] text-left text-sm">
+      <div className="-mx-1 mt-5 overflow-x-auto px-1">
+        <table className="w-full min-w-[420px] text-left text-sm">
           <thead>
             <tr className="border-b border-slate-200 dark:border-white/10">
               <th className="py-2 pr-4" />
-              {ids.map((id, i) => <th key={i} className="py-2 pr-4 font-semibold text-brand dark:text-brand-violet">{name(id)}</th>)}
+              {items.map((p, i) => <th key={i} className="py-2 pr-4 font-semibold text-brand dark:text-brand-violet">{p.name[lang]}</th>)}
             </tr>
           </thead>
           <tbody>
             {rows.map(([label, fn]) => (
               <tr key={label} className="border-b border-slate-100 dark:border-white/5">
                 <td className="py-2.5 pr-4 text-slate-500 dark:text-slate-400">{label}</td>
-                {ids.map((id, i) => <td key={i} className="py-2.5 pr-4 font-medium">{fn(id)}</td>)}
+                {items.map((p, i) => <td key={i} className="py-2.5 pr-4 font-medium">{fn(p)}</td>)}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      {note && <p className="mt-2 text-xs text-amber-700 dark:text-amber-300">* {note}</p>}
       <Link
-        href={`/chat?q=${encodeURIComponent(lang === "bn" ? `${name(a)} এবং ${name(b)} এর মধ্যে তুলনা করুন` : `Compare ${name(a)} and ${name(b)}`)}`}
+        href={`/chat?q=${encodeURIComponent(lang === "bn" ? `${items[0].name.bn} এবং ${items[1].name.bn} এর মধ্যে তুলনা করুন` : `Compare ${items[0].name.en} and ${items[1].name.en}`)}`}
         className="btn-ghost mt-5 text-sm"
       >
         {t("ask_ai")} <ArrowUpRight size={15} />
@@ -199,8 +238,9 @@ export default function AdmissionTools() {
       <div className="grid gap-6 lg:grid-cols-2">
         <EligibilityChecker />
         <FeeCalculator />
+        <MastersFeeCalculator />
         <DepartmentComparison />
-        <div className="lg:col-span-2"><AdmissionChecklist /></div>
+        <div className="min-w-0 lg:col-span-2"><AdmissionChecklist /></div>
       </div>
     </PageShell>
   );
