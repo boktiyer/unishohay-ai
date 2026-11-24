@@ -71,9 +71,9 @@ export async function POST(req: Request) {
   const now = Date.now();
   let candidates = MODELS.filter((m) => (exhaustedUntil.get(m) ?? 0) < now);
   if (!candidates.length) candidates = [...MODELS];
-  // Give Gemini at most ~8s to start answering; after that, answer straight from the dataset.
+  // Give Gemini at most ~6s to start answering; after that, answer straight from the dataset.
   const started = Date.now();
-  const DEADLINE_MS = 8000;
+  const DEADLINE_MS = 6000;
   const callModel = async (model: string, config: object) => {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), Math.max(1500, DEADLINE_MS - (Date.now() - started)));
