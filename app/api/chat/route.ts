@@ -68,7 +68,7 @@ export async function POST(req: Request) {
   const baseConfig = {
     systemInstruction: buildSystemInstruction(retrieval.context, lang, retrieval.confirm),
     temperature: 0.2,
-    maxOutputTokens: 1200,
+    maxOutputTokens: 2500,
   };
   // Low thinking = much faster first token (MINIMAL is rejected by gemini-3.8-flash). Dropped automatically if a model rejects it.
   let useFastThinking = true;

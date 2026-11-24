@@ -944,8 +944,19 @@
         "faculty": "Faculties of Humanities, Social Sciences and Law"
       }
     ],
-    "department_chairmen": null,
-    "department_chairmen_note": "Not published in site text. Bot must say: please confirm with the department.",
+    "department_chairmen": {
+      "business_administration": "Md. Musa",
+      "english": "A S M Iftekarul Azam",
+      "law": "Md. Ziaul Karim",
+      "journalism_and_media_studies": "Ms.Dilruba Akter",
+      "computer_science_and_engineering": "Farzina Akther",
+      "electrical_and_electronic_engineering": "Mr. Deepak Kumar Chowdhury",
+      "civil_engineering": "Md. Jahedul Alam",
+      "textile_engineering": "Md. Rezaul Karim",
+      "fashion_design_and_technology": null,
+      "natural_science": null
+    },
+    "department_chairmen_note": "Taken from the Chairman designation on each official teacher-list page (faculty_members). Fashion Design and Natural Science pages list no chairman.",
     "management_offices": [
       "Office of the Founding Chairman",
       "Vice Chancellor",
@@ -1753,7 +1764,6 @@
     "LL.M. (Preliminary & Final) eligibility: the admission requirement page says a 3-year Bachelor of Laws; the admission FAQ page says a 3-year Bachelor's degree and a 2-year Bachelor of Laws. Confirm with the Admission Office."
   ],
   "not_found": [
-    "Department chairmen names",
     "Contact email addresses",
     "Admission office opening hours",
     "Late payment fee amount",
@@ -1889,5 +1899,1607 @@
     "collected_from": "https://www.portcity.edu.bd/",
     "last_verified": "2026-11-25",
     "language_note": "Official site says 'trimester'. Some policy pages still say 'semester'. The bot should say trimester."
+  },
+  "faculty_members": {
+    "source_note": "Names and designations copied exactly as published on the official PCIU teacher-list pages (one per department). Lists include adjunct faculty and teachers on study leave. summary_csv_count comes from department_summary.csv and is lower because it was an older count.",
+    "last_verified": "2026-11-25",
+    "departments": {
+      "business_administration": {
+        "department_name": "Department of Business Administration",
+        "program_ids": [
+          "bba"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/16/T/view-teacher-list",
+        "total_listed": 41,
+        "summary_csv_count": 12,
+        "teachers": [
+          {
+            "name": "Mr. Prof. Dr. Md. Fashiul Alam",
+            "designation": "Dean",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Musa",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Mahofuzur Rahman (Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Farzana Amin",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Washeka Anjom",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Azmat Ullah",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Rumana Sultana",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Kaniz Morshed",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Atikur Rahman",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ripan Chatterjee",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Farzana Rashid",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mrs. Syeda Sarah Alif (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Nafisa Tasnim",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Ashraful Islam",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Abida Sultana Sanda",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "MD.SHA NEWAJ HOSSAIN",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Angela Sajjan",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Prem Sagor Das",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Priya Chowdhury",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SUSMITA SAHA",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Hafsa Binta Firdaus",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Showkat Hossan",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "JANNATUL NYEEMA",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "KANETA ISLAM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Rahat",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Amrita Nandy",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Saima Akter Bristy",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ikbal Hossan Hasib",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Shahreen Hannan Arina",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Dr. Harunur Rashid",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. A.F.M. Aowrangazab",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Mohammad Saleh Jahur",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "A. K. M. Tafzal Haque",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. S.M. sohrab Uddin",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Md. Iqbal Hossain",
+            "designation": "Adjunct Faculty- Associate Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Md. Aftab Uddin",
+            "designation": "Adjunct Faculty- Associate Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Mohammad Mizanur Rahman Chowdhury",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md. Kafil Uddin",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md. Abdullah Al Hasan",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md. Ashraful Alam",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr . shanto Banik",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "english": {
+        "department_name": "Department of English",
+        "program_ids": [
+          "english"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/18/T/view-teacher-list",
+        "total_listed": 22,
+        "summary_csv_count": 22,
+        "teachers": [
+          {
+            "name": "Prof. Mainul Hasan Chowdhury",
+            "designation": "Dean",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "A S M Iftekarul Azam",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Md. Rashed Khan Milon",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Fahamida Akter",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Muhammad Ishtiaq",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms.Asma Yasmin",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Priyanka Muhury (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Sadatun Nessa (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Bithy Saha",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Ahmed Haroon (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Abu Hanif",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Subrina Kamal",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Tanjina Akther",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "MASUD RANA",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Tamanna Mohammed Ali",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Farheen Chowdhury",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md Rashed",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Jerin Akter",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Dr. Jahangir Bin Sarwar",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Ms.Rownak Jahan",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Maruful alam",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Neyamot Ullah Bhuiyan",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "law": {
+        "department_name": "Department of Law",
+        "program_ids": [
+          "llb"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/19/T/view-teacher-list",
+        "total_listed": 18,
+        "summary_csv_count": 18,
+        "teachers": [
+          {
+            "name": "Prof. Abdullah Al Faruque (Ph.D)",
+            "designation": "Honorary Adviser",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Prashanta Bhushon Barua",
+            "designation": "Faculty & Legal Adviser",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Ziaul Karim",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Afroza Perveen",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Anwara Begum",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Silma Subah Chowdhury",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammad Nurul Amin",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Aqib Tahmid",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SAIMA AKTHER",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "MD. RAKIBUL ISLAM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Rupayan Rudra",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Sakib Hasan",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "NAOSHIN IMAM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Prof.Dr.Shajeda Akter",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Prof. Md. Zakir Hossain",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Ms. Barrister Afroza Aktar",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md.Jashim Uddin",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md.Naeem Morshed",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "journalism_and_media_studies": {
+        "department_name": "Department of Journalism and Media Studies",
+        "program_ids": [
+          "journalism"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/20/T/view-teacher-list",
+        "total_listed": 15,
+        "summary_csv_count": 14,
+        "teachers": [
+          {
+            "name": "Ms.Dilruba Akter",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammad. Ali Asgar Chowdhury",
+            "designation": "Associate Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Jewel Das (Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Fouzia Sultana Chowdhury",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Ataus Samad Raju",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Prashanta Kumar Shill",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Sanjida Wadud Upama",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Aquib Ul Wadud Alam (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Taslima Akter Erin",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Koushik Chandra Barmanhriday",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Pinki Chakma",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammad Sahid Ullah",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Farjana Karim",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Mr. Madhab chandra Das",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Ms Rawshon Akhter",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "computer_science_and_engineering": {
+        "department_name": "Department of Computer Science and Engineering",
+        "program_ids": [
+          "cse"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/9/T/view-teacher-list",
+        "total_listed": 54,
+        "summary_csv_count": 30,
+        "teachers": [
+          {
+            "name": "Farzina Akther",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "S. M. Osman Gani",
+            "designation": "Associate Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Sowmitra Das",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Sharmin Akter",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mrs. Taofica Amrine",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Abadat Hossain",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Dr. Md. Zia Ullah (Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Manoara Begum (Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Tahmina Akter",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mrs. Fujaila Shahnaj (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Miftahul Jannat Mokarrama (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mahmudul Hasan Bhuiyan (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Emam Hossain (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Rabeya Sadia (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Borhan Uddin Sumon (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Tawsin Uddin Ahmed (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Fariha Tahsin Chowdhury (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Shafayet Nur (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Subashis Roy Bhowmik (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Maherab Hasan",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Sharmin Akter",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Zarin Rafah Chowdhury",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "NUSRATUL JANNAT",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ratul Barua",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "TANVINUR RAHMAN SIAM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Al Mamun",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "MD. SAIF UDDIN",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Eshita Chowdhury",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "ALAMGIR HOSSAIN",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "TASMIN AKTHER",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Aishwaria Roy Snigdha",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "K.M.TOUSIF BIN PARVES",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "JAHID KARIM FAHIM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Sheikh Mohammad Tahsin Murtaj",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md Atik Ishrak",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Tanvir Mahmud",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Syeda Alisha Noor",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Faisal Ahammed Shawon",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mrithunjoy Das Shiblu",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SAIMA JAHAN SULTANA",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "jannatul Ferdous",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "AFRIN SULTANA",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Muhammad Anwarul Azim",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Asaduzzaman",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. M Sanaullah Chowdhury",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Md Hanif Seddiqui",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Mohammed Moshiul Hoque",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Mohammad Khairul Islam",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Rashed Mustafa",
+            "designation": "Adjunct Faculty- Associate Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Kazi Ashrafuzzaman",
+            "designation": "Adjunct Faculty- Associate Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Iqbal Ahmed",
+            "designation": "Adjunct Faculty- Associate Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Shima Chakraborty",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md Hasan Hafizur Rahman",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Mr. A. H. M, Sajedul Hoque",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "electrical_and_electronic_engineering": {
+        "department_name": "Department of Electrical and Electronic Engineering",
+        "program_ids": [
+          "eee"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/13/T/view-teacher-list",
+        "total_listed": 23,
+        "summary_csv_count": 19,
+        "teachers": [
+          {
+            "name": "Mr. Deepak Kumar Chowdhury",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Salena Akther",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Akib Jayed Islam",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Swarup Chakraborty (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Sultanus Salehin (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Raisul Ismail Apon",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Sohag Mia",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SHREYA PAUL (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Zarin Nushiba",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "NAEEM PASHA",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Nafis Fuad Wasi",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Anamika Barua",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Nirzar Barua",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "NAZMUL KADER CHOWDHURY (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "RAMISHA ANAN TASNUM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mahmudul Hasan",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Dr. Quazi Delwar Hossain",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Nur Mohammad",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Muhammad Ahsan Ullah",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Md. Azad Hossain",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Mohammad Rubaiyat Tanvir Hossain",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Tofeal Ahmed",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Mr. Piyas Chowdhury",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "civil_engineering": {
+        "department_name": "Department of Civil Engineering",
+        "program_ids": [
+          "civil"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/14/T/view-teacher-list",
+        "total_listed": 32,
+        "summary_csv_count": 8,
+        "teachers": [
+          {
+            "name": "Md. Jahedul Alam",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Abu Yusuf(Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Israt Jahan Ruva",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ehsanul Kabir (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. S.M. Rahat Rahman (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Tasnuva Farnaz (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammed Abul Kalam Azad (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammad Hasan Mahmud Mazumdar (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammad Abdul Aziz",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Towhidul Islam (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "JANNATUL FERDOUS (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Anika Tahsin (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Dil Afroza Karim",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Romena Akter",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "MD. SHAHRIAR HOSSAIN",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md Rashid Awal Chowdhury",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md.Abir Hasan Turza",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Muntasir Mohammad Shoeb",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SHOHA TAIUL OYSHE",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "JUSHAN ABDULLAH BABAR",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "S.M. Alauddin Abdullah",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "FATEMA KASHEM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md Pranto Hasan",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "ASNAFUL HUDA ASNAF",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Dr. Md.Saiful Islam",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Sudip Kumar Pal",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Prof. Dr. Asiful Haque",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Prof.Dr. Md.Abdur Rahman Bhuiyan",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Prof. Dr. Md. Reaz Akter Mullick",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Dr. Engr. Ajoy Paul",
+            "designation": "Adjunct Faculty- Associate Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Mohammad Tarekul Alam",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md. Mehdi Hassan Masum",
+            "designation": "Adjunct Faculty-Assistant Professor",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "textile_engineering": {
+        "department_name": "Department of Textile Engineering",
+        "program_ids": [
+          "textile"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/15/T/view-teacher-list",
+        "total_listed": 24,
+        "summary_csv_count": 12,
+        "teachers": [
+          {
+            "name": "Prof. Dr. Engr. Mafzal Ahmed",
+            "designation": "Dean",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Rezaul Karim",
+            "designation": "Chairman",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Zubair Bin Sayed Oli",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Main Uddin",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Suraiya Sultana",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Jahid Khan",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Nur-Us-Shafa Mazumder (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Mehedi Hasan Tusher (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Asif Sakib (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Tahmina Jahan",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Nazif Hasan Chowdhury (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Niaz Morshed Rifat (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Chowdhury Md. Adib Zawad (CMA)",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Ms. Israt Parveen (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Rafiul Islam (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Md. Nazmul Huda(Shuvo) (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Kazi Sifat Muntasir",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Nusrat Tahmida Hossain",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Sayedul Morsalin",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Jahida Akter",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SONIA AKHTER",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Aditya Bhattacharjee",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Prof. Dr. Md.Mahbubul Alam",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Md. Burhan Uddin Faruquee",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "fashion_design_and_technology": {
+        "department_name": "Department of Fashion Design and Technology",
+        "program_ids": [
+          "fashion"
+        ],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/17/T/view-teacher-list",
+        "total_listed": 10,
+        "summary_csv_count": 10,
+        "teachers": [
+          {
+            "name": "TAMIMA SULTANA MUNMUN (Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mr. Ashraful Islam",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Rashidul Hasan Sharif",
+            "designation": "Assistant Professor",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Syeda Nazneen Ahsan",
+            "designation": "Sr. Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Arafat Islam",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "SAMIA ISLAM",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Farin Chowdhury",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Reshma Khatoon (leave)",
+            "designation": "Teaching Assistant",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Jasim Uddin",
+            "designation": "Adjunct Faculty- Professor",
+            "on_leave": false,
+            "adjunct": true
+          },
+          {
+            "name": "Shoeb Faruquee",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      },
+      "natural_science": {
+        "department_name": "Department of Natural Science",
+        "program_ids": [],
+        "source_url": "https://www.portcity.edu.bd/HomePage/ListPrimary/21/T/view-teacher-list",
+        "total_listed": 9,
+        "summary_csv_count": 9,
+        "teachers": [
+          {
+            "name": "Mohammad Mehedi Hasan Rocky (Study Leave)",
+            "designation": "Assistant Professor",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Fuhad Ahmed (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Iqbal Hossen (Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Mohammad Amzad Hossain Bhuyan(Study Leave)",
+            "designation": "Sr. Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Punam Mutsuddi",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Maksud Khan (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Ishmam Ibnul Arabi (Study Leave)",
+            "designation": "Lecturer",
+            "on_leave": true,
+            "adjunct": false
+          },
+          {
+            "name": "Md. Ahad Hossain",
+            "designation": "Lecturer",
+            "on_leave": false,
+            "adjunct": false
+          },
+          {
+            "name": "Mr.Saiful Kabir Chowdhury",
+            "designation": "Adjunct Faculty",
+            "on_leave": false,
+            "adjunct": true
+          }
+        ]
+      }
+    }
   }
 }

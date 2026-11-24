@@ -162,6 +162,12 @@ export const TOPICS = {
     url: links.official_site,
     kw: ["news", "event", "workshop", "tournament", "খবর", "ইভেন্ট", "অনুষ্ঠান", "কর্মশালা"],
   },
+  faculty_members: {
+    keys: ["faculty_members"],
+    label: { en: "Teacher List", bn: "শিক্ষক তালিকা" },
+    url: raw.faculties_and_departments.source_url,
+    kw: ["teacher", "faculty member", "faculty list", "lecturer", "professor", "instructor", "sir", "madam", "chairman", "chairperson", "head of", "শিক্ষক", "টিচার", "স্যার", "ম্যাডাম", "লেকচারার", "প্রফেসর", "অধ্যাপক", "প্রভাষক", "চেয়ারম্যান", "বিভাগীয় প্রধান"],
+  },
   faqs: {
     keys: ["faqs", "faq_additions"],
     label: { en: "Admission FAQ", bn: "ভর্তি সংক্রান্ত প্রশ্নোত্তর" },
@@ -177,6 +183,36 @@ const has = (text: string, kw: string) => text.includes(kw.toLowerCase());
 export function findPrograms(text: string): string[] {
   const t = text.toLowerCase();
   return programs.filter((p) => p.keywords.some((k) => has(t, k))).map((p) => p.id);
+}
+
+/* ---- Teachers (faculty_members) ---- */
+
+type FacultyDept = (typeof raw.faculty_members.departments)[keyof typeof raw.faculty_members.departments];
+export const facultyDepts = Object.entries(raw.faculty_members.departments) as [string, FacultyDept][];
+
+const cleanName = (n: string) =>
+  n.toLowerCase().replace(/\(.*?\)/g, " ").replace(/\b(mr|mrs|ms|dr|prof|engr|md|mohammad|muhammad)\b\.?/g, " ").replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim();
+
+/** Teachers whose (cleaned) full name appears in the question, e.g. "Who is Farzina Akther?" */
+export function findTeachers(question: string) {
+  const q = " " + question.toLowerCase().replace(/\b(mr|mrs|ms|dr|prof|engr|md|mohammad|muhammad)\b\.?/g, " ").replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ") + " ";
+  const hits: { department: string; name: string; designation: string }[] = [];
+  for (const [, dep] of facultyDepts) {
+    for (const t of dep.teachers) {
+      const n = cleanName(t.name);
+      if (n.split(" ").length >= 2 && q.includes(" " + n + " ")) hits.push({ department: dep.department_name, name: t.name, designation: t.designation });
+    }
+  }
+  return hits;
+}
+
+const NATURAL_SCIENCE = ["natural science", "math", "physics", "chemistry", "statistics", "ন্যাচারাল সায়েন্স", "গণিত", "পদার্থ", "রসায়ন"];
+
+/** Department keys for the programs/subjects in the question (empty = all departments). */
+export function facultyDeptKeys(question: string, programIds: string[]): string[] {
+  const keys = facultyDepts.filter(([, d]) => d.program_ids.some((p) => programIds.includes(p))).map(([k]) => k);
+  if (NATURAL_SCIENCE.some((k) => question.toLowerCase().includes(k))) keys.push("natural_science");
+  return keys;
 }
 
 /* ---- FAQ matching (used as retrieval examples and quick answers) ---- */
@@ -220,6 +256,7 @@ export interface RetrievalResult {
   /** true when the answer involves fees or eligibility */
   confirm: boolean;
   faqMatches: { item: FaqItem; score: number }[];
+  teacherHits: { department: string; name: string; designation: string }[];
 }
 
 /**
@@ -240,6 +277,9 @@ export function retrieveContext(question: string, recent: string[] = []): Retrie
   }
   // A program was asked about without a specific topic: give its fees + eligibility.
   if (programIds.length && topics.length === 0) topics.push("departments", "tuition_fees", "eligibility");
+
+  const teacherHits = findTeachers(question);
+  if (teacherHits.length && !topics.includes("faculty_members")) topics.push("faculty_members");
 
   const faqMatches = matchFaqs(question);
   if (faqMatches.length && !topics.includes("faqs")) topics.push("faqs");
@@ -264,9 +304,18 @@ export function retrieveContext(question: string, recent: string[] = []): Retrie
       if (key === "tuition_fees") ctx.tuition_fees = { ...raw.tuition_fees, by_program: pick(fees) };
       else if (key === "eligibility") ctx.eligibility = { ...raw.eligibility, by_program: pick(eligibility) };
       else if (key === "faqs" || key === "faq_additions") continue; // only the matching FAQs are added below
+      else if (key === "faculty_members") {
+        const want = facultyDeptKeys(q, programIds);
+        const deps = facultyDepts.filter(([k]) => !want.length || want.includes(k));
+        ctx.faculty_members = {
+          source_note: raw.faculty_members.source_note,
+          departments: Object.fromEntries(deps.map(([k, d]) => [k, { department_name: d.department_name, source_url: d.source_url, total_listed: d.total_listed, teachers: d.teachers.map((t) => `${t.name} | ${t.designation}`) }])),
+        };
+      }
       else ctx[key] = raw[key];
     }
   }
+  if (teacherHits.length) ctx.teacher_name_matches = teacherHits;
   if (faqMatches.length) ctx.closest_official_faqs = faqMatches.map((m) => m.item);
   if (programIds.length) ctx.programs_in_focus = programIds;
 
@@ -277,6 +326,7 @@ export function retrieveContext(question: string, recent: string[] = []): Retrie
     sourced,
     confirm: topics.some((t) => t === "tuition_fees" || t === "eligibility" || t === "masters" || t === "other_fees"),
     faqMatches,
+    teacherHits,
   };
 }
 

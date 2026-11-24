@@ -3,7 +3,7 @@
  * Used when Gemini is overloaded, out of quota or too slow, so the student always gets an answer.
  * Only copies values from the dataset; never calculates or guesses.
  */
-import { admission, bdt, contact, eligibility, fees, links, programs, retrieveContext, toLangDigits, type Topic } from "./admission-data";
+import { admission, bdt, contact, eligibility, facultyDepts, facultyDeptKeys, fees, links, programs, retrieveContext, toLangDigits, type Topic } from "./admission-data";
 import type { Lang } from "@/types";
 import { detectSmallTalk, ONLY_PCIU, smallTalkReply } from "./small-talk";
 
@@ -81,7 +81,9 @@ export function fallbackAnswer(question: string, recent: string[], lang: Lang) {
   const q = question.toLowerCase();
   const asks = (re: RegExp) => re.test(q);
 
-  for (const s of r.topics.slice(0, 3)) {
+  // teacher questions: show the teacher list first
+  const ordered = [...r.topics].sort((a, b) => Number(b === "faculty_members") - Number(a === "faculty_members"));
+  for (const s of ordered.slice(0, 3)) {
     switch (s) {
       case "tuition_fees":
         out.push(
@@ -180,7 +182,7 @@ export function fallbackAnswer(question: string, recent: string[], lang: Lang) {
       }
       case "leadership": {
         const l = admission.leadership;
-        out.push(`### ${t.lead}`, `- ${l.vice_chancellor.title}: **${l.vice_chancellor.name}**`, ...l.deans.map((x) => `- Dean, ${x.faculty}: ${x.name}`), `- ${t.chairmen}`, `- ${officeReferral(lang)}`);
+        out.push(`### ${t.lead}`, `- ${l.vice_chancellor.title}: **${l.vice_chancellor.name}**`, ...l.deans.map((x) => `- Dean, ${x.faculty}: ${x.name}`), ...facultyDepts.flatMap(([, dep]) => dep.teachers.filter((x) => x.designation === "Chairman").map((x) => `- Chairman, ${dep.department_name}: ${x.name}`)));
         break;
       }
       case "departments":
@@ -201,6 +203,20 @@ export function fallbackAnswer(question: string, recent: string[], lang: Lang) {
       case "news":
         out.push(...admission.recent_news_snapshot.items.map((n) => `- ${n.date}: ${n.title}`));
         break;
+      case "faculty_members": {
+        if (r.teacherHits.length) {
+          out.push(...r.teacherHits.map((h) => `- **${h.name}**: ${h.designation}, ${h.department}`));
+          break;
+        }
+        const want = facultyDeptKeys(q, r.programIds);
+        for (const [k, dep] of facultyDepts.filter(([k]) => !want.length || want.includes(k))) {
+          const groups = new Map<string, string[]>();
+          for (const tch of dep.teachers) groups.set(tch.designation, [...(groups.get(tch.designation) ?? []), tch.name]);
+          out.push(`### ${dep.department_name} (${d(dep.total_listed)})`, ...[...groups].map(([des, names]) => `- **${des}**: ${names.join(", ")}`), `- [${lang === "bn" ? "অফিসিয়াল শিক্ষক তালিকা" : "Official teacher list"}](${dep.source_url})`);
+          if (!want.length && k === "natural_science") break;
+        }
+        break;
+      }
       case "faqs":
         out.push(...r.faqMatches.map((m) => `**${lang === "bn" ? m.item.q_bn : m.item.q_en}**\n${lang === "bn" ? m.item.a_bn : m.item.a_en}`));
         break;
