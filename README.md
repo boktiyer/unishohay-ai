@@ -89,7 +89,7 @@ git push -u origin main
 `data/admission-info.json` was built from official PCIU pages at https://www.portcity.edu.bd. Each section has a `source_url` and a `last_verified` date.
 
 - **Fees and dates change every semester.** Before the demo, replace or update this file with the organizer's official dataset. You do not need to change any code.
-- Any field set to `null` means **not available**. The chatbot will say the information is not available and refer the student to the Admission Office. Fill in a field, such as `admission_dates.application_deadline` or `required_documents.list`, and the bot starts using it immediately.
+- Any field set to `null` means **not available**. The chatbot will say the information is not available and refer the student to the Admission Office. Fill in a field, such as `university.phone` or `admission_dates.bachelors.orientation`, and the bot starts using it immediately. The current file covers the January 2027 intake (schedule, documents, payment policy, scholarships, bachelor's and master's fees).
 - `demo_data` is a top-level flag. If it is set to `true`, the Admission Guide shows a "Demo data" notice.
 - To add a program, add an entry to `departments.programs` with its Bangla and English `keywords`, then add matching entries under `eligibility.by_program` and `tuition_fees.by_program`.
 

@@ -1,21 +1,25 @@
 {
   "demo_data": false,
-  "dataset_note": "Built from official PCIU web pages (portcity.edu.bd). Fields set to null are NOT_AVAILABLE and must never be guessed. Replace or update this file with the organizer's official dataset before the demo.",
+  "dataset_note": "Built from official PCIU web pages (portcity.edu.bd), retrieved 2026-11-24. Fields set to null are NOT_AVAILABLE and must never be guessed. PCIU runs on trimesters. Fees and dates change every intake: update this file before each demo.",
   "university": {
     "source_url": "https://www.portcity.edu.bd",
     "last_verified": "2026-11-24",
     "name": "Port City International University",
     "short_name": "PCIU",
-    "description": "UGC and Government approved private university at Khulshi, Chattogram, Bangladesh.",
+    "type": "Private university",
+    "approval": "UGC & Govt. Approved",
+    "description": "UGC and Government approved private university at Khulshi, Chattogram, Bangladesh, in the heart of the hill city.",
+    "levels_offered": ["Undergraduate", "Postgraduate"],
     "address": "7-14, Nikunja Housing Society, South Khulshi, Chattogram",
     "website": "https://www.portcity.edu.bd",
-    "online_admission_portal": "http://119.18.149.45/pciuonlineadmission/",
+    "online_admission_portal": "http://119.18.149.45/PCIUOnlineAdmission",
+    "facebook": "https://www.facebook.com/Port-City-International-University-492646557443546/",
     "phone": null,
     "email": null,
     "admission_office_hours": null
   },
   "departments": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/DepatmentDetails/29/Portfolio/bachelor-s-degree-programs",
     "last_verified": "2026-11-24",
     "programs": [
       { "id": "bba", "name": "BBA (Bachelor of Business Administration)", "name_bn": "বিবিএ (ব্যাচেলর অব বিজনেস অ্যাডমিনিস্ট্রেশন)", "level": "Bachelor", "keywords": ["bba", "business", "বিবিএ", "বিজনেস", "ব্যবসায়"] },
@@ -28,36 +32,64 @@
       { "id": "textile", "name": "B.Sc. in Textile Engineering", "name_bn": "বি.এসসি ইন টেক্সটাইল ইঞ্জিনিয়ারিং", "level": "Bachelor", "keywords": ["textile", "টেক্সটাইল", "বস্ত্র"] },
       { "id": "fashion", "name": "B.Sc. in Fashion Design and Technology", "name_bn": "বি.এসসি ইন ফ্যাশন ডিজাইন অ্যান্ড টেকনোলজি", "level": "Bachelor", "keywords": ["fashion", "design", "ফ্যাশন", "ডিজাইন"] }
     ],
-    "masters_programs_note": "Some master's programs (MBA for BBA graduates, Executive MBA, LL.M., M.A. in English, M.S.S. in Broadcast and Print Journalism, M.S.S. in Economics, MCSE) may be admitted directly. Master's fees and eligibility are not available in this dataset.",
-    "masters_programs": ["MBA (for BBA graduates)", "Executive MBA", "LL.M.", "M.A. in English", "M.S.S. in Broadcast and Print Journalism", "M.S.S. in Economics", "MCSE"]
+    "masters_programs": [
+      "MBA (Master of Business Administration)",
+      "Executive MBA",
+      "LL.M. (Preliminary & Final)",
+      "LL.M. (Final)",
+      "M.A. in English (Preliminary & Final)",
+      "M.A. in English (Final)",
+      "M.S.S. in Broadcast & Print Journalism (Preliminary & Final)",
+      "M.S.S. in Broadcast & Print Journalism (Final)",
+      "M.S.S. in Economics (Preliminary & Final)",
+      "M.Sc. in Computer Science & Engineering (MCSE)"
+    ]
   },
   "eligibility": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/54/Page/admission-admission-requirement",
     "last_verified": "2026-11-24",
-    "by_program": {
-      "bba": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "cse": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "llb": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "english": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C" },
-      "eee": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": null },
-      "civil": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": null },
-      "textile": { "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": null },
-      "journalism": { "min_ssc_gpa": null, "min_hsc_gpa": null, "published_text": null },
-      "fashion": { "min_ssc_gpa": null, "min_hsc_gpa": null, "published_text": null }
+    "bachelors_categories": {
+      "arts_law_social_science_business": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent. O-Level/A-Level alternative: minimum 5 subjects in O-Level and 2 in A-Level, with grade B in 4 subjects and C in 3 subjects.",
+      "science_and_engineering": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent. O-Level/A-Level alternative: minimum 5 subjects in O-Level and 2 in A-Level, with grade B in 4 subjects and C in 3 subjects from science group."
     },
-    "o_a_level": "Minimum 5 subjects in O-Level and 2 subjects in A-Level, with minimum grade B in 4 subjects and C in 3 subjects from the science group.",
-    "special_provision": "A special provision exists for meritorious and poor students from remote underdeveloped areas.",
-    "special_provision_details": null,
-    "masters_eligibility": null
+    "by_program": {
+      "bba": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
+      "llb": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
+      "english": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
+      "journalism": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
+      "cse": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
+      "civil": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
+      "eee": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
+      "textile": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
+      "fashion": { "category": null, "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": null, "note": "Both published categories require minimum GPA 2.50 in SSC and HSC. Whether a science background is required for this program is not confirmed." }
+    },
+    "o_a_level": "Minimum 5 subjects in O-Level and 2 subjects in A-Level, with minimum grade B in 4 subjects and C in 3 subjects (from the science group for science and engineering programs).",
+    "special_provision": "6% of students receive scholarships: 3% for children of freedom fighters and 3% for meritorious and poor students from remote underdeveloped areas.",
+    "masters": {
+      "general": [
+        "Minimum GPA 2.50 or second division in both S.S.C and H.S.C or equivalent from relevant group",
+        "O-Level/A-Level alternative: minimum 5 subjects in O-Level and 2 in A-Level, with grade B in 4 subjects and C in 3 subjects from relevant group",
+        "Minimum second class or equivalent CGPA in Bachelor's degree from relevant subject/group"
+      ],
+      "program_specific": {
+        "MBA / M.A. in English (Prel. & Final) / M.S.S. in Broadcast & Print Journalism (Prel. & Final) / M.S.S. in Economics (Prel. & Final)": "Graduates (B.A./B.Sc./B.Com./B.S.S. or equivalent) or Master's degree from any discipline",
+        "LL.M. (Final)": "4-year Bachelor of Laws from any recognized university",
+        "LL.M. (Preliminary & Final)": "3-year Bachelor of Laws from any recognized university",
+        "M.A. in English (Final)": "B.A. (Hons.) in English or 4-year Bachelor's degree in English from any recognized university",
+        "M.S.S. in Economics (Final)": "4-year Bachelor's degree in Economics from any recognized university",
+        "M.S.S. in Broadcast & Print Journalism (Final)": "4-year Bachelor's degree in Journalism from any recognized university",
+        "M.Sc. in Computer Science & Engineering (MCSE)": "B.Sc. in Computer Science & Engineering or other relevant subjects"
+      }
+    }
   },
   "tuition_fees": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/DepatmentDetails/29/Portfolio/bachelor-s-degree-programs",
     "last_verified": "2026-11-24",
     "currency": "BDT",
     "admission_fee": 18000,
     "admission_fee_refundable": false,
     "admission_form_price": 500,
-    "notes": "Total fees include the admission fee. Per-semester and per-year breakdowns are not available and must not be calculated.",
+    "notes": "Total fees include the admission fee (BDT 18,000, non-refundable, due at admission). Where two totals are shown, the main total is for H.S.C. background and the other for diploma background. PCIU uses trimesters; a per-trimester or per-year fee breakdown is not published and must not be calculated.",
     "by_program": {
       "bba": { "total_credits": 130, "tuition_per_credit": 2300, "total_fee_hsc": 317000, "total_fee_diploma": null },
       "llb": { "total_credits": 133, "tuition_per_credit": 2600, "total_fee_hsc": 363800, "total_fee_diploma": null },
@@ -69,59 +101,165 @@
       "textile": { "total_credits": 159, "tuition_per_credit": 2100, "total_fee_hsc": 351900, "total_fee_diploma": 320400 },
       "fashion": { "total_credits": 145, "tuition_per_credit": 1800, "total_fee_hsc": 279000, "total_fee_diploma": null }
     },
+    "masters": [
+      {
+        "program": "Master of Business Administration (MBA)",
+        "admission_fee_bdt": 18000,
+        "tuition_fee_per_credit_bdt": 1700,
+        "base_credit_hours": 42,
+        "credit_hours_and_fees_by_background": [
+          { "academic_background": "B.A., B.Sc., B.S.S. (Pass)", "fresh_graduate_credits": 66, "total_fees_bdt": 130200, "credits_with_2_yrs_experience": 60, "credits_with_3_yrs_experience": 54, "credits_with_4_yrs_experience": 48 },
+          { "academic_background": "B.A./B.Sc./B.S.S. (Hons.)/M.A./M.S.S.", "fresh_graduate_credits": 60, "total_fees_bdt": 120000, "credits_with_2_yrs_experience": 54, "credits_with_3_yrs_experience": 48, "credits_with_4_yrs_experience": 42 },
+          { "academic_background": "B.Sc. Engr./B.Com. (Hons.)/M.Sc.", "fresh_graduate_credits": 54, "total_fees_bdt": 109800, "credits_with_2_yrs_experience": 48, "credits_with_3_yrs_experience": 42, "credits_with_4_yrs_experience": null },
+          { "academic_background": "M.Com.", "fresh_graduate_credits": 48, "total_fees_bdt": 99600, "credits_with_2_yrs_experience": 42, "credits_with_3_yrs_experience": null, "credits_with_4_yrs_experience": null },
+          { "academic_background": "M.Com. with Hons.", "fresh_graduate_credits": 42, "total_fees_bdt": 89400, "credits_with_2_yrs_experience": null, "credits_with_3_yrs_experience": null, "credits_with_4_yrs_experience": null },
+          { "academic_background": "BBA", "fresh_graduate_credits": 42, "total_fees_bdt": 89400, "credits_with_2_yrs_experience": null, "credits_with_3_yrs_experience": null, "credits_with_4_yrs_experience": null }
+        ],
+        "note": "Total fees shown are for fresh graduates. Job experience must be business related and is counted from the result of the last degree; it reduces required credits. null = not applicable."
+      },
+      { "program": "Master of Laws (LL.M. Final)", "total_credit_hours": 36, "admission_fee_bdt": 18000, "tuition_fee_per_credit_bdt": 1500, "total_fees_bdt": 72000 },
+      { "program": "M.A. in English (Final)", "total_credit_hours": 42, "admission_fee_bdt": 18000, "tuition_fee_per_credit_bdt": 1300, "total_fees_bdt": 72600 },
+      { "program": "M.S.S. in Broadcast Print Journalism (Final)", "total_credit_hours": 30, "admission_fee_bdt": 18000, "tuition_fee_per_credit_bdt": 1300, "total_fees_bdt": 57000 },
+      {
+        "program": "M.Sc. in Computer Science and Engineering (MCSE)",
+        "admission_fee_bdt": 18000,
+        "tuition_fee_per_credit_bdt": 1500,
+        "options_by_background": [
+          { "academic_background": "B.Sc. in CSE/CSI/CS (4 years)", "track": "Thesis or Project", "total_credits": 36, "total_fees_bdt": 72000 },
+          { "academic_background": "B.Sc. in CSE/CSI/CS (3 years) / EEE / Applied Physics (4 years)", "track": "Thesis or Project", "prerequisite_credits": 12, "total_credits": 48, "total_fees_bdt": 90000 },
+          { "academic_background": "Applied Physics (3 years) / M.Sc. (Physics / Math)", "track": "Thesis or Project", "prerequisite_credits": 18, "total_credits": 54, "total_fees_bdt": 99000 },
+          { "academic_background": "B.Sc. (Pass with Math Physics)", "track": "Project", "prerequisite_credits": 30, "total_credits": 66, "total_fees_bdt": 117000 }
+        ]
+      }
+    ],
+    "masters_fees_not_available": ["Executive MBA", "LL.M. (Preliminary & Final)", "M.A. in English (Preliminary & Final)", "M.S.S. in Economics"],
+    "trimester_fee_international_students_bdt": 5000,
     "per_semester_fee": null,
     "per_year_fee": null,
-    "hostel_and_other_fees": null,
-    "payment_policy_and_installments": null,
-    "masters_fees": null
+    "hostel_and_other_fees": null
+  },
+  "payment_policy": {
+    "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/59/Page/admission-payment-policy",
+    "last_verified": "2026-11-24",
+    "rules": [
+      "Admission fee is due at the time of admission and is non-refundable.",
+      "50% of a trimester's tuition/course fee is due 10 days before the mid-term examination; the remaining 50% is due 10 days before the final examination.",
+      "Late payment is allowed with a late fee according to university policy.",
+      "Tuition and other dues must be paid before collecting admit cards for mid-term and final exams.",
+      "The university may cancel the enrollment/admission of any student failing to meet financial obligations."
+    ],
+    "payment_channels": {
+      "banks": [
+        { "bank": "Dutch Bangla Bank Ltd.", "account_no": "129.110.15436", "branch": "O R Nizam Road Branch, Chattogram" },
+        { "bank": "Exim Bank Ltd.", "account_no": "069 111000 16098", "branch": "Khulshi Branch, Chattogram" }
+      ],
+      "bank_note": "Mention the student's ID number on the deposit slip.",
+      "rocket": { "biller_id": "2994", "how": "Rocket app > Bill Pay > search biller 2994 > Port City International University > enter Student ID as Bill No and the amount" },
+      "bkash": { "merchant_number": "01881075020", "how": "bKash app > Make Payment > enter merchant number, amount, Student ID as reference, then PIN; or dial *247# > 3 (Payment) > merchant number > amount > Student ID > 1 > PIN" }
+    },
+    "payment_query_contacts": [
+      { "name": "S. M. Kamruzzaman Shaheen", "phone": "01881075020", "for": "bKash payment queries" },
+      { "name": "Abu Hena Mostofa Kamal", "phone": "01881075027" },
+      { "name": "Osman Gani", "phone": "01911061132" },
+      { "name": "Md. Jawadur Rahman", "phone": "01701221029" },
+      { "name": "Azizul Mannan Mozumder", "phone": "01839716021" },
+      { "name": "Hasnat Shakir Alam", "phone": "01833052474" },
+      { "name": "Md. Uzzal Hossain", "phone": "01982645301" }
+    ]
   },
   "admission_dates": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
     "last_verified": "2026-11-24",
-    "application_deadline": null,
-    "admission_test_date": null,
-    "result_date": null
+    "intake": "Class start January 2027",
+    "admission_starts": "2026-09-14",
+    "bachelors": {
+      "direct_admission_last_date": "2026-12-09",
+      "last_date_to_apply_for_written_test": "2026-12-10",
+      "written_test": "2026-12-12, 12:30 pm - 1:30 pm",
+      "result_publication": "2026-12-13, 12:00 pm",
+      "admission_period": "2026-12-13 to 2026-12-15",
+      "course_registration": "2026-12-13 to 2026-12-15",
+      "orientation": null
+    },
+    "masters": {
+      "direct_admission_last_date": "2026-12-09",
+      "orientation": null
+    }
   },
   "scholarships": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/37/Page/admission-scolarship-and-financial-assistance",
     "last_verified": "2026-11-24",
-    "summary": "PCIU has an official scholarship and tuition waiver page, but its amounts and percentages were not verified for this dataset. Students seeking a scholarship based on admission test performance may sit for the written test.",
-    "amounts_or_percentages": null
+    "items": [
+      "Scholarships are awarded to 6% of total students: 3% for children of freedom fighters and 3% for meritorious and poor students from remote underdeveloped areas.",
+      "Scholarships are based on S.S.C. and H.S.C. results.",
+      "Bachelor's: first-trimester scholarship is based on admission test performance; later trimesters are based on trimester results. Master's: based on trimester results.",
+      "Need-based financial aid is available for poor students."
+    ],
+    "amounts_or_percentages_of_waiver": null
   },
   "admission_procedure": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
     "last_verified": "2026-11-24",
     "steps": [
       { "en": "Check that you meet the minimum academic requirement for your program.", "bn": "আপনার প্রোগ্রামের ন্যূনতম শিক্ষাগত যোগ্যতা পূরণ করছেন কি না যাচাই করুন।" },
       { "en": "Collect the admission form from the admission office (BDT 500) or apply online through the official portal.", "bn": "ভর্তি অফিস থেকে ভর্তি ফর্ম সংগ্রহ করুন (৫০০ টাকা) অথবা অফিসিয়াল পোর্টালে অনলাইনে আবেদন করুন।" },
-      { "en": "Combined SSC + HSC GPA 7.00 or above (8.00 or above for LL.B.): direct admission without the written test.", "bn": "এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি (এলএল.বি-র জন্য ৮.০০ বা তার বেশি): লিখিত পরীক্ষা ছাড়াই সরাসরি ভর্তি।" },
-      { "en": "Combined GPA below 7.00 (but meeting the minimum): sit for the written test and viva voce.", "bn": "মিলিত জিপিএ ৭.০০-এর কম (কিন্তু ন্যূনতম যোগ্যতা আছে): লিখিত পরীক্ষা ও ভাইভা দিতে হবে।" },
-      { "en": "Direct-admission applicants may still need to appear at a viva voce and attend an English placement test.", "bn": "সরাসরি ভর্তির আবেদনকারীদেরও ভাইভা ও ইংরেজি প্লেসমেন্ট টেস্টে অংশ নিতে হতে পারে।" },
-      { "en": "Pay the non-refundable admission fee of BDT 18,000 and complete admission at the office.", "bn": "অফেরতযোগ্য ১৮,০০০ টাকা ভর্তি ফি পরিশোধ করে অফিসে ভর্তি সম্পন্ন করুন।" }
+      { "en": "Submit the form with attested photocopies of SSC & HSC mark sheets and certificates, and your NID / birth certificate / passport.", "bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি এবং এনআইডি / জন্ম সনদ / পাসপোর্টসহ ফর্ম জমা দিন।" },
+      { "en": "Combined SSC + HSC GPA 7.00 or above (8.00 for LL.B.): direct admission without the written test (viva voce may be required). Last date: 9 December 2026.", "bn": "এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি (এলএল.বি-র জন্য ৮.০০): লিখিত পরীক্ষা ছাড়াই সরাসরি ভর্তি (ভাইভা লাগতে পারে)। শেষ তারিখ: ৯ ডিসেম্বর ২০২৬।" },
+      { "en": "Combined GPA below 7.00: apply for the written test by 10 December 2026. Written test: 12 December 2026, 12:30-1:30 pm. Result: 13 December 2026, 12:00 pm.", "bn": "মিলিত জিপিএ ৭.০০-এর কম হলে: ১০ ডিসেম্বর ২০২৬-এর মধ্যে লিখিত পরীক্ষার জন্য আবেদন করুন। লিখিত পরীক্ষা: ১২ ডিসেম্বর ২০২৬, দুপুর ১২:৩০-১:৩০। ফলাফল: ১৩ ডিসেম্বর ২০২৬, দুপুর ১২:০০।" },
+      { "en": "Admission and course registration: 13-15 December 2026. Show original certificates, give 4 passport-size and 3 stamp-size photos, and pay the non-refundable BDT 18,000 admission fee.", "bn": "ভর্তি ও কোর্স রেজিস্ট্রেশন: ১৩-১৫ ডিসেম্বর ২০২৬। মূল সার্টিফিকেট দেখান, ৪ কপি পাসপোর্ট ও ৩ কপি স্ট্যাম্প সাইজ ছবি দিন এবং অফেরতযোগ্য ১৮,০০০ টাকা ভর্তি ফি পরিশোধ করুন।" },
+      { "en": "Classes start in January 2027. Orientation date will be announced.", "bn": "ক্লাস শুরু জানুয়ারি ২০২৭। ওরিয়েন্টেশনের তারিখ পরে জানানো হবে।" }
     ],
     "direct_admission": {
       "min_combined_gpa": 7.0,
       "min_combined_gpa_llb": 8.0,
-      "note": "Direct-admission applicants may still need to appear at a viva voce and attend an English placement test."
+      "note": "Written test is exempted; viva voce may be required."
     },
     "written_test_rule": "Applicants who meet the minimum requirement but have a combined GPA below 7.00 must take the written test and the viva voce.",
-    "scholarship_test_rule": "Students seeking scholarship based on admission test performance may sit for the written test.",
+    "scholarship_test_rule": "For bachelor's students, the first-trimester scholarship is based on admission test performance.",
+    "masters_direct_admission_programs": ["MBA (BBA graduates)", "Executive MBA", "LL.M. (Prel. & Final)", "LL.M. (Final)", "M.A. in English (Prel. & Final)", "M.A. in English (Final)", "M.S.S. in Broadcast & Print Journalism (Prel. & Final)", "M.S.S. in Broadcast & Print Journalism (Final)", "MCSE"],
     "online_admission_available": true
   },
   "required_documents": {
-    "source_url": "https://www.portcity.edu.bd",
+    "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/55/Page/admission-documents-required-for-admission",
     "last_verified": "2026-11-24",
-    "list": null
+    "bachelors": {
+      "at_form_submission": [
+        "Filled out application form",
+        "Attested photocopies of S.S.C. or equivalent marks sheet and certificate/testimonial",
+        "Attested photocopies of H.S.C. or equivalent marks sheet and certificate/testimonial",
+        "Attested photocopies of National ID or Birth Certificate or Passport"
+      ],
+      "at_admission": [
+        "Original marks sheet & certificate/testimonial of both S.S.C and H.S.C or equivalent must be shown",
+        "4 copies of passport-size attested and 3 copies of stamp-size color photographs"
+      ]
+    },
+    "masters": {
+      "at_form_submission": [
+        "Filled out application form",
+        "Attested photocopies of S.S.C., H.S.C., Graduation (and Master's, if applicable) marks sheets and certificates/testimonials",
+        "Attested photocopies of National ID or Birth Certificate or Passport",
+        "Job experience certificate (if necessary)"
+      ],
+      "at_admission": [
+        "Original marks sheet & certificate/testimonial of all degrees must be shown",
+        "Attested photocopies of marks sheet and certificate/testimonial of S.S.C. or equivalent",
+        "4 copies of passport-size attested and 3 copies of stamp-size color photographs",
+        "Student must be present physically at the time of admission"
+      ]
+    },
+    "note": "Failure to submit any required document or photograph with the application form may be treated as an incomplete form and can result in cancellation of the application/admission."
   },
   "faqs": {
     "source_url": "https://www.portcity.edu.bd",
     "last_verified": "2026-11-24",
     "items": [
-      { "q_en": "How much is the admission fee?", "a_en": "The admission fee is BDT 18,000 for every bachelor program and it is non-refundable.", "q_bn": "ভর্তি ফি কত?", "a_bn": "সব ব্যাচেলর প্রোগ্রামের ভর্তি ফি ১৮,০০০ টাকা এবং এটি ফেরতযোগ্য নয়।" },
-      { "q_en": "Can I get admitted without a written test?", "a_en": "Yes, if your combined SSC + HSC GPA is 7.00 or above (8.00 or above for LL.B.). You may still need a viva voce and an English placement test.", "q_bn": "লিখিত পরীক্ষা ছাড়া কি ভর্তি হওয়া যায়?", "a_bn": "হ্যাঁ, যদি এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি হয় (এলএল.বি-র জন্য ৮.০০)। তবে ভাইভা ও ইংরেজি প্লেসমেন্ট টেস্ট দিতে হতে পারে।" },
-      { "q_en": "Can I apply online?", "a_en": "Yes. Online admission is available through the official PCIU admission portal.", "q_bn": "অনলাইনে কি আবেদন করা যায়?", "a_bn": "হ্যাঁ। পিসিআইইউ-এর অফিসিয়াল অনলাইন পোর্টালের মাধ্যমে আবেদন করা যায়।" },
-      { "q_en": "What is the last date to apply?", "a_en": "The current deadline is not available in our official data. Please contact the PCIU Admission Office or check portcity.edu.bd.", "q_bn": "আবেদনের শেষ তারিখ কবে?", "a_bn": "বর্তমান শেষ তারিখ আমাদের অফিসিয়াল ডেটায় নেই। অনুগ্রহ করে পিসিআইইউ ভর্তি অফিসে যোগাযোগ করুন বা portcity.edu.bd দেখুন।" },
-      { "q_en": "Where is PCIU located?", "a_en": "7-14, Nikunja Housing Society, South Khulshi, Chattogram.", "q_bn": "পিসিআইইউ কোথায় অবস্থিত?", "a_bn": "৭-১৪, নিকুঞ্জ হাউজিং সোসাইটি, দক্ষিণ খুলশী, চট্টগ্রাম।" }
+      { "q_en": "How much is the admission fee?", "a_en": "The admission fee is BDT 18,000 for every program and it is non-refundable. The admission form costs BDT 500.", "q_bn": "ভর্তি ফি কত?", "a_bn": "সব প্রোগ্রামের ভর্তি ফি ১৮,০০০ টাকা এবং এটি ফেরতযোগ্য নয়। ভর্তি ফর্মের দাম ৫০০ টাকা।" },
+      { "q_en": "What is the last date to apply?", "a_en": "For the January 2027 intake: direct admission by 9 December 2026; apply for the written test by 10 December 2026. The written test is on 12 December 2026.", "q_bn": "আবেদনের শেষ তারিখ কবে?", "a_bn": "জানুয়ারি ২০২৭ ইনটেকের জন্য: সরাসরি ভর্তির শেষ তারিখ ৯ ডিসেম্বর ২০২৬; লিখিত পরীক্ষার আবেদনের শেষ তারিখ ১০ ডিসেম্বর ২০২৬। লিখিত পরীক্ষা ১২ ডিসেম্বর ২০২৬।" },
+      { "q_en": "Can I get admitted without a written test?", "a_en": "Yes, if your combined SSC + HSC GPA is 7.00 or above (8.00 or above for LL.B.). A viva voce may still be required.", "q_bn": "লিখিত পরীক্ষা ছাড়া কি ভর্তি হওয়া যায়?", "a_bn": "হ্যাঁ, যদি এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি হয় (এলএল.বি-র জন্য ৮.০০)। তবে ভাইভা লাগতে পারে।" },
+      { "q_en": "What documents do I need?", "a_en": "Attested photocopies of SSC and HSC mark sheets and certificates, NID / birth certificate / passport, and at admission the originals plus 4 passport-size and 3 stamp-size photos.", "q_bn": "কী কী কাগজপত্র লাগবে?", "a_bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি, এনআইডি / জন্ম সনদ / পাসপোর্ট; আর ভর্তির সময় মূল কাগজ এবং ৪ কপি পাসপোর্ট ও ৩ কপি স্ট্যাম্প সাইজ ছবি।" },
+      { "q_en": "Are there scholarships?", "a_en": "Yes. 6% of students receive scholarships (3% for children of freedom fighters, 3% for meritorious and poor students from remote areas), based on SSC/HSC results and admission test or trimester results. Need-based aid is also available.", "q_bn": "বৃত্তি আছে কি?", "a_bn": "হ্যাঁ। মোট শিক্ষার্থীর ৬% বৃত্তি পায় (৩% মুক্তিযোদ্ধার সন্তান, ৩% প্রত্যন্ত অঞ্চলের মেধাবী ও দরিদ্র শিক্ষার্থী), এসএসসি/এইচএসসি ও ভর্তি পরীক্ষা বা ট্রাইমেস্টার ফলাফলের ভিত্তিতে। দরিদ্র শিক্ষার্থীদের জন্য আর্থিক সহায়তাও আছে।" },
+      { "q_en": "How can I pay fees?", "a_en": "By bank deposit (Dutch Bangla Bank or Exim Bank, with your Student ID on the slip), Rocket (biller 2994) or bKash (merchant 01881075020).", "q_bn": "কীভাবে ফি দেওয়া যায়?", "a_bn": "ব্যাংকে জমা (ডাচ-বাংলা বা এক্সিম ব্যাংক, স্লিপে স্টুডেন্ট আইডি লিখে), রকেট (বিলার ২৯৯৪) বা বিকাশ (মার্চেন্ট ০১৮৮১০৭৫০২০)।" }
     ]
   }
 }

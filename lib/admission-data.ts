@@ -26,6 +26,7 @@ type SectionKey =
   | "departments"
   | "eligibility"
   | "tuition_fees"
+  | "payment_policy"
   | "admission_dates"
   | "scholarships"
   | "admission_procedure"
@@ -34,10 +35,11 @@ type SectionKey =
 
 const TOPIC_KEYWORDS: Record<SectionKey, string[]> = {
   university: ["pciu", "university", "address", "location", "where", "contact", "phone", "email", "website", "office", "ঠিকানা", "কোথায়", "যোগাযোগ", "ফোন", "ইমেইল", "ওয়েবসাইট", "অফিস", "বিশ্ববিদ্যালয়", "ভার্সিটি"],
-  departments: ["department", "program", "subject", "course", "offer", "available", "master", "mba", "বিভাগ", "প্রোগ্রাম", "বিষয়", "সাবজেক্ট", "ডিপার্টমেন্ট", "কোর্স", "মাস্টার্স", "কী কী"],
+  departments: ["department", "program", "subject", "course", "offer", "available", "master", "mba", "ll.m", "llm", "mcse", "m.sc", "m.a.", "m.s.s", "postgrad", "বিভাগ", "প্রোগ্রাম", "বিষয়", "সাবজেক্ট", "ডিপার্টমেন্ট", "কোর্স", "মাস্টার্স", "এমবিএ", "কী কী"],
   eligibility: ["eligib", "gpa", "requirement", "qualif", "ssc", "hsc", "o level", "o-level", "a level", "a-level", "diploma", "science", "commerce", "arts", "result", "can i", "যোগ্যতা", "জিপিএ", "এসএসসি", "এইচএসসি", "রেজাল্ট", "ফলাফল", "ডিপ্লোমা", "বিজ্ঞান", "পারব", "পারবো"],
-  tuition_fees: ["fee", "cost", "tuition", "credit", "price", "money", "taka", "bdt", "installment", "payment", "semester", "year", "hostel", "expens", "খরচ", "ফি", "টাকা", "টিউশন", "ক্রেডিট", "কিস্তি", "সেমিস্টার", "বছর", "হোস্টেল", "পেমেন্ট"],
-  admission_dates: ["deadline", "date", "last day", "when", "schedule", "start", "exam date", "শেষ তারিখ", "তারিখ", "কবে", "সময়সীমা", "ডেডলাইন", "কখন"],
+  tuition_fees: ["fee", "cost", "tuition", "credit", "price", "money", "taka", "bdt", "semester", "trimester", "year", "hostel", "expens", "international", "খরচ", "ফি", "টাকা", "টিউশন", "ক্রেডিট", "সেমিস্টার", "ট্রাইমেস্টার", "বছর", "হোস্টেল"],
+  payment_policy: ["pay", "installment", "bkash", "rocket", "bank", "deposit", "late fee", "due", "admit card", "পেমেন্ট", "পরিশোধ", "কিস্তি", "বিকাশ", "রকেট", "ব্যাংক", "জমা", "বকেয়া", "লেট ফি"],
+  admission_dates: ["deadline", "date", "last day", "when", "schedule", "start", "exam", "test", "result", "orientation", "registration", "intake", "শেষ তারিখ", "তারিখ", "কবে", "সময়সীমা", "ডেডলাইন", "কখন", "পরীক্ষা", "ফলাফল", "ক্লাস শুরু", "রেজিস্ট্রেশন"],
   scholarships: ["scholarship", "waiver", "discount", "free", "financial", "বৃত্তি", "স্কলারশিপ", "ওয়েভার", "ছাড়", "মওকুফ"],
   admission_procedure: ["apply", "application", "procedure", "process", "how to", "step", "admission test", "written", "viva", "form", "online", "portal", "direct", "আবেদন", "প্রক্রিয়া", "কিভাবে", "কীভাবে", "ভর্তি পরীক্ষা", "লিখিত", "ভাইভা", "ফর্ম", "অনলাইন", "সরাসরি", "নিয়ম"],
   required_documents: ["document", "paper", "certificate", "transcript", "photo", "marksheet", "কাগজ", "ডকুমেন্ট", "সার্টিফিকেট", "সনদ", "ছবি", "মার্কশিট"],

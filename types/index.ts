@@ -38,4 +38,6 @@ export interface ProgramEligibility {
   min_ssc_gpa: number | null;
   min_hsc_gpa: number | null;
   published_text: string | null;
+  category?: string | null;
+  note?: string;
 }
