@@ -1,5 +1,5 @@
 /* UnishohayAI service worker: offline support for pages and static assets. The chat API is never cached. */
-const CACHE = "unishohay-v2";
+const CACHE = "unishohay-v3";
 const PRECACHE = ["/", "/chat", "/admission-guide", "/tools", "/offline.html", "/images/logo.png", "/images/logo-mark.png", "/icons/icon-192.png"];
 
 self.addEventListener("install", (event) => {

@@ -7,14 +7,15 @@ export function LogoMark({ size = 40 }: { size?: number }) {
 }
 
 /** Full brand logo with mascot, wordmark and tagline */
-export function LogoFull({ width = 260, className = "" }: { width?: number; className?: string }) {
+export function LogoFull({ width = 260, className = "", priority = false }: { width?: number; className?: string; priority?: boolean }) {
   return (
     <Image
       src="/images/logo.png"
       alt="UnishohayAI - Your University Assistant"
       width={width}
       height={Math.round((width * 756) / 900)}
-      priority
+      sizes={`${width}px`}
+      priority={priority}
       className={className}
     />
   );

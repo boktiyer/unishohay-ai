@@ -9,28 +9,140 @@
     "type": "Private university",
     "approval": "UGC & Govt. Approved",
     "description": "UGC and Government approved private university at Khulshi, Chattogram, Bangladesh, in the heart of the hill city.",
-    "levels_offered": ["Undergraduate", "Postgraduate"],
+    "levels_offered": [
+      "Undergraduate",
+      "Postgraduate"
+    ],
     "address": "7-14, Nikunja Housing Society, South Khulshi, Chattogram",
     "website": "https://www.portcity.edu.bd",
     "online_admission_portal": "http://119.18.149.45/PCIUOnlineAdmission",
     "facebook": "https://www.facebook.com/Port-City-International-University-492646557443546/",
     "phone": null,
     "email": null,
-    "admission_office_hours": null
+    "admission_office_hours": null,
+    "about": "Since its establishment, PCIU has focused on helping students face the challenges of an ever-advancing world. It provides a supportive environment for undergraduate and postgraduate students, with dedicated academics guiding their research and academic endeavors, and aims to maintain a global standard in quality education and research.",
+    "vision_mission": "PCIU is described as a new-generation private university committed to excellence in higher education and research. Its vision is to become a global-standard center of excellence through education, research and service, and its mission is transformative education that changes society."
   },
   "departments": {
     "source_url": "https://portcity.edu.bd/HomePage/DepatmentDetails/29/Portfolio/bachelor-s-degree-programs",
     "last_verified": "2026-11-24",
     "programs": [
-      { "id": "bba", "name": "BBA (Bachelor of Business Administration)", "name_bn": "বিবিএ (ব্যাচেলর অব বিজনেস অ্যাডমিনিস্ট্রেশন)", "level": "Bachelor", "keywords": ["bba", "business", "বিবিএ", "বিজনেস", "ব্যবসায়"] },
-      { "id": "llb", "name": "LL.B. (Hons.)", "name_bn": "এলএল.বি (অনার্স) - আইন", "level": "Bachelor", "keywords": ["llb", "ll.b", "law", "আইন", "এলএলবি", "এল এল বি"] },
-      { "id": "english", "name": "B.A. (Hons.) in English", "name_bn": "বি.এ (অনার্স) ইংরেজি", "level": "Bachelor", "keywords": ["b.a", "english", "ইংরেজি", "ইংলিশ"] },
-      { "id": "journalism", "name": "B.S.S. (Hons.) in Broadcast Print Journalism", "name_bn": "বি.এস.এস (অনার্স) ব্রডকাস্ট ও প্রিন্ট জার্নালিজম", "level": "Bachelor", "keywords": ["journalism", "media", "broadcast", "bss", "সাংবাদিকতা", "জার্নালিজম", "মিডিয়া"] },
-      { "id": "cse", "name": "B.Sc. in Computer Science and Engineering (CSE)", "name_bn": "বি.এসসি ইন কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং (সিএসই)", "level": "Bachelor", "keywords": ["cse", "computer", "software", "programming", "কম্পিউটার", "সিএসই", "সফটওয়্যার"] },
-      { "id": "civil", "name": "B.Sc. in Civil Engineering", "name_bn": "বি.এসসি ইন সিভিল ইঞ্জিনিয়ারিং", "level": "Bachelor", "keywords": ["civil", "সিভিল"] },
-      { "id": "eee", "name": "B.Sc. in Electrical and Electronic Engineering (EEE)", "name_bn": "বি.এসসি ইন ইলেকট্রিক্যাল অ্যান্ড ইলেকট্রনিক ইঞ্জিনিয়ারিং (ইইই)", "level": "Bachelor", "keywords": ["eee", "electrical", "electronic", "ইইই", "ইলেকট্রিক্যাল", "ইলেকট্রনিক"] },
-      { "id": "textile", "name": "B.Sc. in Textile Engineering", "name_bn": "বি.এসসি ইন টেক্সটাইল ইঞ্জিনিয়ারিং", "level": "Bachelor", "keywords": ["textile", "টেক্সটাইল", "বস্ত্র"] },
-      { "id": "fashion", "name": "B.Sc. in Fashion Design and Technology", "name_bn": "বি.এসসি ইন ফ্যাশন ডিজাইন অ্যান্ড টেকনোলজি", "level": "Bachelor", "keywords": ["fashion", "design", "ফ্যাশন", "ডিজাইন"] }
+      {
+        "id": "bba",
+        "name": "BBA (Bachelor of Business Administration)",
+        "name_bn": "বিবিএ (ব্যাচেলর অব বিজনেস অ্যাডমিনিস্ট্রেশন)",
+        "level": "Bachelor",
+        "keywords": [
+          "bba",
+          "business",
+          "বিবিএ",
+          "বিজনেস",
+          "ব্যবসায়"
+        ]
+      },
+      {
+        "id": "llb",
+        "name": "LL.B. (Hons.)",
+        "name_bn": "এলএল.বি (অনার্স) - আইন",
+        "level": "Bachelor",
+        "keywords": [
+          "llb",
+          "ll.b",
+          "law",
+          "আইন",
+          "এলএলবি",
+          "এল এল বি"
+        ]
+      },
+      {
+        "id": "english",
+        "name": "B.A. (Hons.) in English",
+        "name_bn": "বি.এ (অনার্স) ইংরেজি",
+        "level": "Bachelor",
+        "keywords": [
+          "b.a",
+          "english",
+          "ইংরেজি",
+          "ইংলিশ"
+        ]
+      },
+      {
+        "id": "journalism",
+        "name": "B.S.S. (Hons.) in Broadcast Print Journalism",
+        "name_bn": "বি.এস.এস (অনার্স) ব্রডকাস্ট ও প্রিন্ট জার্নালিজম",
+        "level": "Bachelor",
+        "keywords": [
+          "journalism",
+          "media",
+          "broadcast",
+          "bss",
+          "সাংবাদিকতা",
+          "জার্নালিজম",
+          "মিডিয়া"
+        ]
+      },
+      {
+        "id": "cse",
+        "name": "B.Sc. in Computer Science and Engineering (CSE)",
+        "name_bn": "বি.এসসি ইন কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং (সিএসই)",
+        "level": "Bachelor",
+        "keywords": [
+          "cse",
+          "computer",
+          "software",
+          "programming",
+          "কম্পিউটার",
+          "সিএসই",
+          "সফটওয়্যার"
+        ]
+      },
+      {
+        "id": "civil",
+        "name": "B.Sc. in Civil Engineering",
+        "name_bn": "বি.এসসি ইন সিভিল ইঞ্জিনিয়ারিং",
+        "level": "Bachelor",
+        "keywords": [
+          "civil",
+          "সিভিল"
+        ]
+      },
+      {
+        "id": "eee",
+        "name": "B.Sc. in Electrical and Electronic Engineering (EEE)",
+        "name_bn": "বি.এসসি ইন ইলেকট্রিক্যাল অ্যান্ড ইলেকট্রনিক ইঞ্জিনিয়ারিং (ইইই)",
+        "level": "Bachelor",
+        "keywords": [
+          "eee",
+          "electrical",
+          "electronic",
+          "ইইই",
+          "ইলেকট্রিক্যাল",
+          "ইলেকট্রনিক"
+        ]
+      },
+      {
+        "id": "textile",
+        "name": "B.Sc. in Textile Engineering",
+        "name_bn": "বি.এসসি ইন টেক্সটাইল ইঞ্জিনিয়ারিং",
+        "level": "Bachelor",
+        "keywords": [
+          "textile",
+          "টেক্সটাইল",
+          "বস্ত্র"
+        ]
+      },
+      {
+        "id": "fashion",
+        "name": "B.Sc. in Fashion Design and Technology",
+        "name_bn": "বি.এসসি ইন ফ্যাশন ডিজাইন অ্যান্ড টেকনোলজি",
+        "level": "Bachelor",
+        "keywords": [
+          "fashion",
+          "design",
+          "ফ্যাশন",
+          "ডিজাইন"
+        ]
+      }
     ],
     "masters_programs": [
       "MBA (Master of Business Administration)",
@@ -53,15 +165,61 @@
       "science_and_engineering": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent. O-Level/A-Level alternative: minimum 5 subjects in O-Level and 2 in A-Level, with grade B in 4 subjects and C in 3 subjects from science group."
     },
     "by_program": {
-      "bba": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
-      "llb": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
-      "english": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
-      "journalism": { "category": "arts_law_social_science_business", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent" },
-      "cse": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "civil": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "eee": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "textile": { "category": "science_and_engineering", "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent" },
-      "fashion": { "category": null, "min_ssc_gpa": 2.5, "min_hsc_gpa": 2.5, "published_text": null, "note": "Both published categories require minimum GPA 2.50 in SSC and HSC. Whether a science background is required for this program is not confirmed." }
+      "bba": {
+        "category": "arts_law_social_science_business",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent"
+      },
+      "llb": {
+        "category": "arts_law_social_science_business",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent"
+      },
+      "english": {
+        "category": "arts_law_social_science_business",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent"
+      },
+      "journalism": {
+        "category": "arts_law_social_science_business",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C or equivalent"
+      },
+      "cse": {
+        "category": "science_and_engineering",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent"
+      },
+      "civil": {
+        "category": "science_and_engineering",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent"
+      },
+      "eee": {
+        "category": "science_and_engineering",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent"
+      },
+      "textile": {
+        "category": "science_and_engineering",
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": "Minimum GPA 2.50 in both S.S.C and H.S.C with science background or equivalent"
+      },
+      "fashion": {
+        "category": null,
+        "min_ssc_gpa": 2.5,
+        "min_hsc_gpa": 2.5,
+        "published_text": null,
+        "note": "Both published categories require minimum GPA 2.50 in SSC and HSC. Whether a science background is required for this program is not confirmed."
+      }
     },
     "o_a_level": "Minimum 5 subjects in O-Level and 2 subjects in A-Level, with minimum grade B in 4 subjects and C in 3 subjects (from the science group for science and engineering programs).",
     "special_provision": "6% of students receive scholarships: 3% for children of freedom fighters and 3% for meritorious and poor students from remote underdeveloped areas.",
@@ -91,15 +249,60 @@
     "admission_form_price": 500,
     "notes": "Total fees include the admission fee (BDT 18,000, non-refundable, due at admission). Where two totals are shown, the main total is for H.S.C. background and the other for diploma background. PCIU uses trimesters; a per-trimester or per-year fee breakdown is not published and must not be calculated.",
     "by_program": {
-      "bba": { "total_credits": 130, "tuition_per_credit": 2300, "total_fee_hsc": 317000, "total_fee_diploma": null },
-      "llb": { "total_credits": 133, "tuition_per_credit": 2600, "total_fee_hsc": 363800, "total_fee_diploma": null },
-      "english": { "total_credits": 132, "tuition_per_credit": 1900, "total_fee_hsc": 268800, "total_fee_diploma": null },
-      "journalism": { "total_credits": 136, "tuition_per_credit": 1300, "total_fee_hsc": 194800, "total_fee_diploma": null },
-      "cse": { "total_credits": 156, "tuition_per_credit": 2300, "total_fee_hsc": 376800, "total_fee_diploma": 342300 },
-      "civil": { "total_credits": 159, "tuition_per_credit": 2100, "total_fee_hsc": 351900, "total_fee_diploma": 321975 },
-      "eee": { "total_credits": 157, "tuition_per_credit": 2200, "total_fee_hsc": 363400, "total_fee_diploma": 330400 },
-      "textile": { "total_credits": 159, "tuition_per_credit": 2100, "total_fee_hsc": 351900, "total_fee_diploma": 320400 },
-      "fashion": { "total_credits": 145, "tuition_per_credit": 1800, "total_fee_hsc": 279000, "total_fee_diploma": null }
+      "bba": {
+        "total_credits": 130,
+        "tuition_per_credit": 2300,
+        "total_fee_hsc": 317000,
+        "total_fee_diploma": null
+      },
+      "llb": {
+        "total_credits": 133,
+        "tuition_per_credit": 2600,
+        "total_fee_hsc": 363800,
+        "total_fee_diploma": null
+      },
+      "english": {
+        "total_credits": 132,
+        "tuition_per_credit": 1900,
+        "total_fee_hsc": 268800,
+        "total_fee_diploma": null
+      },
+      "journalism": {
+        "total_credits": 136,
+        "tuition_per_credit": 1300,
+        "total_fee_hsc": 194800,
+        "total_fee_diploma": null
+      },
+      "cse": {
+        "total_credits": 156,
+        "tuition_per_credit": 2300,
+        "total_fee_hsc": 376800,
+        "total_fee_diploma": 342300
+      },
+      "civil": {
+        "total_credits": 159,
+        "tuition_per_credit": 2100,
+        "total_fee_hsc": 351900,
+        "total_fee_diploma": 321975
+      },
+      "eee": {
+        "total_credits": 157,
+        "tuition_per_credit": 2200,
+        "total_fee_hsc": 363400,
+        "total_fee_diploma": 330400
+      },
+      "textile": {
+        "total_credits": 159,
+        "tuition_per_credit": 2100,
+        "total_fee_hsc": 351900,
+        "total_fee_diploma": 320400
+      },
+      "fashion": {
+        "total_credits": 145,
+        "tuition_per_credit": 1800,
+        "total_fee_hsc": 279000,
+        "total_fee_diploma": null
+      }
     },
     "masters": [
       {
@@ -108,31 +311,119 @@
         "tuition_fee_per_credit_bdt": 1700,
         "base_credit_hours": 42,
         "credit_hours_and_fees_by_background": [
-          { "academic_background": "B.A., B.Sc., B.S.S. (Pass)", "fresh_graduate_credits": 66, "total_fees_bdt": 130200, "credits_with_2_yrs_experience": 60, "credits_with_3_yrs_experience": 54, "credits_with_4_yrs_experience": 48 },
-          { "academic_background": "B.A./B.Sc./B.S.S. (Hons.)/M.A./M.S.S.", "fresh_graduate_credits": 60, "total_fees_bdt": 120000, "credits_with_2_yrs_experience": 54, "credits_with_3_yrs_experience": 48, "credits_with_4_yrs_experience": 42 },
-          { "academic_background": "B.Sc. Engr./B.Com. (Hons.)/M.Sc.", "fresh_graduate_credits": 54, "total_fees_bdt": 109800, "credits_with_2_yrs_experience": 48, "credits_with_3_yrs_experience": 42, "credits_with_4_yrs_experience": null },
-          { "academic_background": "M.Com.", "fresh_graduate_credits": 48, "total_fees_bdt": 99600, "credits_with_2_yrs_experience": 42, "credits_with_3_yrs_experience": null, "credits_with_4_yrs_experience": null },
-          { "academic_background": "M.Com. with Hons.", "fresh_graduate_credits": 42, "total_fees_bdt": 89400, "credits_with_2_yrs_experience": null, "credits_with_3_yrs_experience": null, "credits_with_4_yrs_experience": null },
-          { "academic_background": "BBA", "fresh_graduate_credits": 42, "total_fees_bdt": 89400, "credits_with_2_yrs_experience": null, "credits_with_3_yrs_experience": null, "credits_with_4_yrs_experience": null }
+          {
+            "academic_background": "B.A., B.Sc., B.S.S. (Pass)",
+            "fresh_graduate_credits": 66,
+            "total_fees_bdt": 130200,
+            "credits_with_2_yrs_experience": 60,
+            "credits_with_3_yrs_experience": 54,
+            "credits_with_4_yrs_experience": 48
+          },
+          {
+            "academic_background": "B.A./B.Sc./B.S.S. (Hons.)/M.A./M.S.S.",
+            "fresh_graduate_credits": 60,
+            "total_fees_bdt": 120000,
+            "credits_with_2_yrs_experience": 54,
+            "credits_with_3_yrs_experience": 48,
+            "credits_with_4_yrs_experience": 42
+          },
+          {
+            "academic_background": "B.Sc. Engr./B.Com. (Hons.)/M.Sc.",
+            "fresh_graduate_credits": 54,
+            "total_fees_bdt": 109800,
+            "credits_with_2_yrs_experience": 48,
+            "credits_with_3_yrs_experience": 42,
+            "credits_with_4_yrs_experience": null
+          },
+          {
+            "academic_background": "M.Com.",
+            "fresh_graduate_credits": 48,
+            "total_fees_bdt": 99600,
+            "credits_with_2_yrs_experience": 42,
+            "credits_with_3_yrs_experience": null,
+            "credits_with_4_yrs_experience": null
+          },
+          {
+            "academic_background": "M.Com. with Hons.",
+            "fresh_graduate_credits": 42,
+            "total_fees_bdt": 89400,
+            "credits_with_2_yrs_experience": null,
+            "credits_with_3_yrs_experience": null,
+            "credits_with_4_yrs_experience": null
+          },
+          {
+            "academic_background": "BBA",
+            "fresh_graduate_credits": 42,
+            "total_fees_bdt": 89400,
+            "credits_with_2_yrs_experience": null,
+            "credits_with_3_yrs_experience": null,
+            "credits_with_4_yrs_experience": null
+          }
         ],
         "note": "Total fees shown are for fresh graduates. Job experience must be business related and is counted from the result of the last degree; it reduces required credits. null = not applicable."
       },
-      { "program": "Master of Laws (LL.M. Final)", "total_credit_hours": 36, "admission_fee_bdt": 18000, "tuition_fee_per_credit_bdt": 1500, "total_fees_bdt": 72000 },
-      { "program": "M.A. in English (Final)", "total_credit_hours": 42, "admission_fee_bdt": 18000, "tuition_fee_per_credit_bdt": 1300, "total_fees_bdt": 72600 },
-      { "program": "M.S.S. in Broadcast Print Journalism (Final)", "total_credit_hours": 30, "admission_fee_bdt": 18000, "tuition_fee_per_credit_bdt": 1300, "total_fees_bdt": 57000 },
+      {
+        "program": "Master of Laws (LL.M. Final)",
+        "total_credit_hours": 36,
+        "admission_fee_bdt": 18000,
+        "tuition_fee_per_credit_bdt": 1500,
+        "total_fees_bdt": 72000
+      },
+      {
+        "program": "M.A. in English (Final)",
+        "total_credit_hours": 42,
+        "admission_fee_bdt": 18000,
+        "tuition_fee_per_credit_bdt": 1300,
+        "total_fees_bdt": 72600
+      },
+      {
+        "program": "M.S.S. in Broadcast Print Journalism (Final)",
+        "total_credit_hours": 30,
+        "admission_fee_bdt": 18000,
+        "tuition_fee_per_credit_bdt": 1300,
+        "total_fees_bdt": 57000
+      },
       {
         "program": "M.Sc. in Computer Science and Engineering (MCSE)",
         "admission_fee_bdt": 18000,
         "tuition_fee_per_credit_bdt": 1500,
         "options_by_background": [
-          { "academic_background": "B.Sc. in CSE/CSI/CS (4 years)", "track": "Thesis or Project", "total_credits": 36, "total_fees_bdt": 72000 },
-          { "academic_background": "B.Sc. in CSE/CSI/CS (3 years) / EEE / Applied Physics (4 years)", "track": "Thesis or Project", "prerequisite_credits": 12, "total_credits": 48, "total_fees_bdt": 90000 },
-          { "academic_background": "Applied Physics (3 years) / M.Sc. (Physics / Math)", "track": "Thesis or Project", "prerequisite_credits": 18, "total_credits": 54, "total_fees_bdt": 99000 },
-          { "academic_background": "B.Sc. (Pass with Math Physics)", "track": "Project", "prerequisite_credits": 30, "total_credits": 66, "total_fees_bdt": 117000 }
+          {
+            "academic_background": "B.Sc. in CSE/CSI/CS (4 years)",
+            "track": "Thesis or Project",
+            "total_credits": 36,
+            "total_fees_bdt": 72000
+          },
+          {
+            "academic_background": "B.Sc. in CSE/CSI/CS (3 years) / EEE / Applied Physics (4 years)",
+            "track": "Thesis or Project",
+            "prerequisite_credits": 12,
+            "total_credits": 48,
+            "total_fees_bdt": 90000
+          },
+          {
+            "academic_background": "Applied Physics (3 years) / M.Sc. (Physics / Math)",
+            "track": "Thesis or Project",
+            "prerequisite_credits": 18,
+            "total_credits": 54,
+            "total_fees_bdt": 99000
+          },
+          {
+            "academic_background": "B.Sc. (Pass with Math Physics)",
+            "track": "Project",
+            "prerequisite_credits": 30,
+            "total_credits": 66,
+            "total_fees_bdt": 117000
+          }
         ]
       }
     ],
-    "masters_fees_not_available": ["Executive MBA", "LL.M. (Preliminary & Final)", "M.A. in English (Preliminary & Final)", "M.S.S. in Economics"],
+    "masters_fees_not_available": [
+      "Executive MBA",
+      "LL.M. (Preliminary & Final)",
+      "M.A. in English (Preliminary & Final)",
+      "M.S.S. in Economics"
+    ],
     "trimester_fee_international_students_bdt": 5000,
     "per_semester_fee": null,
     "per_year_fee": null,
@@ -150,21 +441,57 @@
     ],
     "payment_channels": {
       "banks": [
-        { "bank": "Dutch Bangla Bank Ltd.", "account_no": "129.110.15436", "branch": "O R Nizam Road Branch, Chattogram" },
-        { "bank": "Exim Bank Ltd.", "account_no": "069 111000 16098", "branch": "Khulshi Branch, Chattogram" }
+        {
+          "bank": "Dutch Bangla Bank Ltd.",
+          "account_no": "129.110.15436",
+          "branch": "O R Nizam Road Branch, Chattogram"
+        },
+        {
+          "bank": "Exim Bank Ltd.",
+          "account_no": "069 111000 16098",
+          "branch": "Khulshi Branch, Chattogram"
+        }
       ],
       "bank_note": "Mention the student's ID number on the deposit slip.",
-      "rocket": { "biller_id": "2994", "how": "Rocket app > Bill Pay > search biller 2994 > Port City International University > enter Student ID as Bill No and the amount" },
-      "bkash": { "merchant_number": "01881075020", "how": "bKash app > Make Payment > enter merchant number, amount, Student ID as reference, then PIN; or dial *247# > 3 (Payment) > merchant number > amount > Student ID > 1 > PIN" }
+      "rocket": {
+        "biller_id": "2994",
+        "how": "Rocket app > Bill Pay > search biller 2994 > Port City International University > enter Student ID as Bill No and the amount"
+      },
+      "bkash": {
+        "merchant_number": "01881075020",
+        "how": "bKash app > Make Payment > enter merchant number, amount, Student ID as reference, then PIN; or dial *247# > 3 (Payment) > merchant number > amount > Student ID > 1 > PIN"
+      }
     },
     "payment_query_contacts": [
-      { "name": "S. M. Kamruzzaman Shaheen", "phone": "01881075020", "for": "bKash payment queries" },
-      { "name": "Abu Hena Mostofa Kamal", "phone": "01881075027" },
-      { "name": "Osman Gani", "phone": "01911061132" },
-      { "name": "Md. Jawadur Rahman", "phone": "01701221029" },
-      { "name": "Azizul Mannan Mozumder", "phone": "01839716021" },
-      { "name": "Hasnat Shakir Alam", "phone": "01833052474" },
-      { "name": "Md. Uzzal Hossain", "phone": "01982645301" }
+      {
+        "name": "S. M. Kamruzzaman Shaheen",
+        "phone": "01881075020",
+        "for": "bKash payment queries"
+      },
+      {
+        "name": "Abu Hena Mostofa Kamal",
+        "phone": "01881075027"
+      },
+      {
+        "name": "Osman Gani",
+        "phone": "01911061132"
+      },
+      {
+        "name": "Md. Jawadur Rahman",
+        "phone": "01701221029"
+      },
+      {
+        "name": "Azizul Mannan Mozumder",
+        "phone": "01839716021"
+      },
+      {
+        "name": "Hasnat Shakir Alam",
+        "phone": "01833052474"
+      },
+      {
+        "name": "Md. Uzzal Hossain",
+        "phone": "01982645301"
+      }
     ]
   },
   "admission_dates": {
@@ -201,22 +528,53 @@
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
     "last_verified": "2026-11-24",
     "steps": [
-      { "en": "Check that you meet the minimum academic requirement for your program.", "bn": "আপনার প্রোগ্রামের ন্যূনতম শিক্ষাগত যোগ্যতা পূরণ করছেন কি না যাচাই করুন।" },
-      { "en": "Collect the admission form from the admission office (BDT 500) or apply online through the official portal.", "bn": "ভর্তি অফিস থেকে ভর্তি ফর্ম সংগ্রহ করুন (৫০০ টাকা) অথবা অফিসিয়াল পোর্টালে অনলাইনে আবেদন করুন।" },
-      { "en": "Submit the form with attested photocopies of SSC & HSC mark sheets and certificates, and your NID / birth certificate / passport.", "bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি এবং এনআইডি / জন্ম সনদ / পাসপোর্টসহ ফর্ম জমা দিন।" },
-      { "en": "Combined SSC + HSC GPA 7.00 or above (8.00 for LL.B.): direct admission without the written test (viva voce may be required). Last date: 9 December 2026.", "bn": "এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি (এলএল.বি-র জন্য ৮.০০): লিখিত পরীক্ষা ছাড়াই সরাসরি ভর্তি (ভাইভা লাগতে পারে)। শেষ তারিখ: ৯ ডিসেম্বর ২০২৬।" },
-      { "en": "Combined GPA below 7.00: apply for the written test by 10 December 2026. Written test: 12 December 2026, 12:30-1:30 pm. Result: 13 December 2026, 12:00 pm.", "bn": "মিলিত জিপিএ ৭.০০-এর কম হলে: ১০ ডিসেম্বর ২০২৬-এর মধ্যে লিখিত পরীক্ষার জন্য আবেদন করুন। লিখিত পরীক্ষা: ১২ ডিসেম্বর ২০২৬, দুপুর ১২:৩০-১:৩০। ফলাফল: ১৩ ডিসেম্বর ২০২৬, দুপুর ১২:০০।" },
-      { "en": "Admission and course registration: 13-15 December 2026. Show original certificates, give 4 passport-size and 3 stamp-size photos, and pay the non-refundable BDT 18,000 admission fee.", "bn": "ভর্তি ও কোর্স রেজিস্ট্রেশন: ১৩-১৫ ডিসেম্বর ২০২৬। মূল সার্টিফিকেট দেখান, ৪ কপি পাসপোর্ট ও ৩ কপি স্ট্যাম্প সাইজ ছবি দিন এবং অফেরতযোগ্য ১৮,০০০ টাকা ভর্তি ফি পরিশোধ করুন।" },
-      { "en": "Classes start in January 2027. Orientation date will be announced.", "bn": "ক্লাস শুরু জানুয়ারি ২০২৭। ওরিয়েন্টেশনের তারিখ পরে জানানো হবে।" }
+      {
+        "en": "Check that you meet the minimum academic requirement for your program.",
+        "bn": "আপনার প্রোগ্রামের ন্যূনতম শিক্ষাগত যোগ্যতা পূরণ করছেন কি না যাচাই করুন।"
+      },
+      {
+        "en": "Collect the admission form from the admission office (BDT 500) or apply online through the official portal.",
+        "bn": "ভর্তি অফিস থেকে ভর্তি ফর্ম সংগ্রহ করুন (৫০০ টাকা) অথবা অফিসিয়াল পোর্টালে অনলাইনে আবেদন করুন।"
+      },
+      {
+        "en": "Submit the form with attested photocopies of SSC & HSC mark sheets and certificates, and your NID / birth certificate / passport.",
+        "bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি এবং এনআইডি / জন্ম সনদ / পাসপোর্টসহ ফর্ম জমা দিন।"
+      },
+      {
+        "en": "Combined SSC + HSC GPA 7.00 or above (8.00 for LL.B.): direct admission without the written test (viva voce may be required). Last date: 9 December 2026.",
+        "bn": "এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি (এলএল.বি-র জন্য ৮.০০): লিখিত পরীক্ষা ছাড়াই সরাসরি ভর্তি (ভাইভা লাগতে পারে)। শেষ তারিখ: ৯ ডিসেম্বর ২০২৬।"
+      },
+      {
+        "en": "Combined GPA below 7.00: apply for the written test by 10 December 2026. Written test: 12 December 2026, 12:30-1:30 pm. Result: 13 December 2026, 12:00 pm.",
+        "bn": "মিলিত জিপিএ ৭.০০-এর কম হলে: ১০ ডিসেম্বর ২০২৬-এর মধ্যে লিখিত পরীক্ষার জন্য আবেদন করুন। লিখিত পরীক্ষা: ১২ ডিসেম্বর ২০২৬, দুপুর ১২:৩০-১:৩০। ফলাফল: ১৩ ডিসেম্বর ২০২৬, দুপুর ১২:০০।"
+      },
+      {
+        "en": "Admission and course registration: 13-15 December 2026. Show original certificates, give 4 passport-size and 3 stamp-size photos, and pay the non-refundable BDT 18,000 admission fee.",
+        "bn": "ভর্তি ও কোর্স রেজিস্ট্রেশন: ১৩-১৫ ডিসেম্বর ২০২৬। মূল সার্টিফিকেট দেখান, ৪ কপি পাসপোর্ট ও ৩ কপি স্ট্যাম্প সাইজ ছবি দিন এবং অফেরতযোগ্য ১৮,০০০ টাকা ভর্তি ফি পরিশোধ করুন।"
+      },
+      {
+        "en": "Classes start in January 2027. Orientation date will be announced.",
+        "bn": "ক্লাস শুরু জানুয়ারি ২০২৭। ওরিয়েন্টেশনের তারিখ পরে জানানো হবে।"
+      }
     ],
     "direct_admission": {
-      "min_combined_gpa": 7.0,
-      "min_combined_gpa_llb": 8.0,
+      "min_combined_gpa": 7,
+      "min_combined_gpa_llb": 8,
       "note": "Written test is exempted; viva voce may be required."
     },
     "written_test_rule": "Applicants who meet the minimum requirement but have a combined GPA below 7.00 must take the written test and the viva voce.",
     "scholarship_test_rule": "For bachelor's students, the first-trimester scholarship is based on admission test performance.",
-    "masters_direct_admission_programs": ["MBA (BBA graduates)", "Executive MBA", "LL.M. (Prel. & Final)", "LL.M. (Final)", "M.A. in English (Prel. & Final)", "M.A. in English (Final)", "M.S.S. in Broadcast & Print Journalism (Prel. & Final)", "M.S.S. in Broadcast & Print Journalism (Final)", "MCSE"],
+    "masters_direct_admission_programs": [
+      "MBA (BBA graduates)",
+      "Executive MBA",
+      "LL.M. (Prel. & Final)",
+      "LL.M. (Final)",
+      "M.A. in English (Prel. & Final)",
+      "M.A. in English (Final)",
+      "M.S.S. in Broadcast & Print Journalism (Prel. & Final)",
+      "M.S.S. in Broadcast & Print Journalism (Final)",
+      "MCSE"
+    ],
     "online_admission_available": true
   },
   "required_documents": {
@@ -250,16 +608,185 @@
     },
     "note": "Failure to submit any required document or photograph with the application form may be treated as an incomplete form and can result in cancellation of the application/admission."
   },
+  "campus_life": {
+    "source_url": "https://www.portcity.edu.bd",
+    "last_verified": "2026-11-24",
+    "facilities": {
+      "library": {
+        "name": "Ratnagarva Begum Ashrafunnesa Library",
+        "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/56/C/facilities-library-ratnagarva-begum-ashrafunnesa-library",
+        "rules_url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/83/Page/facilities-library-library-rules-and-regulations",
+        "e_library_url": "https://www.portcity.edu.bd/E_library/ELibraryList"
+      },
+      "student_forums": [
+        {
+          "name": "Student Forum",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/22/C/facilities-forum-student-forum"
+        },
+        {
+          "name": "Cultural Forum (PCCF)",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/115/C/facilities-forum-cultural-forum-pccf"
+        },
+        {
+          "name": "Debate Forum",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/116/C/facilities-forum-debate-forum"
+        },
+        {
+          "name": "Sports Forum",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/117/C/facilities-forum-sports-forum"
+        },
+        {
+          "name": "IT Forum",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/119/C/facilities-forum-it-forum"
+        }
+      ],
+      "other": [
+        {
+          "title": "Lab",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/57/C/facilities-lab"
+        },
+        {
+          "title": "Campus Life",
+          "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/14/Page/facilities-campus-life"
+        },
+        {
+          "title": "Medical Center",
+          "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/22/Page/facilities-medical-center"
+        },
+        {
+          "title": "Alumni",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/59/C/facilities-alumni"
+        },
+        {
+          "title": "Industrial Visit",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/58/C/facilities-industrial-visit"
+        },
+        {
+          "title": "Sexual Harassment Prevention Committee",
+          "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/168/C/facilities-sexual-harassment-prevention-commitee"
+        },
+        {
+          "title": "Practical Classes Videos",
+          "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/80/Page/facilities-practical-classes-videos"
+        }
+      ]
+    },
+    "useful_links": {
+      "student_portal": "https://studentportal.portcity.edu.bd",
+      "online_admission": "http://119.18.149.45/pciuonlineadmission/",
+      "alumni": "http://119.18.149.45/PCIUAlumni",
+      "convocation": "https://www.portcity.ac.bd/convocation",
+      "student_cv_portal": "http://www.studentcvportal.com",
+      "career": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/62/Page/career",
+      "facebook": "https://www.facebook.com/Port-City-International-University-492646557443546/"
+    },
+    "university_offices": [
+      {
+        "office": "Office of the Founding Chairman",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/49/Page/the-university-management-offices-office-of-the-founding-chairman"
+      },
+      {
+        "office": "Office of the Vice Chancellor",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/44/Page/the-university-management-offices-office-of-the-vice-chancellor"
+      },
+      {
+        "office": "Office of the Dean",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/48/Page/the-university-management-offices-office-of-the-dean"
+      },
+      {
+        "office": "Office of the Registrar",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/45/Page/the-university-management-offices-office-of-the-registrar"
+      },
+      {
+        "office": "Office of the Controller of Examinations",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/46/Page/the-university-management-offices-office-of-the-controller-of-examinations"
+      },
+      {
+        "office": "Office of the Admission",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/51/Page/the-university-management-offices-office-of-the-admission"
+      },
+      {
+        "office": "Office of the IT",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/50/Page/the-university-management-offices-office-of-the-it"
+      },
+      {
+        "office": "Office of the Accounts",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/47/Page/the-university-management-offices-office-of-the-accounts"
+      },
+      {
+        "office": "Office of the Library",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/52/Page/the-university-management-offices-office-of-the-library"
+      }
+    ],
+    "hostel": null,
+    "transport": null,
+    "recent_news": [
+      {
+        "title": "Learning beyond the classroom",
+        "date": "2026-11-09",
+        "summary": "Students of the JRN-32 batch, Department of Journalism and Media Studies, visited the office of Dainik Purbokone on November 5, 2026 as part of the Newspaper Editing and Display course.",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/10474/Event/learning-beyond-the-classroom"
+      },
+      {
+        "title": "Workshop on Drone Photography and Videography",
+        "date": "2026-05-19",
+        "summary": "Held at PCIU on May 19, 2026, organized by the PCIU Media Club under the Department of Journalism & Media Studies.",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/10473/Event/a-workshop-on-drone-photography-and-videography-was-held-at-port-city-international-university-pciu-on-may-19-2026-organized-by-pciu-media-club"
+      },
+      {
+        "title": "Bengali New Year greetings (নববর্ষের শুভেচ্ছা)",
+        "date": "2026-04-13",
+        "summary": "New Year greeting notice.",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/9473/Event"
+      },
+      {
+        "title": "Port City International University Rapid Chess Tournament 2026",
+        "date": "2026-04-11",
+        "summary": "Presented by the PCIU Sports Forum; registration through an official form.",
+        "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/9470/Event/the-pciu-sports-forum-proudly-presents-the-port-city-international-university-rapid-chess-tournament-2026"
+      }
+    ]
+  },
   "faqs": {
     "source_url": "https://www.portcity.edu.bd",
     "last_verified": "2026-11-24",
     "items": [
-      { "q_en": "How much is the admission fee?", "a_en": "The admission fee is BDT 18,000 for every program and it is non-refundable. The admission form costs BDT 500.", "q_bn": "ভর্তি ফি কত?", "a_bn": "সব প্রোগ্রামের ভর্তি ফি ১৮,০০০ টাকা এবং এটি ফেরতযোগ্য নয়। ভর্তি ফর্মের দাম ৫০০ টাকা।" },
-      { "q_en": "What is the last date to apply?", "a_en": "For the January 2027 intake: direct admission by 9 December 2026; apply for the written test by 10 December 2026. The written test is on 12 December 2026.", "q_bn": "আবেদনের শেষ তারিখ কবে?", "a_bn": "জানুয়ারি ২০২৭ ইনটেকের জন্য: সরাসরি ভর্তির শেষ তারিখ ৯ ডিসেম্বর ২০২৬; লিখিত পরীক্ষার আবেদনের শেষ তারিখ ১০ ডিসেম্বর ২০২৬। লিখিত পরীক্ষা ১২ ডিসেম্বর ২০২৬।" },
-      { "q_en": "Can I get admitted without a written test?", "a_en": "Yes, if your combined SSC + HSC GPA is 7.00 or above (8.00 or above for LL.B.). A viva voce may still be required.", "q_bn": "লিখিত পরীক্ষা ছাড়া কি ভর্তি হওয়া যায়?", "a_bn": "হ্যাঁ, যদি এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি হয় (এলএল.বি-র জন্য ৮.০০)। তবে ভাইভা লাগতে পারে।" },
-      { "q_en": "What documents do I need?", "a_en": "Attested photocopies of SSC and HSC mark sheets and certificates, NID / birth certificate / passport, and at admission the originals plus 4 passport-size and 3 stamp-size photos.", "q_bn": "কী কী কাগজপত্র লাগবে?", "a_bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি, এনআইডি / জন্ম সনদ / পাসপোর্ট; আর ভর্তির সময় মূল কাগজ এবং ৪ কপি পাসপোর্ট ও ৩ কপি স্ট্যাম্প সাইজ ছবি।" },
-      { "q_en": "Are there scholarships?", "a_en": "Yes. 6% of students receive scholarships (3% for children of freedom fighters, 3% for meritorious and poor students from remote areas), based on SSC/HSC results and admission test or trimester results. Need-based aid is also available.", "q_bn": "বৃত্তি আছে কি?", "a_bn": "হ্যাঁ। মোট শিক্ষার্থীর ৬% বৃত্তি পায় (৩% মুক্তিযোদ্ধার সন্তান, ৩% প্রত্যন্ত অঞ্চলের মেধাবী ও দরিদ্র শিক্ষার্থী), এসএসসি/এইচএসসি ও ভর্তি পরীক্ষা বা ট্রাইমেস্টার ফলাফলের ভিত্তিতে। দরিদ্র শিক্ষার্থীদের জন্য আর্থিক সহায়তাও আছে।" },
-      { "q_en": "How can I pay fees?", "a_en": "By bank deposit (Dutch Bangla Bank or Exim Bank, with your Student ID on the slip), Rocket (biller 2994) or bKash (merchant 01881075020).", "q_bn": "কীভাবে ফি দেওয়া যায়?", "a_bn": "ব্যাংকে জমা (ডাচ-বাংলা বা এক্সিম ব্যাংক, স্লিপে স্টুডেন্ট আইডি লিখে), রকেট (বিলার ২৯৯৪) বা বিকাশ (মার্চেন্ট ০১৮৮১০৭৫০২০)।" }
+      {
+        "q_en": "How much is the admission fee?",
+        "a_en": "The admission fee is BDT 18,000 for every program and it is non-refundable. The admission form costs BDT 500.",
+        "q_bn": "ভর্তি ফি কত?",
+        "a_bn": "সব প্রোগ্রামের ভর্তি ফি ১৮,০০০ টাকা এবং এটি ফেরতযোগ্য নয়। ভর্তি ফর্মের দাম ৫০০ টাকা।"
+      },
+      {
+        "q_en": "What is the last date to apply?",
+        "a_en": "For the January 2027 intake: direct admission by 9 December 2026; apply for the written test by 10 December 2026. The written test is on 12 December 2026.",
+        "q_bn": "আবেদনের শেষ তারিখ কবে?",
+        "a_bn": "জানুয়ারি ২০২৭ ইনটেকের জন্য: সরাসরি ভর্তির শেষ তারিখ ৯ ডিসেম্বর ২০২৬; লিখিত পরীক্ষার আবেদনের শেষ তারিখ ১০ ডিসেম্বর ২০২৬। লিখিত পরীক্ষা ১২ ডিসেম্বর ২০২৬।"
+      },
+      {
+        "q_en": "Can I get admitted without a written test?",
+        "a_en": "Yes, if your combined SSC + HSC GPA is 7.00 or above (8.00 or above for LL.B.). A viva voce may still be required.",
+        "q_bn": "লিখিত পরীক্ষা ছাড়া কি ভর্তি হওয়া যায়?",
+        "a_bn": "হ্যাঁ, যদি এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি হয় (এলএল.বি-র জন্য ৮.০০)। তবে ভাইভা লাগতে পারে।"
+      },
+      {
+        "q_en": "What documents do I need?",
+        "a_en": "Attested photocopies of SSC and HSC mark sheets and certificates, NID / birth certificate / passport, and at admission the originals plus 4 passport-size and 3 stamp-size photos.",
+        "q_bn": "কী কী কাগজপত্র লাগবে?",
+        "a_bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি, এনআইডি / জন্ম সনদ / পাসপোর্ট; আর ভর্তির সময় মূল কাগজ এবং ৪ কপি পাসপোর্ট ও ৩ কপি স্ট্যাম্প সাইজ ছবি।"
+      },
+      {
+        "q_en": "Are there scholarships?",
+        "a_en": "Yes. 6% of students receive scholarships (3% for children of freedom fighters, 3% for meritorious and poor students from remote areas), based on SSC/HSC results and admission test or trimester results. Need-based aid is also available.",
+        "q_bn": "বৃত্তি আছে কি?",
+        "a_bn": "হ্যাঁ। মোট শিক্ষার্থীর ৬% বৃত্তি পায় (৩% মুক্তিযোদ্ধার সন্তান, ৩% প্রত্যন্ত অঞ্চলের মেধাবী ও দরিদ্র শিক্ষার্থী), এসএসসি/এইচএসসি ও ভর্তি পরীক্ষা বা ট্রাইমেস্টার ফলাফলের ভিত্তিতে। দরিদ্র শিক্ষার্থীদের জন্য আর্থিক সহায়তাও আছে।"
+      },
+      {
+        "q_en": "How can I pay fees?",
+        "a_en": "By bank deposit (Dutch Bangla Bank or Exim Bank, with your Student ID on the slip), Rocket (biller 2994) or bKash (merchant 01881075020).",
+        "q_bn": "কীভাবে ফি দেওয়া যায়?",
+        "a_bn": "ব্যাংকে জমা (ডাচ-বাংলা বা এক্সিম ব্যাংক, স্লিপে স্টুডেন্ট আইডি লিখে), রকেট (বিলার ২৯৯৪) বা বিকাশ (মার্চেন্ট ০১৮৮১০৭৫০২০)।"
+      }
     ]
   }
 }

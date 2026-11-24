@@ -1,8 +1,11 @@
+import { ThinkingLevel } from "@google/genai";
 import { detectLang, retrieveContext } from "@/lib/admission-data";
 import { buildSystemInstruction, getGemini, MODELS } from "@/lib/gemini";
 import type { Lang } from "@/types";
 
 export const runtime = "nodejs";
+export const preferredRegion = "sin1"; // Singapore: closest Vercel region to Bangladesh
+export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
 const MAX_HISTORY = 12;
@@ -50,22 +53,38 @@ export async function POST(req: Request) {
   const retrieval = retrieveContext(last.content, previousUser);
 
   const contents = messages.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
-  const config = { systemInstruction: buildSystemInstruction(retrieval.context, lang, retrieval.confirm), temperature: 0.2 };
+  const baseConfig = {
+    systemInstruction: buildSystemInstruction(retrieval.context, lang, retrieval.confirm),
+    temperature: 0.2,
+    maxOutputTokens: 1200,
+  };
+  // Minimal thinking = much faster first token. Dropped automatically if a model rejects it.
+  let useFastThinking = true;
 
   // Free-tier Gemini often returns 503 (overloaded) or 429 (per-model quota).
-  // Go through all models, up to 3 rounds with backoff; drop models that are out of quota or missing.
+  // Go through all models, up to 2 rounds; drop models that are out of quota or missing.
   let stream: AsyncGenerator<{ text?: string }> | null = null;
   let lastStatus: number | undefined;
   let candidates = [...MODELS];
-  outer: for (let round = 0; round < 3 && candidates.length; round++) {
-    if (round) await new Promise((r) => setTimeout(r, 1500 * round));
+  outer: for (let round = 0; round < 2 && candidates.length; round++) {
+    if (round) await new Promise((r) => setTimeout(r, 1000));
     for (const model of [...candidates]) {
       try {
+        const config = useFastThinking ? { ...baseConfig, thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL } } : baseConfig;
         stream = await ai.models.generateContentStream({ model, contents, config });
         break outer;
       } catch (err) {
         lastStatus = (err as { status?: number })?.status;
         console.error(`Gemini error [${model}]:`, lastStatus, (err as Error)?.message?.slice(0, 200));
+        if (lastStatus === 400 && useFastThinking) {
+          useFastThinking = false; // model does not support thinkingLevel: retry without it
+          try {
+            stream = await ai.models.generateContentStream({ model, contents, config: baseConfig });
+            break outer;
+          } catch (e2) {
+            lastStatus = (e2 as { status?: number })?.status;
+          }
+        }
         if (lastStatus === 400 || lastStatus === 401 || lastStatus === 403) break outer; // bad key / request
         if (lastStatus === 404 || lastStatus === 429) candidates = candidates.filter((m) => m !== model);
       }

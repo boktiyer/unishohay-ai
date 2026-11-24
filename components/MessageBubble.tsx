@@ -1,7 +1,6 @@
 "use client";
 
 import clsx from "clsx";
-import { motion } from "framer-motion";
 import { Check, Copy, Database, Info, RefreshCw, TriangleAlert, User } from "lucide-react";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -33,11 +32,8 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 14 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25 }}
-      className={clsx("flex gap-3", isUser && "flex-row-reverse")}
+    <div
+      className={clsx("anim-msg flex gap-3", isUser && "flex-row-reverse")}
     >
       {isUser ? (
         <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-slate-200 text-slate-600 dark:bg-white/10 dark:text-slate-300">
@@ -102,6 +98,6 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }

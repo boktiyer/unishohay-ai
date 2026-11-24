@@ -58,7 +58,7 @@ export default function Navbar() {
   useEffect(() => setOpen(false), [path]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/70 backdrop-blur-xl dark:border-white/5 dark:bg-night/70">
+    <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/95 md:bg-white/70 md:backdrop-blur-xl dark:border-white/5 dark:bg-night/95 md:dark:bg-night/70">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo />
         <div className="hidden items-center gap-1 md:flex">

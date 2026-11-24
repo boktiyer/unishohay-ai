@@ -1,7 +1,6 @@
 "use client";
 
 import clsx from "clsx";
-import { motion } from "framer-motion";
 import {
   ArrowRight, BookOpen, Calculator, ChevronDown, Clock, Database, GraduationCap,
   Languages, MessageSquare, Search, ShieldCheck, Sparkles, Wallet, Zap,
@@ -13,16 +12,11 @@ import type { DictKey } from "@/lib/i18n";
 import { LogoMark } from "./Logo";
 import { useLang } from "./Providers";
 
-const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
 
 export function GlowBg() {
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-brand/30 blur-3xl dark:bg-brand/25" />
-      <div className="absolute -right-24 top-24 h-96 w-96 rounded-full bg-brand-blue/25 blur-3xl dark:bg-brand-blue/20" />
-      <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand-violet/20 blur-3xl" />
-    </div>
+    // Soft glow drawn with radial gradients (no blur filter: much cheaper to paint on phones)
+    <div aria-hidden className="glow-bg pointer-events-none absolute inset-0 -z-10" />
   );
 }
 
@@ -44,11 +38,9 @@ function ChatMockup() {
       : "CSE has 156 credits at BDT 2,300 per credit. Total fee is **BDT 376,800** (HSC background), including the admission fee.";
   const [before, bold, after] = a.split("**");
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30, scale: 0.97 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.6, delay: 0.25 }}
-      className="glass w-full max-w-md rounded-3xl p-5"
+    <div
+      style={{ animationDelay: "200ms" }}
+      className="anim-up glass w-full max-w-md rounded-3xl p-5"
     >
       <div className="mb-4 flex items-center gap-2 border-b border-slate-200/70 pb-3 dark:border-white/10">
         <LogoMark size={36} />
@@ -62,7 +54,7 @@ function ChatMockup() {
         </div>
         <div className="flex items-center gap-1.5 text-xs text-brand dark:text-brand-violet"><Database size={13} /> {lang === "bn" ? "সূত্র: অফিসিয়াল ভর্তি ডেটা" : "Source: Official Admission Data"}</div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -87,19 +79,19 @@ export default function Landing() {
       <section className="relative isolate">
         <GlowBg />
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-2 lg:pt-24">
-          <motion.div variants={stagger} initial="hidden" animate="show">
-            <motion.span variants={fadeUp} className="glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium text-brand dark:text-brand-violet">
+          <div>
+            <span className="anim-up glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium text-brand dark:text-brand-violet">
               <Sparkles size={15} /> {t("hero_badge")}
-            </motion.span>
-            <motion.h1 variants={fadeUp} className="mt-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            </span>
+            <h1 style={{ animationDelay: "60ms" }} className="anim-up mt-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               {t("hero_title_1")} <span className="text-gradient">{t("hero_title_2")}</span>
-            </motion.h1>
-            <motion.p variants={fadeUp} className="mt-5 max-w-xl text-lg text-slate-600 dark:text-slate-300">{t("hero_sub")}</motion.p>
-            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
+            </h1>
+            <p style={{ animationDelay: "120ms" }} className="anim-up mt-5 max-w-xl text-lg text-slate-600 dark:text-slate-300">{t("hero_sub")}</p>
+            <div style={{ animationDelay: "180ms" }} className="anim-up mt-8 flex flex-wrap gap-3">
               <Link href="/chat" className="btn-primary px-6 py-3">{t("start_chat")} <ArrowRight size={18} /></Link>
               <Link href="/admission-guide" className="btn-ghost px-6 py-3">{t("view_guide")}</Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
           <div className="flex justify-center lg:justify-end"><ChatMockup /></div>
         </div>
       </section>
@@ -122,15 +114,15 @@ export default function Landing() {
       {/* Features */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
         <SectionTitle title={t("features_title")} sub={t("features_sub")} />
-        <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(([Icon, title, desc]) => (
-            <motion.div key={title} variants={fadeUp} className="glass group rounded-2xl p-6 transition hover:-translate-y-1">
+            <div key={title} className="glass group rounded-2xl p-6 transition hover:-translate-y-1">
               <span className="bg-brand-gradient grid h-12 w-12 place-items-center rounded-xl text-white shadow-lg shadow-brand/25"><Icon size={22} /></span>
               <h3 className="mt-5 text-lg font-bold">{t(title)}</h3>
               <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{t(desc)}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       {/* How it works */}
@@ -138,12 +130,12 @@ export default function Landing() {
         <SectionTitle title={t("how_title")} />
         <div className="grid gap-6 md:grid-cols-3">
           {steps.map(([Icon, title, desc], i) => (
-            <motion.div key={title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative text-center">
+            <div key={title} className="relative text-center">
               <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-brand/10 text-brand dark:text-brand-violet"><Icon size={26} /></div>
               <div className="mt-2 text-xs font-bold tracking-widest text-brand-violet">0{i + 1}</div>
               <h3 className="mt-1 text-lg font-bold">{t(title)}</h3>
               <p className="mx-auto mt-2 max-w-xs text-sm text-slate-500 dark:text-slate-400">{t(desc)}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>

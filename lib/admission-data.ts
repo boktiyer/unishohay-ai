@@ -31,10 +31,11 @@ type SectionKey =
   | "scholarships"
   | "admission_procedure"
   | "required_documents"
+  | "campus_life"
   | "faqs";
 
 const TOPIC_KEYWORDS: Record<SectionKey, string[]> = {
-  university: ["pciu", "university", "address", "location", "where", "contact", "phone", "email", "website", "office", "ঠিকানা", "কোথায়", "যোগাযোগ", "ফোন", "ইমেইল", "ওয়েবসাইট", "অফিস", "বিশ্ববিদ্যালয়", "ভার্সিটি"],
+  university: ["pciu", "university", "about", "vision", "mission", "approved", "ugc", "address", "location", "where", "contact", "phone", "email", "website", "office", "ঠিকানা", "কোথায়", "যোগাযোগ", "ফোন", "ইমেইল", "ওয়েবসাইট", "অফিস", "বিশ্ববিদ্যালয়", "ভার্সিটি"],
   departments: ["department", "program", "subject", "course", "offer", "available", "master", "mba", "ll.m", "llm", "mcse", "m.sc", "m.a.", "m.s.s", "postgrad", "বিভাগ", "প্রোগ্রাম", "বিষয়", "সাবজেক্ট", "ডিপার্টমেন্ট", "কোর্স", "মাস্টার্স", "এমবিএ", "কী কী"],
   eligibility: ["eligib", "gpa", "requirement", "qualif", "ssc", "hsc", "o level", "o-level", "a level", "a-level", "diploma", "science", "commerce", "arts", "result", "can i", "যোগ্যতা", "জিপিএ", "এসএসসি", "এইচএসসি", "রেজাল্ট", "ফলাফল", "ডিপ্লোমা", "বিজ্ঞান", "পারব", "পারবো"],
   tuition_fees: ["fee", "cost", "tuition", "credit", "price", "money", "taka", "bdt", "semester", "trimester", "year", "hostel", "expens", "international", "খরচ", "ফি", "টাকা", "টিউশন", "ক্রেডিট", "সেমিস্টার", "ট্রাইমেস্টার", "বছর", "হোস্টেল"],
@@ -43,6 +44,7 @@ const TOPIC_KEYWORDS: Record<SectionKey, string[]> = {
   scholarships: ["scholarship", "waiver", "discount", "free", "financial", "বৃত্তি", "স্কলারশিপ", "ওয়েভার", "ছাড়", "মওকুফ"],
   admission_procedure: ["apply", "application", "procedure", "process", "how to", "step", "admission test", "written", "viva", "form", "online", "portal", "direct", "আবেদন", "প্রক্রিয়া", "কিভাবে", "কীভাবে", "ভর্তি পরীক্ষা", "লিখিত", "ভাইভা", "ফর্ম", "অনলাইন", "সরাসরি", "নিয়ম"],
   required_documents: ["document", "paper", "certificate", "transcript", "photo", "marksheet", "কাগজ", "ডকুমেন্ট", "সার্টিফিকেট", "সনদ", "ছবি", "মার্কশিট"],
+  campus_life: ["campus", "facilit", "library", "lab", "medical", "club", "forum", "sport", "debate", "cultural", "hostel", "transport", "bus", "portal", "alumni", "news", "event", "career", "job", "cv", "convocation", "registrar", "controller", "ক্যাম্পাস", "সুবিধা", "লাইব্রেরি", "ল্যাব", "মেডিকেল", "ক্লাব", "ফোরাম", "খেলা", "বিতর্ক", "হোস্টেল", "বাস", "যাতায়াত", "পোর্টাল", "অ্যালামনাই", "খবর", "ইভেন্ট", "অনুষ্ঠান", "ক্যারিয়ার", "চাকরি", "সমাবর্তন"],
   faqs: ["faq", "question", "প্রশ্ন"],
 };
 

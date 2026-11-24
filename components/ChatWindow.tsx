@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Eraser, PanelLeft } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { detectLang } from "@/lib/admission-data";
@@ -19,29 +18,25 @@ function SuggestedQuestions({ onPick }: { onPick: (q: string) => void }) {
   const { t, lang } = useLang();
   return (
     <div className="mx-auto flex max-w-3xl flex-col items-center px-2 py-10 text-center">
-      <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
-        <LogoFull width={220} className="h-auto w-44 sm:w-56" />
-      </motion.div>
+      <div>
+        <LogoFull width={220} priority className="h-auto w-44 sm:w-56" />
+      </div>
       <h1 className="mt-3 text-2xl font-extrabold sm:text-3xl">{t("welcome_title")}</h1>
       <p className="mt-2 text-slate-500 dark:text-slate-400">{t("welcome_sub")}</p>
-      <motion.div
-        initial="hidden"
-        animate="show"
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06 } } }}
+      <div
         className="mt-8 grid w-full gap-3 sm:grid-cols-2"
       >
         {suggestions[lang].map((q) => (
-          <motion.button
+          <button
             key={q}
-            variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}
             onClick={() => onPick(q)}
             className="glass group flex items-center justify-between gap-3 rounded-2xl px-4 py-3.5 text-left text-sm font-medium transition hover:-translate-y-0.5 hover:border-brand-violet/40"
           >
             {q}
             <ArrowUpRight size={16} className="shrink-0 text-brand-violet transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </motion.button>
+          </button>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
@@ -210,7 +205,7 @@ export default function ChatWindow() {
             <SuggestedQuestions onPick={send} />
           ) : (
             <div className="mx-auto max-w-3xl space-y-6">
-              <AnimatePresence initial={false}>
+              <>
                 {messages.map((m) => (
                   <MessageBubble
                     key={m.id}
@@ -220,7 +215,7 @@ export default function ChatWindow() {
                     onRegenerate={regenerate}
                   />
                 ))}
-              </AnimatePresence>
+              </>
               <div ref={bottomRef} />
             </div>
           )}
