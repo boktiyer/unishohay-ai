@@ -101,7 +101,7 @@ export default function ChatWindow() {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || dict[detectLang(lastText)].network_error);
       }
-      patchMsg(convId, aId, () => ({ sourced: res.headers.get("X-Sourced") === "1", confirm: res.headers.get("X-Confirm") === "1" }));
+      patchMsg(convId, aId, () => ({ sourced: res.headers.get("X-Sourced") === "1", confirm: res.headers.get("X-Confirm") === "1", fallback: res.headers.get("X-Fallback") === "1" }));
 
       const reader = res.body.getReader();
       const decoder = new TextDecoder();

@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { Check, Copy, Database, Info, RefreshCw, TriangleAlert, User } from "lucide-react";
+import { Check, Copy, Database, Info, RefreshCw, TriangleAlert, User, Zap } from "lucide-react";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -78,6 +78,11 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
             {message.sourced && !message.error && (
               <span className="inline-flex items-center gap-1 rounded-full bg-brand/10 px-2 py-0.5 font-medium text-brand dark:text-brand-violet">
                 <Database size={12} /> {t("source")}
+              </span>
+            )}
+            {message.fallback && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-2 py-0.5 font-medium text-sky-700 dark:bg-sky-500/15 dark:text-sky-300">
+                <Zap size={12} /> {t("fallback_note")}
               </span>
             )}
             {message.confirm && !message.error && (

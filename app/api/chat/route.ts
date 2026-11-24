@@ -1,5 +1,6 @@
 import { ThinkingLevel } from "@google/genai";
 import { detectLang, retrieveContext } from "@/lib/admission-data";
+import { fallbackAnswer } from "@/lib/fallback";
 import { buildSystemInstruction, getGemini, MODELS } from "@/lib/gemini";
 import type { Lang } from "@/types";
 
@@ -70,12 +71,25 @@ export async function POST(req: Request) {
   const now = Date.now();
   let candidates = MODELS.filter((m) => (exhaustedUntil.get(m) ?? 0) < now);
   if (!candidates.length) candidates = [...MODELS];
+  // Give Gemini at most ~8s to start answering; after that, answer straight from the dataset.
+  const started = Date.now();
+  const DEADLINE_MS = 8000;
+  const callModel = async (model: string, config: object) => {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), Math.max(1500, DEADLINE_MS - (Date.now() - started)));
+    try {
+      return await ai.models.generateContentStream({ model, contents, config: { ...config, abortSignal: ctrl.signal } });
+    } finally {
+      clearTimeout(timer); // only the wait for the first response is limited, not the streaming itself
+    }
+  };
   outer: for (let round = 0; round < 2 && candidates.length; round++) {
     if (round) await new Promise((r) => setTimeout(r, 1000));
     for (const model of [...candidates]) {
+      if (Date.now() - started > DEADLINE_MS) break outer;
       try {
         const config = useFastThinking ? { ...baseConfig, thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL } } : baseConfig;
-        stream = await ai.models.generateContentStream({ model, contents, config });
+        stream = await callModel(model, config);
         break outer;
       } catch (err) {
         lastStatus = (err as { status?: number })?.status;
@@ -83,7 +97,7 @@ export async function POST(req: Request) {
         if (lastStatus === 400 && useFastThinking) {
           useFastThinking = false; // model does not support thinkingLevel: retry without it
           try {
-            stream = await ai.models.generateContentStream({ model, contents, config: baseConfig });
+            stream = await callModel(model, baseConfig);
             break outer;
           } catch (e2) {
             lastStatus = (e2 as { status?: number })?.status;
@@ -98,9 +112,18 @@ export async function POST(req: Request) {
     }
   }
   if (!stream) {
-    if (lastStatus === 429) return fail("rate", lang, 429);
-    if (lastStatus === 503) return fail("busy", lang, 503);
-    return fail("generic", lang, 502);
+    if (lastStatus === 401 || lastStatus === 403) return fail("generic", lang, 502);
+    // Gemini busy / out of quota / too slow: answer directly from the official dataset.
+    const fb = fallbackAnswer(last.content, previousUser, lang);
+    return new Response(fb.text, {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Sourced": fb.sourced ? "1" : "0",
+        "X-Confirm": fb.confirm ? "1" : "0",
+        "X-Fallback": "1",
+      },
+    });
   }
 
   const encoder = new TextEncoder();

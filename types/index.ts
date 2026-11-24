@@ -10,6 +10,8 @@ export interface ChatMessage {
   /** Answer touches fees/eligibility: show "confirm with Admission Office" note */
   confirm?: boolean;
   error?: boolean;
+  /** AI was busy: answer was built directly from the dataset */
+  fallback?: boolean;
 }
 
 export interface Conversation {
