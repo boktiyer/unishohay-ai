@@ -9,6 +9,8 @@ export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
 const MAX_HISTORY = 12;
+/** Models that hit their quota (429) or are unavailable (404), remembered per server instance. */
+const exhaustedUntil = new Map<string, number>();
 const MAX_CHARS = 2000;
 
 const ERR = {
@@ -65,7 +67,9 @@ export async function POST(req: Request) {
   // Go through all models, up to 2 rounds; drop models that are out of quota or missing.
   let stream: AsyncGenerator<{ text?: string }> | null = null;
   let lastStatus: number | undefined;
-  let candidates = [...MODELS];
+  const now = Date.now();
+  let candidates = MODELS.filter((m) => (exhaustedUntil.get(m) ?? 0) < now);
+  if (!candidates.length) candidates = [...MODELS];
   outer: for (let round = 0; round < 2 && candidates.length; round++) {
     if (round) await new Promise((r) => setTimeout(r, 1000));
     for (const model of [...candidates]) {
@@ -86,7 +90,10 @@ export async function POST(req: Request) {
           }
         }
         if (lastStatus === 400 || lastStatus === 401 || lastStatus === 403) break outer; // bad key / request
-        if (lastStatus === 404 || lastStatus === 429) candidates = candidates.filter((m) => m !== model);
+        if (lastStatus === 404 || lastStatus === 429) {
+          candidates = candidates.filter((m) => m !== model);
+          exhaustedUntil.set(model, Date.now() + 10 * 60_000); // skip this model for 10 minutes
+        }
       }
     }
   }
