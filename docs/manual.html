@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<title>UnishohayAI — ব্যবহার নির্দেশিকা ও পরিচিতি</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=block" rel="stylesheet" />
+<style>
+  @font-face { font-family: "Kalpurush"; src: local("Kalpurush"), url("file:///C:/Windows/Fonts/kalpurush.ttf") format("truetype"); }
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  @page :first { margin: 0; }
+  :root { --p: #6D28D9; --b: #2563EB; --v: #8B5CF6; --ink: #1e293b; --mute: #64748b; --line: #e2e8f0; --bg: #F8FAFF; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: "Plus Jakarta Sans", "Kalpurush", "Nirmala UI", sans-serif; color: var(--ink); font-size: 11.6pt; line-height: 1.65; }
+  .bn, p, li, td, h2, h3 { font-family: "Plus Jakarta Sans", "Kalpurush", "Nirmala UI", sans-serif; }
+  .en { font-family: "Plus Jakarta Sans", sans-serif; }
+  h1, h2, h3 { line-height: 1.3; margin: 0; }
+  h2 { font-size: 19pt; font-weight: 700; margin: 0 0 4mm; display: flex; align-items: center; gap: 3mm; }
+  h2 .num { display: inline-grid; place-items: center; width: 9mm; height: 9mm; border-radius: 2.5mm; background: linear-gradient(135deg, var(--p), var(--b)); color: #fff; font-size: 12pt; font-family: "Plus Jakarta Sans"; }
+  h3 { font-size: 12.5pt; font-weight: 700; margin: 5mm 0 2mm; color: var(--p); }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 5.5mm; }
+  li { margin-bottom: 1mm; }
+  b, strong { font-weight: 700; }
+  .lead { font-size: 12.4pt; color: #334155; }
+  .muted { color: var(--mute); }
+  .small { font-size: 9pt; }
+  .section { break-before: page; }
+  .avoid { break-inside: avoid; }
+  .grad { background: linear-gradient(135deg, var(--p), var(--b)); }
+  .gtext { background: linear-gradient(135deg, var(--p), var(--b)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* cover */
+  .cover { height: 297mm; width: 210mm; position: relative; overflow: hidden; color: #fff; padding: 22mm 20mm; display: flex; flex-direction: column; }
+  .cover::before { content: ""; position: absolute; inset: 0; background: radial-gradient(90mm 90mm at 85% 12%, rgba(255,255,255,.18), transparent 70%), radial-gradient(120mm 120mm at 0% 100%, rgba(139,92,246,.55), transparent 70%); }
+  .cover > * { position: relative; }
+  .cover .tag { display: inline-block; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.35); border-radius: 99px; padding: 1.5mm 4.5mm; font-size: 10pt; width: fit-content; }
+  .cover .logo { width: 118mm; margin: 14mm auto 8mm; background: #fff; border-radius: 10mm; padding: 6mm 8mm; box-shadow: 0 10mm 30mm rgba(0,0,0,.25); }
+  .cover .logo img { width: 100%; display: block; }
+  .cover h1 { font-size: 30pt; font-weight: 800; text-align: center; font-family: "Plus Jakarta Sans", "Kalpurush"; }
+  .cover .sub { text-align: center; font-size: 13pt; opacity: .95; margin-top: 3mm; }
+  .cover .meta { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  .cover .meta div { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); border-radius: 4mm; padding: 3.5mm 4mm; font-size: 9.5pt; }
+  .cover .meta b { display: block; font-size: 11pt; }
+
+  /* components */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5mm; margin: 3mm 0 4mm; }
+  .cards.three { grid-template-columns: repeat(3, 1fr); }
+  .card { border: 1px solid var(--line); border-radius: 4mm; padding: 3.5mm 4mm; background: #fff; break-inside: avoid; }
+  .card .ic { width: 8mm; height: 8mm; border-radius: 2.5mm; display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 11pt; margin-bottom: 2mm; background: linear-gradient(135deg, var(--p), var(--b)); }
+  .card h4 { margin: 0 0 1mm; font-size: 11pt; font-family: "Plus Jakarta Sans", "Kalpurush"; }
+  .card p { margin: 0; font-size: 10.4pt; color: #475569; line-height: 1.6; }
+  .tint { background: var(--bg); border: 1px solid #e0e7ff; border-radius: 4mm; padding: 4mm 5mm; margin: 3mm 0; break-inside: avoid; }
+  .note { background: #fffbeb; border: 1px solid #fde68a; border-radius: 3mm; padding: 3mm 4mm; font-size: 10.4pt; color: #78350f; break-inside: avoid; }
+  .shot { width: 100%; object-fit: cover; object-position: top; border: 1px solid var(--line); border-radius: 3mm; box-shadow: 0 2mm 6mm rgba(15,23,42,.08); display: block; margin: 2mm 0 1.5mm; }
+  .cap { font-size: 8.8pt; color: var(--mute); text-align: center; margin-bottom: 4mm; }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps > li { counter-increment: s; position: relative; padding-left: 10mm; margin-bottom: 2.2mm; break-inside: avoid; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: .3mm; width: 6.5mm; height: 6.5mm; border-radius: 50%; background: linear-gradient(135deg, var(--p), var(--b)); color: #fff; font: 700 9pt "Plus Jakarta Sans"; display: grid; place-items: center; }
+  table { width: 100%; border-collapse: collapse; font-size: 10.4pt; margin: 2mm 0 4mm; break-inside: auto; }
+  th, td { border: 1px solid var(--line); padding: 2mm 3mm; text-align: left; vertical-align: top; }
+  th { background: #f1edff; font-family: "Plus Jakarta Sans", "Kalpurush"; }
+  tr { break-inside: avoid; }
+  .flow { display: flex; align-items: stretch; gap: 2mm; margin: 3mm 0; }
+  .flow div { flex: 1; border-radius: 3mm; padding: 3mm; font-size: 9.2pt; text-align: center; background: #f5f3ff; border: 1px solid #ddd6fe; display: grid; place-items: center; }
+  .flow span { align-self: center; color: var(--v); font-weight: 800; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 5mm; }
+  .kpi div { border-radius: 4mm; padding: 3.5mm; text-align: center; background: #f5f3ff; border: 1px solid #ddd6fe; }
+  .kpi b { display: block; font: 800 16pt "Plus Jakarta Sans"; }
+  .kpi span { font-size: 8.8pt; color: #475569; }
+  .script td:first-child { width: 22mm; font-weight: 700; color: var(--p); font-family: "Plus Jakarta Sans"; }
+  .end { text-align: center; padding-top: 2mm; }
+  .tight { font-size: 9.9pt; }
+  .tight td, .tight th { padding: 1.5mm 2.5mm; }
+  .end img { width: 34mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="cover grad">
+  <span class="tag">PCIU Computer Club Hackathon · Team Trio Code</span>
+  <div class="logo"><img src="../public/images/logo.png" alt="UnishohayAI" /></div>
+  <h1>ব্যবহার নির্দেশিকা ও পরিচিতি</h1>
+  <p class="sub">পোর্ট সিটি ইন্টারন্যাশনাল ইউনিভার্সিটির (PCIU) জন্য বাংলা ও ইংরেজি<br />এআই ভর্তি সহকারী — কী আছে, কীভাবে ব্যবহার করবেন, কেন কাজে আসবে</p>
+  <div class="meta">
+    <div><b>ওয়েবসাইট</b><span class="en">unishohay-ai.vercel.app</span></div>
+    <div><b>ভাষা</b>বাংলা ও ইংরেজি</div>
+    <div><b>তথ্য সংগ্রহ</b>portcity.edu.bd · ২৫ নভেম্বর ২০২৬</div>
+  </div>
+</section>
+
+<!-- ============ 1. AT A GLANCE ============ -->
+<section class="section">
+  <h2><span class="num">১</span> এক নজরে UnishohayAI</h2>
+  <p class="lead"><b>UnishohayAI</b> (ইউনিসহায় এআই) একটি ওয়েবসাইট ও চ্যাটবট। এখানে শিক্ষার্থী ও অভিভাবকেরা পোর্ট সিটি ইন্টারন্যাশনাল ইউনিভার্সিটির ভর্তি, ফি, যোগ্যতা, বৃত্তি, শিক্ষক তালিকা ও ক্যাম্পাস সংক্রান্ত যেকোনো প্রশ্ন নিজের ভাষায় করে সাথে সাথে উত্তর পান। উত্তর আসে শুধু PCIU-র অফিসিয়াল ওয়েবসাইট থেকে সংগৃহীত তথ্য থেকে, আর প্রতিটি উত্তরের নিচে তথ্যের উৎস দেখানো হয়।</p>
+
+  <div class="kpi">
+    <div><b>২৪/৭</b><span>যেকোনো সময় চালু</span></div>
+    <div><b>২</b><span>ভাষা: বাংলা ও ইংরেজি</span></div>
+    <div><b>৯ + ১০</b><span>ব্যাচেলর ও মাস্টার্স প্রোগ্রাম</span></div>
+    <div><b>২৪৮</b><span>শিক্ষকের নাম ও পদবি, ১০টি বিভাগ</span></div>
+  </div>
+
+  <h3>সমস্যা: ভর্তির তথ্য পাওয়া কেন কঠিন</h3>
+  <ul>
+    <li>ফি, যোগ্যতা, তারিখ, কাগজপত্র আর বৃত্তির তথ্য ওয়েবসাইটের অনেকগুলো আলাদা পেজে ছড়িয়ে আছে, আর বেশিরভাগই ইংরেজিতে।</li>
+    <li>ছোট একটা প্রশ্নের জন্যও ভর্তি অফিসে ফোন করতে হয় বা সরাসরি যেতে হয়; অফিস সময়ের বাইরে উত্তর পাওয়া যায় না।</li>
+    <li>গ্রাম বা দূরের শিক্ষার্থী ও অভিভাবকদের জন্য ইংরেজি পেজ পড়ে সঠিক অঙ্ক বের করা কষ্টকর।</li>
+    <li>"আমি কি সরাসরি ভর্তি হতে পারব?", "CSE পড়তে মোট কত খরচ?" — এমন সাধারণ প্রশ্ন ভর্তি অফিসে বারবার আসে।</li>
+  </ul>
+
+  <h3>সমাধান: এক জায়গায়, নিজের ভাষায়, সাথে সাথে উত্তর</h3>
+  <div class="cards">
+    <div class="card"><div class="ic">AI</div><h4>এআই চ্যাট</h4><p>বাংলা বা ইংরেজিতে প্রশ্ন লিখুন বা বলুন; একই ভাষায় গোছানো উত্তর পান। আগের প্রশ্ন মনে রেখে পরের প্রশ্ন বোঝে।</p></div>
+    <div class="card"><div class="ic">✓</div><h4>শুধু অফিসিয়াল তথ্য</h4><p>উত্তর আসে PCIU-র ওয়েবসাইট থেকে সংগৃহীত তথ্য থেকে; তথ্য না থাকলে অনুমান না করে ভর্তি অফিসের ফোন নম্বর দেয়।</p></div>
+    <div class="card"><div class="ic">৳</div><h4>হিসাবের টুলস</h4><p>যোগ্যতা যাচাই, ফি ক্যালকুলেটর, মাস্টার্স ফি ক্যালকুলেটর ও প্রোগ্রাম তুলনা — এআই নয়, সরাসরি ডেটা থেকে হিসাব।</p></div>
+    <div class="card"><div class="ic">📱</div><h4>মোবাইল অ্যাপের মতো</h4><p>ফোনে ইনস্টল করা যায় (PWA); ভর্তি নির্দেশিকা আর টুলস একবার খুললে ইন্টারনেট ছাড়াও দেখা যায়।</p></div>
+  </div>
+</section>
+
+<!-- ============ 2. FEATURES ============ -->
+<section class="section">
+  <h2><span class="num">২</span> মূল সুবিধাসমূহ</h2>
+  <div class="cards three">
+    <div class="card"><div class="ic">১</div><h4>বাংলা ও ইংরেজি</h4><p>যে ভাষায় প্রশ্ন, সেই ভাষায় উত্তর। পুরো সাইটের ভাষা এক ক্লিকে বাংলা / EN করা যায়।</p></div>
+    <div class="card"><div class="ic">২</div><h4>উৎস ও যাচাইয়ের তারিখ</h4><p>প্রতিটি উত্তরের নিচে "সূত্র: টিউশন ও ফি · যাচাই ২৫ নভেম্বর ২০২৬" ধরনের লাইন, অফিসিয়াল পেজের লিংকসহ।</p></div>
+    <div class="card"><div class="ic">৩</div><h4>সবসময় উত্তর</h4><p>এআই সার্ভার ব্যস্ত থাকলেও ৮ সেকেন্ডের মধ্যে সরাসরি অফিসিয়াল ডেটা থেকে উত্তর দেয় — "সার্ভিস বন্ধ" দেখায় না।</p></div>
+    <div class="card"><div class="ic">৪</div><h4>সৎ উত্তর</h4><p>ফি, জিপিএ, তারিখ বা বৃত্তির অঙ্ক কখনো বানায় না। দুই অফিসিয়াল পেজে তথ্যে অমিল থাকলে দুটোই দেখায়।</p></div>
+    <div class="card"><div class="ic">৫</div><h4>শিক্ষক খোঁজা</h4><p>"CSE বিভাগের সব শিক্ষকের নাম দাও" বা "Farzina Akther কে?" — বিভাগ ও পদবিসহ উত্তর।</p></div>
+    <div class="card"><div class="ic">৬</div><h4>ভয়েস ইনপুট</h4><p>মাইক বাটনে চাপ দিয়ে কথা বলে প্রশ্ন করা যায় (Chrome/Edge ব্রাউজারে)।</p></div>
+    <div class="card"><div class="ic">৭</div><h4>চ্যাট ইতিহাস</h4><p>আগের কথোপকথন সংরক্ষিত থাকে; নাম বদলানো, মুছে ফেলা, নতুন চ্যাট শুরু করা যায়।</p></div>
+    <div class="card"><div class="ic">৮</div><h4>শেষ তারিখের কাউন্টডাউন</h4><p>হোম পেজে সরাসরি ভর্তির শেষ তারিখ (৯ ডিসেম্বর ২০২৬) পর্যন্ত কত দিন-ঘণ্টা বাকি, লাইভ দেখায়।</p></div>
+    <div class="card"><div class="ic">৯</div><h4>মতামত দেওয়া</h4><p>প্রতিটি উত্তরে 👍/👎 দিয়ে জানানো যায় উত্তরটি কাজে লেগেছে কি না।</p></div>
+  </div>
+
+  <h3>বট কী কী বিষয়ে উত্তর দিতে পারে</h3>
+  <table>
+    <tr><th style="width:32%">বিষয়</th><th>উদাহরণ</th></tr>
+    <tr><td>বিভাগ ও প্রোগ্রাম</td><td>৯টি ব্যাচেলর ও মাস্টার্স প্রোগ্রাম, অনুষদ ও বিভাগের তালিকা</td></tr>
+    <tr><td>ফি ও খরচ</td><td>ভর্তি ফি, প্রতি ক্রেডিট টিউশন, মোট প্রোগ্রাম ফি (এইচএসসি ও ডিপ্লোমা), মাস্টার্স ফি, ট্রান্সক্রিপ্ট-সার্টিফিকেট ফি</td></tr>
+    <tr><td>যোগ্যতা ও ভর্তি পরীক্ষা</td><td>ন্যূনতম জিপিএ, সরাসরি ভর্তির নিয়ম (মিলিত জিপিএ ৭.০০), লিখিত পরীক্ষার নম্বর বণ্টন</td></tr>
+    <tr><td>তারিখ ও কাগজপত্র</td><td>জানুয়ারি ২০২৭ ইনটেকের সময়সূচি, আবেদন ও ভর্তির সময় যা যা লাগবে</td></tr>
+    <tr><td>বৃত্তি ও পেমেন্ট</td><td>বৃত্তির নিয়ম, বিকাশ/রকেট/ব্যাংকে ফি দেওয়ার পদ্ধতি</td></tr>
+    <tr><td>একাডেমিক নিয়ম</td><td>গ্রেডিং স্কেল, উপস্থিতি, প্রবেশন, রিপিট/ইমপ্রুভমেন্ট, ফলাফল দেখার উপায়</td></tr>
+    <tr><td>ক্যাম্পাস ও মানুষ</td><td>লাইব্রেরি, মেডিকেল সেন্টার, ফোরাম, ভিসি ও ডিন, বিভাগভিত্তিক শিক্ষক তালিকা, যোগাযোগ</td></tr>
+  </table>
+</section>
+
+<!-- ============ 3. WHO BENEFITS ============ -->
+<section class="section">
+  <h2><span class="num">৩</span> কার কী কাজে আসবে</h2>
+  <div class="cards">
+    <div class="card"><div class="ic">🎓</div><h4>ভর্তিচ্ছু শিক্ষার্থী</h4><p>রাত ১২টায়ও জানতে পারবে কোন বিষয়ে কত খরচ, নিজের জিপিএ দিয়ে যোগ্য কি না, সরাসরি ভর্তি পাবে কি না, কোন কাগজ লাগবে আর শেষ তারিখ কবে।</p></div>
+    <div class="card"><div class="ic">👪</div><h4>অভিভাবক</h4><p>বাংলায় প্রশ্ন করে বাংলায় উত্তর পাবেন; ফি ক্যালকুলেটর দিয়ে মোট খরচের পরিষ্কার হিসাব দেখে পরিকল্পনা করতে পারবেন।</p></div>
+    <div class="card"><div class="ic">📚</div><h4>বর্তমান শিক্ষার্থী</h4><p>গ্রেডিং, উপস্থিতি, ইমপ্রুভমেন্ট, ট্রাইমেস্টার ড্রপ, এডমিট কার্ড, ফলাফল দেখা আর কোন শিক্ষক কোন বিভাগে — দ্রুত জানতে পারবে।</p></div>
+    <div class="card"><div class="ic">🏛</div><h4>ভর্তি অফিস ও বিশ্ববিদ্যালয়</h4><p>বারবার আসা একই প্রশ্নের চাপ কমবে; অফিস সময়ের বাইরেও শিক্ষার্থীরা সঠিক তথ্য পাবে; 👍/👎 থেকে বোঝা যাবে কোন তথ্যের চাহিদা বেশি।</p></div>
+  </div>
+
+  <h3>কেন এটা বিশ্বাসযোগ্য</h3>
+  <div class="flow avoid">
+    <div>শিক্ষার্থীর প্রশ্ন<br /><span class="small muted">বাংলা / ইংরেজি</span></div><span>→</span>
+    <div>অফিসিয়াল ডেটার<br />প্রাসঙ্গিক অংশ খোঁজা</div><span>→</span>
+    <div>Google Gemini এআই<br />সহজ ভাষায় সাজায়</div><span>→</span>
+    <div>উৎস ও তারিখসহ<br />উত্তর</div>
+  </div>
+  <ul>
+    <li>এআই শুধু PCIU ওয়েবসাইট থেকে সংগৃহীত ডেটার ভেতর থেকে উত্তর দেয়; বাইরের অনুমান বা ইন্টারনেট থেকে তথ্য নেয় না।</li>
+    <li>যে তথ্য প্রকাশিত নয় (যেমন হোস্টেল, ইমেইল, প্রতি ট্রাইমেস্টারের মোট ফি), সেখানে পরিষ্কার বলে "প্রকাশিত নয়" এবং ভর্তি অফিসের ফোন নম্বর দেয়।</li>
+    <li>ফি বা যোগ্যতার উত্তরে "ভর্তি অফিস থেকে নিশ্চিত হয়ে নিন" নোট থাকে।</li>
+    <li>এআই ব্যস্ত থাকলে নিয়মভিত্তিক উত্তর সরাসরি ডেটা থেকে আসে, তাই ভুল অঙ্ক বানানোর সুযোগ থাকে না।</li>
+    <li>API key শুধু সার্ভারে থাকে; ব্যবহারকারীর ব্রাউজারে কখনো যায় না।</li>
+  </ul>
+  <div class="note">UnishohayAI পিসিআইইউ-এর অফিসিয়াল সেবা নয়; এটি PCIU Computer Club Hackathon-এর জন্য তৈরি একটি প্রজেক্ট। ফি ও তারিখ প্রতি ইনটেকে বদলায়, তাই চূড়ান্ত সিদ্ধান্তের আগে ভর্তি অফিস থেকে নিশ্চিত হয়ে নিন।</div>
+</section>
+
+<!-- ============ 4. HOW TO USE ============ -->
+<section class="section">
+  <h2><span class="num">৪</span> ব্যবহার নির্দেশিকা</h2>
+
+  <h3>৪.১ শুরু করা</h3>
+  <ol class="steps">
+    <li>ব্রাউজারে খুলুন: <b class="en">https://unishohay-ai.vercel.app</b> (মোবাইল বা কম্পিউটার, কোনো অ্যাকাউন্ট লাগে না)।</li>
+    <li>ওপরের ডান কোণে <b>বাংলা / EN</b> চেপে পছন্দের ভাষা বেছে নিন; চাঁদ/সূর্য আইকনে ডার্ক বা লাইট মোড।</li>
+    <li>মেনু থেকে চারটি অংশে যান: <b>Home</b>, <b>AI Chat</b>, <b>Admission Guide</b>, <b>Tools</b>।</li>
+  </ol>
+  <img class="shot" src="img/home.png" alt="হোম পেজ" style="height:62mm" />
+  <p class="cap">হোম পেজ: সরাসরি ভর্তির শেষ তারিখের লাইভ কাউন্টডাউন, "Start Chatting" বাটন ও নমুনা চ্যাট</p>
+
+  <h3>৪.২ এআই চ্যাট ব্যবহার করা</h3>
+  <ol class="steps">
+    <li><b>AI Chat</b>-এ যান। প্রথম পর্দায় ৬টি প্রস্তাবিত প্রশ্ন আছে — চাপলেই উত্তর আসবে।</li>
+    <li>নিচের বক্সে নিজের প্রশ্ন লিখে <b>Enter</b> চাপুন, অথবা <b>মাইক</b> বাটন চেপে কথা বলুন।</li>
+    <li>বক্সের ওপরের ছোট বাটন — <b>ফি, কাগজপত্র, শেষ তারিখ, বৃত্তি</b> — এক চাপে সাধারণ প্রশ্ন।</li>
+    <li>উত্তরের পর পরের প্রশ্ন সরাসরি করুন, যেমন "ওটার মোট খরচ কত?" — বট আগের প্রসঙ্গ মনে রাখে।</li>
+    <li>উত্তরের নিচে: <b>সূত্র</b> লিংক, <b>Copy</b>, 👍/👎 মতামত, আর <b>Regenerate</b> (আবার উত্তর তৈরি)।</li>
+    <li>বাম পাশের <b>Chat history</b>-তে আগের চ্যাট; ✎ দিয়ে নাম বদলান, 🗑 দিয়ে মুছুন, <b>New Chat</b> দিয়ে নতুন শুরু।</li>
+  </ol>
+  <img class="shot" src="img/chat.png" alt="চ্যাট পেজ" style="height:70mm" />
+  <p class="cap">চ্যাট পেজ: উত্তরের নিচে উৎস (Tuition &amp; Fees, যাচাই ২৫ নভেম্বর ২০২৬), নিশ্চিত হওয়ার নোট, কপি ও 👍/👎</p>
+</section>
+
+<section class="section">
+  <h3 style="margin-top:0">৪.৩ ভর্তি নির্দেশিকা (Admission Guide)</h3>
+  <p>সব তথ্য এক পেজে, ওপরের বাটন দিয়ে সরাসরি যেকোনো অংশে যাওয়া যায়:</p>
+  <ul>
+    <li>ভর্তির ধাপ, সময়সূচি (জানুয়ারি ২০২৭ ইনটেক), প্রোগ্রামভিত্তিক যোগ্যতা ও ফির টেবিল</li>
+    <li>মাস্টার্স প্রোগ্রামের ফি (ব্যাকগ্রাউন্ড অনুযায়ী), যোগ্যতা, কাগজপত্র ও সরাসরি ভর্তি</li>
+    <li>লিখিত ভর্তি পরীক্ষার নম্বর বণ্টন, প্রয়োজনীয় কাগজপত্র, পেমেন্ট নীতি ও যোগাযোগ নম্বর</li>
+    <li>পরীক্ষা ও একাডেমিক নিয়ম, ক্যাম্পাস ও মেডিকেল সেন্টার, নেতৃত্ব (ভিসি ও ডিন), অনুষদ → বিভাগ → প্রোগ্রাম</li>
+  </ul>
+  <img class="shot" src="img/guide.png" alt="ভর্তি নির্দেশিকা" style="height:70mm" />
+  <p class="cap">Admission Guide: ওপরে দ্রুত নেভিগেশন বাটন, নিচে ধাপে ধাপে ভর্তি প্রক্রিয়া</p>
+
+  <h3>৪.৪ টুলস (Tools)</h3>
+  <div class="two">
+    <ul>
+      <li><b>Eligibility Checker:</b> প্রোগ্রাম, এসএসসি ও এইচএসসি জিপিএ, বিভাগ দিন → যোগ্য কি না, সরাসরি ভর্তি না লিখিত পরীক্ষা।</li>
+      <li><b>Fee Calculator:</b> প্রোগ্রাম ও এইচএসসি/ডিপ্লোমা বেছে নিন → ভর্তি ফি, ক্রেডিট, মোট ফি।</li>
+    </ul>
+    <ul>
+      <li><b>Master's Fee Calculator:</b> MBA, MCSE ইত্যাদি ব্যাকগ্রাউন্ড অনুযায়ী মোট ফি।</li>
+      <li><b>Compare Programs:</b> যেকোনো দুটি প্রোগ্রাম পাশাপাশি তুলনা।</li>
+      <li><b>Admission Checklist:</b> ধাপগুলো টিক দিন, অগ্রগতির বার সংরক্ষিত থাকে।</li>
+    </ul>
+  </div>
+  <img class="shot" src="img/tools.png" alt="টুলস" style="height:62mm" />
+  <p class="cap">Tools: এআই নয়, সরাসরি অফিসিয়াল ডেটা থেকে হিসাব</p>
+</section>
+
+<section class="section">
+  <h3 style="margin-top:0">৪.৫ মোবাইলে ব্যবহার ও অ্যাপ হিসেবে ইনস্টল</h3>
+  <img class="shot" src="img/mobile.png" alt="মোবাইল ভিউ" style="height:72mm" />
+  <p class="cap">মোবাইল ভিউ: হোম, ভর্তি নির্দেশিকা ও টুলস — ছোট স্ক্রিনেও সম্পূর্ণ ব্যবহারযোগ্য</p>
+  <div class="two">
+    <div class="tint">
+      <b>Android (Chrome)</b>
+      <ol style="margin:2mm 0 0">
+        <li>সাইট খুলুন।</li>
+        <li>ওপরের <b>অ্যাপ ইনস্টল</b> বাটন চাপুন, অথবা ⋮ মেনু → <b>Install app</b>।</li>
+        <li>হোম স্ক্রিনে UnishohayAI আইকন চলে আসবে।</li>
+      </ol>
+    </div>
+    <div class="tint">
+      <b>iPhone (Safari)</b>
+      <ol style="margin:2mm 0 0">
+        <li>Safari-তে সাইট খুলুন।</li>
+        <li><b>Share</b> বাটন → <b>Add to Home Screen</b>।</li>
+        <li>অ্যাপের মতো পুরো স্ক্রিনে খুলবে।</li>
+      </ol>
+    </div>
+  </div>
+  <p>অ্যাপ আইকনে লং-প্রেস করলে সরাসরি AI Chat, Admission Guide বা Tools-এ যাওয়া যায়। ভর্তি নির্দেশিকা ও টুলস একবার খোলার পর ইন্টারনেট ছাড়াও দেখা যায়; চ্যাটের জন্য ইন্টারনেট লাগে।</p>
+
+  <h3>৪.৬ উদাহরণ প্রশ্ন</h3>
+  <table>
+    <tr><th>বাংলা</th><th>English</th></tr>
+    <tr><td>সিএসই পড়তে মোট খরচ কত?</td><td class="en">What is the total fee for CSE?</td></tr>
+    <tr><td>আবেদনের শেষ তারিখ কবে?</td><td class="en">What is the last date to apply?</td></tr>
+    <tr><td>লিখিত পরীক্ষা ছাড়া কি সরাসরি ভর্তি হওয়া যায়?</td><td class="en">Can I get direct admission without a written test?</td></tr>
+    <tr><td>ভর্তির জন্য কী কী কাগজপত্র লাগবে?</td><td class="en">What documents do I need for admission?</td></tr>
+    <tr><td>সিএসই ডিপার্টমেন্টের সব টিচারদের নাম দাও</td><td class="en">Who is the chairman of EEE?</td></tr>
+    <tr><td>লাইব্রেরি কখন খোলা থাকে?</td><td class="en">What is the fee for an MBA?</td></tr>
+    <tr><td>বিকাশে কীভাবে ফি দেব?</td><td class="en">How many credits is BBA?</td></tr>
+  </table>
+</section>
+
+<!-- ============ 5. PRESENTATION ============ -->
+<section class="section">
+  <h2><span class="num">৫</span> কীভাবে উপস্থাপন করবেন</h2>
+  <h3>এক লাইনে পরিচয় (Pitch)</h3>
+  <div class="tint lead">"UnishohayAI হলো পিসিআইইউ-এর জন্য বাংলা-ইংরেজি এআই ভর্তি সহকারী — যেকোনো শিক্ষার্থী যেকোনো সময় নিজের ভাষায় প্রশ্ন করে অফিসিয়াল তথ্য থেকে উৎসসহ উত্তর পায়, আর তথ্য না থাকলে বট অনুমান না করে সৎভাবে বলে দেয়।"</div>
+
+  <h3>৩ মিনিটের ডেমো স্ক্রিপ্ট</h3>
+  <table class="script tight">
+    <tr><td>০:০০–০:৩০</td><td><b>সমস্যা বলুন:</b> ভর্তির তথ্য অনেক পেজে ছড়ানো, ইংরেজিতে, অফিস সময়ের বাইরে উত্তর নেই।</td></tr>
+    <tr><td>০:৩০–১:০০</td><td><b>হোম পেজ দেখান:</b> লাইভ কাউন্টডাউন, বাংলা/EN টগল এক চাপে পুরো সাইটের ভাষা বদলায়।</td></tr>
+    <tr><td>১:০০–১:৪৫</td><td><b>বাংলায় প্রশ্ন:</b> "সিএসই পড়তে মোট খরচ কত?" → তারপর "ওটার জন্য কত জিপিএ লাগবে?" (প্রসঙ্গ মনে রাখে)। উত্তরের নিচের উৎস লাইন দেখান।</td></tr>
+    <tr><td>১:৪৫–২:১৫</td><td><b>সততা দেখান:</b> "PCIU তে হোস্টেল আছে?" → "প্রকাশিত নয়" + ফোন নম্বর। "How many credits is BBA?" → দুই উৎসের অমিল (১৩০ বনাম ১২৭) দুটোই দেখায়।</td></tr>
+    <tr><td>২:১৫–২:৪৫</td><td><b>টুলস ও শিক্ষক:</b> Eligibility Checker-এ জিপিএ দিয়ে ফল; "সিএসই ডিপার্টমেন্টের সব টিচারদের নাম দাও"।</td></tr>
+    <tr><td>২:৪৫–৩:০০</td><td><b>মোবাইল ও শেষ কথা:</b> ফোনে ইনস্টল করা অ্যাপ দেখান; সম্পূর্ণ ফ্রি টুলে তৈরি, শিক্ষার্থী ও ভর্তি অফিস দুই পক্ষের সময় বাঁচায়।</td></tr>
+  </table>
+
+  <h3>বিচারকদের সম্ভাব্য প্রশ্ন ও উত্তর</h3>
+  <table class="tight">
+    <tr><th style="width:38%">প্রশ্ন</th><th>উত্তর</th></tr>
+    <tr><td>এআই ভুল তথ্য দিলে?</td><td>এআই শুধু আমাদের দেওয়া অফিসিয়াল ডেটা থেকে উত্তর দেয়; অঙ্ক বানানো নিষেধ, উৎস দেখায়, আর ফি-যোগ্যতায় "অফিস থেকে নিশ্চিত হোন" নোট দেয়।</td></tr>
+    <tr><td>এআই সার্ভার বন্ধ থাকলে?</td><td>৮ সেকেন্ডে উত্তর না এলে বট নিজেই ডেটা থেকে নিয়মভিত্তিক উত্তর দেয়, তাই ডেমো বা ব্যবহারে বিরতি হয় না।</td></tr>
+    <tr><td>তথ্য পুরোনো হয়ে গেলে?</td><td>সব তথ্য একটি JSON ফাইলে; প্রতি ইনটেকে শুধু ফাইলটি হালনাগাদ করলেই বট নতুন তথ্য বলে, কোড বদলাতে হয় না।</td></tr>
+    <tr><td>খরচ কত?</td><td>Next.js, Vercel ও Google Gemini-এর ফ্রি টিয়ারে চলে; কোনো পেইড ডাটাবেস বা সার্ভিস নেই।</td></tr>
+    <tr><td>ভবিষ্যতে কী করা যায়?</td><td>পিসিআইইউ-এর অফিসিয়াল ডেটার সাথে সরাসরি সংযোগ, ভর্তি অফিসের জন্য প্রশ্ন-বিশ্লেষণ ড্যাশবোর্ড, Messenger/WhatsApp বট।</td></tr>
+  </table>
+</section>
+
+<!-- ============ 6. TECH, LIMITS, FUTURE ============ -->
+<section class="section">
+  <h2><span class="num">৬</span> প্রযুক্তি, সীমাবদ্ধতা ও ভবিষ্যৎ</h2>
+  <h3>যে প্রযুক্তিতে তৈরি</h3>
+  <table class="tight">
+    <tr><th style="width:32%">অংশ</th><th>প্রযুক্তি</th></tr>
+    <tr><td>ওয়েবসাইট</td><td class="en">Next.js (App Router), React, TypeScript, Tailwind CSS</td></tr>
+    <tr><td>এআই</td><td class="en">Google Gemini (Flash models, free tier) via @google/genai, streaming</td></tr>
+    <tr><td>ডেটা</td><td>একটি JSON ফাইল (PCIU ওয়েবসাইট থেকে সংগৃহীত, ২৫ নভেম্বর ২০২৬); কোনো ডাটাবেস নেই</td></tr>
+    <tr><td>হোস্টিং ও কোড</td><td class="en">Vercel (free), GitHub — github.com/boktiyer/unishohay-ai</td></tr>
+    <tr><td>মোবাইল</td><td>PWA: ইনস্টলযোগ্য, অফলাইন পেজ, সার্ভিস ওয়ার্কার</td></tr>
+  </table>
+
+  <h3>সীমাবদ্ধতা (সৎভাবে)</h3>
+  <ul>
+    <li>এটি পিসিআইইউ-এর অফিসিয়াল সেবা নয়; তথ্য ওয়েবসাইট থেকে ২৫ নভেম্বর ২০২৬-এ সংগৃহীত।</li>
+    <li>কিছু তথ্য অফিসিয়ালভাবে প্রকাশিত নয়: ইমেইল, অফিস সময়, হোস্টেল/যাতায়াত, লেট ফি, বৃত্তির শতাংশ, ওরিয়েন্টেশনের তারিখ।</li>
+    <li>ফ্রি এআই সার্ভার কখনো ব্যস্ত থাকলে উত্তর আসে সরাসরি ডেটা থেকে — সঠিক, তবে কম সাজানো।</li>
+    <li>কিছু ইন্টারনেট সংযোগ থেকে <span class="en">vercel.app</span> ঠিকানা মাঝে মাঝে ধীর খোলে; নিজস্ব ডোমেইন যুক্ত করলে সমাধান হবে।</li>
+  </ul>
+
+  <h3>ভবিষ্যৎ পরিকল্পনা</h3>
+  <div class="cards three">
+    <div class="card"><h4>অফিসিয়াল সংযোগ</h4><p>ভর্তি অফিস নিজেই ডেটা হালনাগাদ করতে পারবে এমন ছোট অ্যাডমিন প্যানেল।</p></div>
+    <div class="card"><h4>প্রশ্ন বিশ্লেষণ</h4><p>👍/👎 আর সাধারণ প্রশ্ন থেকে বোঝা, শিক্ষার্থীরা কী জানতে চায়।</p></div>
+    <div class="card"><h4>আরও চ্যানেল</h4><p>Facebook Messenger ও WhatsApp-এ একই বট, এসএমএস রিমাইন্ডার।</p></div>
+  </div>
+
+  <div class="end avoid">
+    <img src="../public/images/logo.png" alt="UnishohayAI" />
+    <p class="lead" style="margin-top:4mm"><b class="gtext">Team Trio Code</b> · PCIU Computer Club Hackathon</p>
+    <p class="en muted">unishohay-ai.vercel.app · github.com/boktiyer/unishohay-ai</p>
+  </div>
+</section>
+
+</body>
+</html>
