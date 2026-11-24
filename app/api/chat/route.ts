@@ -52,20 +52,22 @@ export async function POST(req: Request) {
   const contents = messages.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const config = { systemInstruction: buildSystemInstruction(retrieval.context, lang, retrieval.confirm), temperature: 0.2 };
 
-  // Try each model; retry once on overload. Fall through to the next model on 503/500/404.
+  // Free-tier Gemini often returns 503 (overloaded) or 429 (per-model quota).
+  // Go through all models, up to 3 rounds with backoff; drop models that are out of quota or missing.
   let stream: AsyncGenerator<{ text?: string }> | null = null;
   let lastStatus: number | undefined;
-  outer: for (const model of MODELS) {
-    for (let attempt = 0; attempt < 2; attempt++) {
+  let candidates = [...MODELS];
+  outer: for (let round = 0; round < 3 && candidates.length; round++) {
+    if (round) await new Promise((r) => setTimeout(r, 1500 * round));
+    for (const model of [...candidates]) {
       try {
         stream = await ai.models.generateContentStream({ model, contents, config });
         break outer;
       } catch (err) {
         lastStatus = (err as { status?: number })?.status;
         console.error(`Gemini error [${model}]:`, lastStatus, (err as Error)?.message?.slice(0, 200));
-        if (lastStatus === 400 || lastStatus === 403) break outer;
-        if (lastStatus === 404 || lastStatus === 429) break; // unavailable or per-model quota hit: next model
-        if (attempt === 0) await new Promise((r) => setTimeout(r, 800));
+        if (lastStatus === 400 || lastStatus === 401 || lastStatus === 403) break outer; // bad key / request
+        if (lastStatus === 404 || lastStatus === 429) candidates = candidates.filter((m) => m !== model);
       }
     }
   }

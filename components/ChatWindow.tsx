@@ -7,7 +7,7 @@ import { detectLang } from "@/lib/admission-data";
 import { dict, suggestions } from "@/lib/i18n";
 import type { ChatMessage, Conversation } from "@/types";
 import ChatInput from "./ChatInput";
-import { LogoMark } from "./Logo";
+import { LogoFull } from "./Logo";
 import MessageBubble from "./MessageBubble";
 import { useLang } from "./Providers";
 import Sidebar from "./Sidebar";
@@ -20,9 +20,9 @@ function SuggestedQuestions({ onPick }: { onPick: (q: string) => void }) {
   return (
     <div className="mx-auto flex max-w-3xl flex-col items-center px-2 py-10 text-center">
       <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
-        <LogoMark size={64} />
+        <LogoFull width={220} className="h-auto w-44 sm:w-56" />
       </motion.div>
-      <h1 className="mt-5 text-2xl font-extrabold sm:text-3xl">{t("welcome_title")}</h1>
+      <h1 className="mt-3 text-2xl font-extrabold sm:text-3xl">{t("welcome_title")}</h1>
       <p className="mt-2 text-slate-500 dark:text-slate-400">{t("welcome_sub")}</p>
       <motion.div
         initial="hidden"

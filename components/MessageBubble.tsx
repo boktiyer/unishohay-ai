@@ -2,11 +2,12 @@
 
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { Bot, Check, Copy, Database, Info, RefreshCw, TriangleAlert, User } from "lucide-react";
+import { Check, Copy, Database, Info, RefreshCw, TriangleAlert, User } from "lucide-react";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { ChatMessage } from "@/types";
+import { LogoMark } from "./Logo";
 import { useLang } from "./Providers";
 
 interface Props {
@@ -38,14 +39,13 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
       transition={{ duration: 0.25 }}
       className={clsx("flex gap-3", isUser && "flex-row-reverse")}
     >
-      <span
-        className={clsx(
-          "grid h-8 w-8 shrink-0 place-items-center rounded-lg",
-          isUser ? "bg-slate-200 text-slate-600 dark:bg-white/10 dark:text-slate-300" : "bg-brand-gradient text-white"
-        )}
-      >
-        {isUser ? <User size={16} /> : <Bot size={16} />}
-      </span>
+      {isUser ? (
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-slate-200 text-slate-600 dark:bg-white/10 dark:text-slate-300">
+          <User size={16} />
+        </span>
+      ) : (
+        <LogoMark size={36} />
+      )}
 
       <div className={clsx("min-w-0 max-w-[85%] sm:max-w-[75%]", isUser && "flex flex-col items-end")}>
         <div

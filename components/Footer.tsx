@@ -3,7 +3,7 @@
 import { ExternalLink, MapPin } from "lucide-react";
 import Link from "next/link";
 import { admission } from "@/lib/admission-data";
-import Logo from "./Logo";
+import { LogoFull } from "./Logo";
 import { useLang } from "./Providers";
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="border-t border-slate-200/70 bg-white/50 dark:border-white/5 dark:bg-white/[0.02]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div className="space-y-3">
-          <Logo />
+          <LogoFull width={200} className="h-auto w-44" />
           <p className="text-sm text-slate-500 dark:text-slate-400">{t("footer_note")}</p>
         </div>
         <div>

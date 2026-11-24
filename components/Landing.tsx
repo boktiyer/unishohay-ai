@@ -3,13 +3,14 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import {
-  ArrowRight, BookOpen, Bot, Calculator, ChevronDown, Clock, Database, GraduationCap,
+  ArrowRight, BookOpen, Calculator, ChevronDown, Clock, Database, GraduationCap,
   Languages, MessageSquare, Search, ShieldCheck, Sparkles, Wallet, Zap,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { admission } from "@/lib/admission-data";
 import type { DictKey } from "@/lib/i18n";
+import { LogoMark } from "./Logo";
 import { useLang } from "./Providers";
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
@@ -50,7 +51,7 @@ function ChatMockup() {
       className="glass w-full max-w-md rounded-3xl p-5"
     >
       <div className="mb-4 flex items-center gap-2 border-b border-slate-200/70 pb-3 dark:border-white/10">
-        <span className="bg-brand-gradient grid h-8 w-8 place-items-center rounded-lg text-white"><Bot size={17} /></span>
+        <LogoMark size={36} />
         <div className="text-sm font-semibold">UnishohayAI</div>
         <span className="ml-auto flex items-center gap-1 text-xs text-emerald-500"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Online</span>
       </div>
