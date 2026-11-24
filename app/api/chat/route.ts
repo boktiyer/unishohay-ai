@@ -1,6 +1,7 @@
 import { ThinkingLevel } from "@google/genai";
 import { detectLang, retrieveContext } from "@/lib/admission-data";
 import { fallbackAnswer } from "@/lib/fallback";
+import { detectSmallTalk, smallTalkReply } from "@/lib/small-talk";
 import { buildSystemInstruction, getGemini, MODELS } from "@/lib/gemini";
 import type { Lang } from "@/types";
 
@@ -48,6 +49,14 @@ export async function POST(req: Request) {
   const lang = last ? detectLang(last.content) : "en";
   if (!last || last.role !== "user") return fail("empty", lang, 400);
   if (last.content.length > MAX_CHARS) return fail("long", lang, 400);
+
+  // Casual chat (hi / how are you / your name / thanks / bye / off-topic): answer instantly.
+  const smallTalk = detectSmallTalk(last.content);
+  if (smallTalk && smallTalk !== "opinion") {
+    return new Response(smallTalkReply(smallTalk, lang), {
+      headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-cache", "X-Sourced": "0", "X-Confirm": "0", "X-Sources": "" },
+    });
+  }
 
   const ai = getGemini();
   if (!ai) return fail("key", lang, 500);

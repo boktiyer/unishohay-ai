@@ -5,6 +5,7 @@
  */
 import { admission, bdt, contact, eligibility, fees, links, programs, retrieveContext, toLangDigits, type Topic } from "./admission-data";
 import type { Lang } from "@/types";
+import { detectSmallTalk, ONLY_PCIU, smallTalkReply } from "./small-talk";
 
 const L = {
   en: {
@@ -55,13 +56,17 @@ export function fallbackAnswer(question: string, recent: string[], lang: Lang) {
   const r = retrieveContext(question, recent);
   const base = { topics: r.topics as Topic[], confirm: r.confirm };
 
+  // "Is PCIU good?" / casual chat: balanced, fact-based reply instead of a data dump.
+  const st = detectSmallTalk(question);
+  if (st) return { topics: (st === "opinion" ? ["about"] : []) as Topic[], confirm: false, sourced: st === "opinion", text: smallTalkReply(st, lang) };
+
   // A close official FAQ match is the best quick answer.
   const top = r.faqMatches[0];
   if (top && top.score >= 0.6) {
     return { ...base, topics: ["faqs"] as Topic[], sourced: true, text: lang === "bn" ? top.item.a_bn : top.item.a_en };
   }
   if (!r.sourced) {
-    return { ...base, sourced: false, confirm: false, text: `${t.notFound}\n\n${officeReferral(lang)}\n\n${t.try}` };
+    return { ...base, sourced: false, confirm: false, text: ONLY_PCIU[lang] };
   }
 
   const d = (s: string | number) => toLangDigits(s, lang);
