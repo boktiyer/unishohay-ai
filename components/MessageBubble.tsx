@@ -39,11 +39,11 @@ export default function MessageBubble({ message, streaming, canRegenerate, onReg
       className={clsx("anim-msg flex gap-3", isUser && "flex-row-reverse")}
     >
       {isUser ? (
-        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-slate-200 text-slate-600 dark:bg-white/10 dark:text-slate-300">
+        <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center self-start rounded-lg bg-slate-200 text-slate-600 dark:bg-white/10 dark:text-slate-300">
           <User size={16} />
         </span>
       ) : (
-        <LogoMark size={36} />
+        <LogoMark size={32} className="mt-0.5 self-start" />
       )}
 
       <div className={clsx("min-w-0 max-w-[85%] sm:max-w-[75%]", isUser && "flex flex-col items-end")}>

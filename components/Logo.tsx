@@ -2,8 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 /** Robot mascot (favicon crop of the brand logo) */
-export function LogoMark({ size = 40 }: { size?: number }) {
-  return <Image src="/images/logo-mark.png" alt="UnishohayAI" width={size} height={size} priority className="shrink-0" />;
+export function LogoMark({ size = 40, className = "" }: { size?: number; className?: string }) {
+  // Fixed width AND height so a flex row (e.g. a long chat answer) can never stretch it vertically.
+  return (
+    <Image
+      src="/images/logo-mark.png"
+      alt="UnishohayAI"
+      width={size}
+      height={size}
+      priority
+      style={{ width: size, height: size }}
+      className={`shrink-0 object-contain ${className}`}
+    />
+  );
 }
 
 /** Full brand logo with mascot, wordmark and tagline */
