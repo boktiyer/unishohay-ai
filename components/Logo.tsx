@@ -24,7 +24,7 @@ export default function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2 font-extrabold tracking-tight">
       <LogoMark size={42} />
-      <span className="text-lg">
+      <span className="hidden text-lg min-[420px]:inline">
         Unishohay<span className="text-gradient">AI</span>
       </span>
     </Link>

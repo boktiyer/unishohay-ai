@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import InstallApp from "./InstallApp";
 import Logo from "./Logo";
 import { useLang } from "./Providers";
 
@@ -74,7 +75,8 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <InstallApp />
           <LangToggle />
           <ThemeToggle />
           <button className="grid h-9 w-9 place-items-center rounded-xl md:hidden" onClick={() => setOpen(!open)} aria-label={t("menu")}>

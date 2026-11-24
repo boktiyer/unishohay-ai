@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   description:
     "AI-powered bilingual (Bangla & English) admission assistant for Port City International University, Chattogram. Ask about departments, fees, eligibility and the admission process.",
   keywords: ["PCIU", "Port City International University", "admission", "chatbot", "Bangla", "Chattogram"],
+  applicationName: "UnishohayAI",
+  appleWebApp: { capable: true, title: "UnishohayAI", statusBarStyle: "default" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
