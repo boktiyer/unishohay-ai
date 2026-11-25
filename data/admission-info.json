@@ -225,10 +225,10 @@
       },
       "fashion": {
         "category": null,
-        "min_ssc_gpa": 2.5,
-        "min_hsc_gpa": 2.5,
+        "min_ssc_gpa": null,
+        "min_hsc_gpa": null,
         "published_text": null,
-        "note": "Both published categories require minimum GPA 2.50 in SSC and HSC. Whether a science background is required for this program is not confirmed."
+        "note": "Fashion Design & Technology is not named on the official Admission Requirement page, so its minimum GPA and background are not available. Say this information is not available and refer the student to the Admission Office."
       }
     },
     "o_a_level": "Minimum 5 subjects in O-Level and 2 subjects in A-Level, with minimum grade B in 4 subjects and C in 3 subjects (from the science group for science and engineering programs).",
@@ -248,7 +248,8 @@
         "M.S.S. in Broadcast & Print Journalism (Final)": "4-year Bachelor's degree in Journalism from any recognized university",
         "M.Sc. in Computer Science & Engineering (MCSE)": "B.Sc. in Computer Science & Engineering or other relevant subjects"
       }
-    }
+    },
+    "diploma_note": "The Admission Requirement page does not describe diploma eligibility rules or credits waived for diploma holders. Only diploma total fees for CSE, Civil, EEE and Textile are published."
   },
   "tuition_fees": {
     "source_url": "https://portcity.edu.bd/HomePage/DepatmentDetails/29/Portfolio/bachelor-s-degree-programs",
@@ -257,6 +258,7 @@
     "admission_fee": 18000,
     "admission_fee_refundable": false,
     "admission_form_price": 500,
+    "diploma_note": "Diploma-background totals are published only for CSE (BDT 3,42,300), Civil (BDT 3,21,975), EEE (BDT 3,30,400) and Textile (BDT 3,20,400), including the BDT 18,000 admission fee. Diploma fees are not published for BBA, LL.B., English, Journalism or Fashion, and the credits waived for diploma holders are not published. Never calculate these; refer the student to the Admission Office.",
     "notes": "Total fees include the admission fee (BDT 18,000, non-refundable, due at admission). Where two totals are shown, the main total is for H.S.C. background and the other for diploma background. PCIU uses trimesters; a per-trimester or per-year fee breakdown is not published and must not be calculated.",
     "by_program": {
       "bba": {
@@ -426,19 +428,32 @@
             "total_credits": 66,
             "total_fees_bdt": 117000
           }
-        ]
+        ],
+        "track_credits": {
+          "Thesis": "24 theory credits + 12 thesis credits (plus any prerequisite credits)",
+          "Project": "30 theory credits + 6 project credits (plus any prerequisite credits)"
+        }
       }
     ],
     "masters_fees_not_available": [
       "Executive MBA",
       "LL.M. (Preliminary & Final)",
       "M.A. in English (Preliminary & Final)",
-      "M.S.S. in Economics"
+      "M.S.S. in Economics",
+      "M.S.S. in Broadcast & Print Journalism (Preliminary & Final)"
     ],
     "trimester_fee_international_students_bdt": 5000,
     "per_year_fee": null,
     "hostel_and_other_fees": null,
-    "per_trimester_fee": null
+    "per_trimester_fee": null,
+    "not_published": [
+      "Per-trimester or per-year fee breakdown",
+      "Lab, library, exam, retake and improvement exam fees",
+      "Late payment fee amount",
+      "Hostel or transport fees",
+      "Diploma-background fees for BBA, LL.B., English, Journalism and Fashion",
+      "Credits waived for diploma holders"
+    ]
   },
   "payment_policy": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/59/Page/admission-payment-policy",
@@ -533,7 +548,12 @@
       "Bachelor's: first-trimester scholarship is based on admission test performance; later trimesters are based on trimester results. Master's: based on trimester results.",
       "Need-based financial aid is available for poor students."
     ],
-    "amounts_or_percentages_of_waiver": null
+    "amounts_or_percentages_of_waiver": null,
+    "not_published": [
+      "Waiver percentage by GPA",
+      "How to apply for need-based aid",
+      "Conditions for keeping a scholarship"
+    ]
   },
   "admission_procedure": {
     "source_url": "https://portcity.edu.bd/HomePage/SubPageDetailsPara/32/Page/admission-admission-schedule",
@@ -552,8 +572,8 @@
         "bn": "এসএসসি ও এইচএসসি মার্কশিট ও সার্টিফিকেটের সত্যায়িত ফটোকপি এবং এনআইডি / জন্ম সনদ / পাসপোর্টসহ ফর্ম জমা দিন।"
       },
       {
-        "en": "Combined SSC + HSC GPA 7.00 or above (8.00 for LL.B.): direct admission without the written test (viva voce may be required). Last date: 9 December 2026.",
-        "bn": "এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি (এলএল.বি-র জন্য ৮.০০): লিখিত পরীক্ষা ছাড়াই সরাসরি ভর্তি (ভাইভা লাগতে পারে)। শেষ তারিখ: ৯ ডিসেম্বর ২০২৬।"
+        "en": "Combined SSC + HSC GPA 7.00 or above (all bachelor's programs): direct admission without the written test, but the viva voce and the English Placement Test are still required. Last date: 9 December 2026.",
+        "bn": "এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি (সব ব্যাচেলর প্রোগ্রাম): লিখিত পরীক্ষা ছাড়াই সরাসরি ভর্তি, তবে ভাইভা ও ইংরেজি প্লেসমেন্ট টেস্ট দিতে হবে। শেষ তারিখ: ৯ ডিসেম্বর ২০২৬।"
       },
       {
         "en": "Combined GPA below 7.00: apply for the written test by 10 December 2026. Written test: 12 December 2026, 12:30-1:30 pm. Result: 13 December 2026, 12:00 pm.",
@@ -570,8 +590,8 @@
     ],
     "direct_admission": {
       "min_combined_gpa": 7,
-      "min_combined_gpa_llb": 8,
-      "note": "Written test is exempted; viva voce may be required."
+      "min_combined_gpa_llb": 7,
+      "note": "Written test is exempted, but the viva voce and the English Placement Test are still required. Verified on the official Direct Admission page (2026-11-25): one 7.00 threshold for all bachelor's programs, no separate LL.B. figure."
     },
     "written_test_rule": "Applicants who meet the minimum requirement but have a combined GPA below 7.00 must take the written test and the viva voce.",
     "scholarship_test_rule": "For bachelor's students, the first-trimester scholarship is based on admission test performance.",
@@ -649,6 +669,10 @@
         {
           "name": "IT Forum",
           "url": "https://www.portcity.edu.bd/HomePage/ListPrimary/119/C/facilities-forum-it-forum"
+        },
+        {
+          "name": "PCIU Computer Club",
+          "url": "https://pciucomputerclub.com/"
         }
       ],
       "other": [
@@ -756,6 +780,13 @@
         "summary": "Presented by the PCIU Sports Forum; registration through an official form.",
         "url": "https://www.portcity.edu.bd/HomePage/SubPageDetailsPara/9470/Event/the-pciu-sports-forum-proudly-presents-the-port-city-international-university-rapid-chess-tournament-2026"
       }
+    ],
+    "other_services": [
+      "Career page and Student CV Portal",
+      "Alumni portal",
+      "Convocation (2nd Convocation page)",
+      "Online certificate verification",
+      "Document issuing application"
     ]
   },
   "faqs": {
@@ -776,9 +807,9 @@
       },
       {
         "q_en": "Can I get admitted without a written test?",
-        "a_en": "Yes, if your combined SSC + HSC GPA is 7.00 or above (8.00 or above for LL.B.). A viva voce may still be required.",
+        "a_en": "Yes, if your combined SSC + HSC GPA is 7.00 or above (same for every bachelor's program, including LL.B.). You must still attend the viva voce and the English Placement Test.",
         "q_bn": "লিখিত পরীক্ষা ছাড়া কি ভর্তি হওয়া যায়?",
-        "a_bn": "হ্যাঁ, যদি এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি হয় (এলএল.বি-র জন্য ৮.০০)। তবে ভাইভা লাগতে পারে।"
+        "a_bn": "হ্যাঁ, যদি এসএসসি + এইচএসসি মিলিয়ে জিপিএ ৭.০০ বা তার বেশি হয় (এলএল.বি-সহ সব ব্যাচেলর প্রোগ্রামে একই)। তবে ভাইভা ও ইংরেজি প্লেসমেন্ট টেস্ট দিতে হবে।"
       },
       {
         "q_en": "What documents do I need?",
@@ -802,6 +833,7 @@
   },
   "chatbot_rules": [
     "Answer only from this data and the existing admission data. If a value is null or listed under not_found, say it is not published and refer to the Admission Office.",
+    "For anything not available (Fashion GPA requirement, trimester fees, waiver percentages, hostel, transport, orientation date, diploma fees for non-engineering programs), say \"this information is not available\" and show the Admission Office numbers: 01851120791, 01773225500, 01773225511, phone +88 02333369877. Address: 7-14, Nikunja Housing Society, South Khulshi, Chattogram.",
     "Use 'trimester' (Bangla: ট্রাইমেস্টার), never 'semester'.",
     "Never guess department chairmen, email addresses, late-fee amounts, or waiver percentages.",
     "Master's totals already include the BDT 18,000 non-refundable admission fee.",
@@ -862,6 +894,7 @@
       "IT Forum",
       "Student Forum",
       "Robotics club",
+      "PCIU Computer Club (https://pciucomputerclub.com/)",
       "Departmental clubs (for example PCIU Media Club under Journalism and Media Studies)",
       "Annual sports",
       "Industrial visits"
@@ -991,7 +1024,9 @@
               "BBA",
               "MBA",
               "Executive MBA"
-            ]
+            ],
+            "highlights_en": "One of the pioneering departments at PCIU. Majors and disciplines include Finance, Marketing, Human Resource Management (HRM) and Accounting. Organizes workshops, seminars and business quiz contests.",
+            "highlights_bn": "PCIU-এর অন্যতম প্রথম দিকের বিভাগ। ফিন্যান্স, মার্কেটিং, এইচআরএম ও অ্যাকাউন্টিংসহ বিভিন্ন মেজর আছে। নিয়মিত ওয়ার্কশপ, সেমিনার ও বিজনেস কুইজ হয়।"
           }
         ]
       },
@@ -1003,21 +1038,27 @@
             "programs": [
               "B.A. (Hons) in English",
               "M.A. in English"
-            ]
+            ],
+            "highlights_en": "Offers language and creative courses with seminars, discussion programs and cultural festivals.",
+            "highlights_bn": "ভাষা ও ক্রিয়েটিভ দুই ধরনের কোর্স আছে। সেমিনার, আলোচনা সভা ও সাংস্কৃতিক অনুষ্ঠান হয়।"
           },
           {
             "name": "Department of Law",
             "programs": [
               "LL.B. (Hons)",
               "LL.M."
-            ]
+            ],
+            "highlights_en": "Skill development bodies include a Personality Development Cell, Debate Society, Moot Court Society, Trial Advocacy Center and Judicial Services Preparation Center.",
+            "highlights_bn": "পারসোনালিটি ডেভেলপমেন্ট সেল, ডিবেট সোসাইটি, মুট কোর্ট সোসাইটি, ট্রায়াল অ্যাডভোকেসি সেন্টার ও জুডিশিয়াল সার্ভিস প্রিপারেশন সেন্টার আছে।"
           },
           {
             "name": "Department of Journalism and Media Studies",
             "programs": [
               "B.S.S. in Broadcast & Print Journalism",
               "M.S.S. in Broadcast & Print Journalism"
-            ]
+            ],
+            "highlights_en": "Started in 2013. Organizes workshops, seminars and media visits, and students complete field work. PCIU Media Club runs under this department.",
+            "highlights_bn": "২০১৩ সাল থেকে চালু। ওয়ার্কশপ, সেমিনার ও মিডিয়া ভিজিট হয় এবং শিক্ষার্থীরা ফিল্ড ওয়ার্ক করে। PCIU Media Club এই বিভাগের অধীনে।"
           }
         ],
         "note": "M.S.S. in Economics is listed in admission pages, but no Economics department appears in the department list."
@@ -1030,36 +1071,48 @@
             "programs": [
               "B.Sc. in CSE",
               "M.Sc. in CSE (MCSE)"
-            ]
+            ],
+            "highlights_en": "Seminars, workshops, programming contests and training on related topics.",
+            "highlights_bn": "সেমিনার, ওয়ার্কশপ, প্রোগ্রামিং কনটেস্ট ও বিভিন্ন বিষয়ে ট্রেনিং হয়।"
           },
           {
             "name": "Department of Electrical and Electronic Engineering",
             "programs": [
               "B.Sc. in EEE"
-            ]
+            ],
+            "highlights_en": "Established in 2012 with a 4 year program.",
+            "highlights_bn": "২০১২ সালে প্রতিষ্ঠিত, ৪ বছর মেয়াদী প্রোগ্রাম।"
           },
           {
             "name": "Department of Civil Engineering",
             "programs": [
               "B.Sc. in Civil Engineering"
-            ]
+            ],
+            "highlights_en": "Started in 2013 with laboratory facilities. Graduates work in government and private organizations in Bangladesh and abroad.",
+            "highlights_bn": "২০১৩ সালে শুরু, ল্যাব সুবিধা আছে। গ্র্যাজুয়েটরা দেশে ও বিদেশে সরকারি-বেসরকারি প্রতিষ্ঠানে কাজ করছেন।"
           },
           {
             "name": "Department of Textile Engineering",
             "programs": [
               "B.Sc. in Textile Engineering"
-            ]
+            ],
+            "highlights_en": "Started in January 2013. Covers spinning, weaving, knitting, dyeing, finishing and garments, with industry links through seminars and workshops.",
+            "highlights_bn": "২০১৩ সালের জানুয়ারি থেকে শুরু। স্পিনিং, উইভিং, নিটিং, ডাইং, ফিনিশিং ও গার্মেন্টস বিষয়ে পড়ানো হয়।"
           },
           {
             "name": "Department of Fashion Design and Technology",
             "programs": [
               "B.Sc. in Fashion Design & Technology"
-            ]
+            ],
+            "highlights_en": "Career paths include own establishment, fashion labels, garment export houses, textile mills, merchandising, visual merchandising, styling and teaching.",
+            "highlights_bn": "নিজস্ব ব্যবসা, ফ্যাশন ব্র্যান্ড, গার্মেন্ট এক্সপোর্ট, টেক্সটাইল মিল, মার্চেন্ডাইজিং, স্টাইলিং ও শিক্ষকতায় ক্যারিয়ার সুযোগ আছে।"
           },
           {
             "name": "Department of Natural Science",
             "programs": [],
-            "note": "Service department (Math, Statistics, Physics, Chemistry, History). No degree program."
+            "note": "Service department (Math, Statistics, Physics, Chemistry, History). No degree program.",
+            "highlights_en": "Service department teaching Mathematics, Business Mathematics, Physics, Chemistry, Statistics and History of Bangladesh to other departments. Does not offer its own degree.",
+            "highlights_bn": "গণিত, বিজনেস ম্যাথ, পদার্থবিজ্ঞান, রসায়ন, পরিসংখ্যান ও বাংলাদেশের ইতিহাস কোর্স অন্য বিভাগকে পড়ায়। নিজস্ব ডিগ্রি প্রোগ্রাম নেই।"
           }
         ]
       }
@@ -1222,7 +1275,13 @@
         "Student must be physically present at the time of admission"
       ]
     },
-    "new_student_registration_note": "New students collect account clearance by paying registration fees in the Accounts Section, then submit it with the filled Student Insurance Form (given during admission) to the department office."
+    "new_student_registration_note": "New students collect account clearance by paying registration fees in the Accounts Section, then submit it with the filled Student Insurance Form (given during admission) to the department office.",
+    "not_published": [
+      "Passing marks",
+      "Detailed syllabus topics",
+      "Viva voce marking scheme",
+      "Master's test marks other than MBA (Regular)"
+    ]
   },
   "masters_programs_and_fees": {
     "source_url": "https://www.portcity.edu.bd/HomePage/DepatmentDetails/30/Portfolio/master-s-degree-programs",
@@ -1707,7 +1766,8 @@
       "Sports Forum",
       "IT Forum",
       "Robotics club",
-      "PCIU Media Club"
+      "PCIU Media Club",
+      "PCIU Computer Club"
     ],
     "other": [
       "Campus Life page",
@@ -1761,7 +1821,8 @@
     "The first admission schedule page listed direct-admission programs without M.S.S. in Economics. The Direct Admission page includes it. This file uses the Direct Admission page.",
     "Some policy pages say 'semester'. The admission pages use 'trimester'.",
     "The history page ends in mid-2024, so it does not show newer events.",
-    "LL.M. (Preliminary & Final) eligibility: the admission requirement page says a 3-year Bachelor of Laws; the admission FAQ page says a 3-year Bachelor's degree and a 2-year Bachelor of Laws. Confirm with the Admission Office."
+    "LL.M. (Preliminary & Final) eligibility: the admission requirement page says a 3-year Bachelor of Laws; the admission FAQ page says a 3-year Bachelor's degree and a 2-year Bachelor of Laws. Confirm with the Admission Office.",
+    "LL.B. direct admission GPA: an older page said 8.00, but the official Direct Admission page (checked 2026-11-25) gives one 7.00 threshold for all bachelor's programs and no separate LL.B. figure. This file uses 7.00."
   ],
   "not_found": [
     "Contact email addresses",
@@ -1770,7 +1831,19 @@
     "Scholarship waiver percentage per student",
     "Orientation date for January 2027 intake",
     "Class schedule, exam schedule and academic calendar contents (pages exist but were not read)",
-    "Lab list, forum details, hostel/transport information (no hostel or transport page was found in the menu)"
+    "Lab list, forum details, hostel/transport information (no hostel or transport page was found in the menu)",
+    "Fashion Design & Technology GPA requirement",
+    "Per-trimester or per-year tuition fee breakdown",
+    "Diploma-background fees for BBA, LL.B., English, Journalism and Fashion, and credits waived for diploma holders",
+    "Hostel information",
+    "Transport information",
+    "Canteen information",
+    "Placement statistics",
+    "Passing marks and syllabus of the admission test",
+    "How to apply for need-based financial aid and conditions for keeping a scholarship",
+    "Fees for Executive MBA, LL.M. (Preliminary & Final), M.A. in English (Preliminary & Final), M.S.S. in Journalism (Preliminary & Final) and M.S.S. in Economics",
+    "Lab, library, retake and improvement exam fees",
+    "Answers to these topics on the university FAQ page were not collected: course registration (new and existing students, add/drop, late registration, extra courses, extending beyond six years), dropping a semester, continuing after dropping three or more semesters, incomplete midterm or final exams, minimum CGPA for the certificate, choosing an internship supervisor. Refer students to the FAQ page or the Admission Office."
   ],
   "faq_additions": [
     {
@@ -1892,6 +1965,66 @@
       "q_bn": "পিসিআইইউ-তে কি বিদেশি শিক্ষার্থী আছে?",
       "a_en": "Yes. The university says a good number of foreign students study there and a language center helps them improve communication skills. The master's fee page lists BDT 5,000 per trimester for international students, but it is unclear whether this applies to bachelor's.",
       "a_bn": "হ্যাঁ। বিশ্ববিদ্যালয়ের তথ্য অনুযায়ী বেশ কিছু বিদেশি শিক্ষার্থী পড়ছেন এবং যোগাযোগ দক্ষতা বাড়াতে ল্যাঙ্গুয়েজ সেন্টার আছে। মাস্টার্স ফি পেজে আন্তর্জাতিক শিক্ষার্থীদের জন্য প্রতি ট্রাইমেস্টারে ৫,০০০ টাকা লেখা আছে, তবে এটি বাচেলরে প্রযোজ্য কি না পরিষ্কার নয়।"
+    },
+    {
+      "q_en": "What is the total fee for CSE for a diploma holder?",
+      "q_bn": "ডিপ্লোমা শেষ করে CSE-তে ভর্তি হলে মোট ফি কত?",
+      "a_en": "For a diploma background the total CSE fee is BDT 342,300, including the non-refundable BDT 18,000 admission fee. For an HSC background it is BDT 376,800.",
+      "a_bn": "ডিপ্লোমা ব্যাকগ্রাউন্ড হলে CSE-র মোট ফি ৩,৪২,৩০০ টাকা। এর মধ্যে ১৮,০০০ টাকা অফেরতযোগ্য ভর্তি ফি ধরা আছে। HSC ব্যাকগ্রাউন্ডে মোট ফি ৩,৭৬,৮০০ টাকা।"
+    },
+    {
+      "q_en": "Which programs have separate diploma fees?",
+      "q_bn": "ডিপ্লোমা শিক্ষার্থীদের ফি কোন কোন প্রোগ্রামে আলাদা?",
+      "a_en": "Diploma totals are published for CSE (BDT 342,300), Civil (321,975), EEE (330,400) and Textile (320,400), including the BDT 18,000 admission fee. For BBA, LL.B., English, Journalism and Fashion they are not published, and the credits waived for diploma holders are not published either, so contact the Admission Office: 01851120791, 01773225500, 01773225511.",
+      "a_bn": "ডিপ্লোমা ব্যাকগ্রাউন্ডের মোট ফি প্রকাশিত আছে CSE (৩,৪২,৩০০), Civil (৩,২১,৯৭৫), EEE (৩,৩০,৪০০) ও Textile (৩,২০,৪০০) টাকা, ১৮,০০০ টাকা ভর্তি ফিসহ। BBA, LL.B., English, Journalism ও Fashion-এর ডিপ্লোমা ফি এবং ডিপ্লোমাধারীদের কত ক্রেডিট মওকুফ হয় তা প্রকাশিত নেই। অ্যাডমিশন অফিসে যোগাযোগ করুন: ০১৮৫১১২০৭৯১, ০১৭৭৩২২৫৫০০, ০১৭৭৩২২৫৫১১।"
+    },
+    {
+      "q_en": "What are the admission fee and form fee?",
+      "q_bn": "ভর্তি ফি ও ভর্তি ফর্মের দাম কত?",
+      "a_en": "The admission fee is BDT 18,000 (non-refundable) and the admission form costs BDT 500.",
+      "a_bn": "ভর্তি ফি ১৮,০০০ টাকা (অফেরতযোগ্য), ভর্তি ফর্ম ৫০০ টাকা।"
+    },
+    {
+      "q_en": "What does the M.Sc. in CSE (MCSE) cost?",
+      "q_bn": "MCSE-তে কত খরচ?",
+      "a_en": "MCSE costs BDT 1,500 per credit. With a 4 year CSE degree it is 36 credits, BDT 72,000 total. With a 3 year CSE, EEE or 4 year Applied Physics degree it is 48 credits, BDT 90,000. Other backgrounds need more credits.",
+      "a_bn": "MCSE-তে প্রতি ক্রেডিট ১,৫০০ টাকা। ৪ বছরের CSE ডিগ্রি থাকলে ৩৬ ক্রেডিটে মোট ৭২,০০০ টাকা। ৩ বছরের CSE বা EEE/Applied Physics (৪ বছর) হলে ৪৮ ক্রেডিটে ৯০,০০০ টাকা। অন্য ব্যাকগ্রাউন্ডে আরও বেশি ক্রেডিট লাগে।"
+    },
+    {
+      "q_en": "What is the admission test marks distribution for engineering and science programs?",
+      "q_bn": "ইঞ্জিনিয়ারিং ও সায়েন্স প্রোগ্রামের ভর্তি পরীক্ষার নম্বর বণ্টন কী?",
+      "a_en": "100 marks in total: English (SAT based) 30, Physics or Chemistry 20, Math or Biology 20, SSC and HSC results 30.",
+      "a_bn": "মোট ১০০ নম্বর: ইংরেজি (SAT ভিত্তিক) ৩০, পদার্থবিজ্ঞান/রসায়ন ২০, গণিত/জীববিজ্ঞান ২০, SSC ও HSC ফলাফল ৩০।"
+    },
+    {
+      "q_en": "What is in the B.A. in English admission test?",
+      "q_bn": "B.A. in English ভর্তি পরীক্ষায় কী কী থাকে?",
+      "a_en": "100 marks in total: English (SAT based) 70 and Aptitude Test 30.",
+      "a_bn": "মোট ১০০ নম্বর: ইংরেজি (SAT ভিত্তিক) ৭০ এবং অ্যাপটিটিউড টেস্ট ৩০।"
+    },
+    {
+      "q_en": "What is the minimum GPA for admission?",
+      "q_bn": "ভর্তির জন্য ন্যূনতম GPA কত?",
+      "a_en": "For bachelor's programs the minimum is GPA 2.50 in both SSC and HSC (or equivalent). Science and engineering programs require a science background. The Fashion Design & Technology requirement is not published, so confirm it with the Admission Office.",
+      "a_bn": "ব্যাচেলর প্রোগ্রামে SSC ও HSC দুটোতেই ন্যূনতম GPA ২.৫০ (বা সমমান)। সায়েন্স ও ইঞ্জিনিয়ারিং প্রোগ্রামে সায়েন্স ব্যাকগ্রাউন্ড লাগবে। Fashion Design & Technology-র যোগ্যতা প্রকাশিত নেই, অ্যাডমিশন অফিস থেকে নিশ্চিত করুন।"
+    },
+    {
+      "q_en": "What is needed with O-Level and A-Level?",
+      "q_bn": "O-Level/A-Level হলে কী লাগবে?",
+      "a_en": "At least 5 O-Level and 2 A-Level subjects, with grade B in 4 subjects and C in 3 subjects. For science and engineering programs these must be from the science group.",
+      "a_bn": "ন্যূনতম ৫টি O-Level ও ২টি A-Level বিষয় লাগবে, যার মধ্যে ৪টিতে B ও ৩টিতে C গ্রেড থাকতে হবে। সায়েন্স ও ইঞ্জিনিয়ারিং প্রোগ্রামে এগুলো সায়েন্স গ্রুপের হতে হবে।"
+    },
+    {
+      "q_en": "Are there scholarships?",
+      "q_bn": "স্কলারশিপ আছে কি?",
+      "a_en": "6% of students receive scholarships: 3% for children of freedom fighters and 3% for meritorious and poor students from remote areas. They are based on SSC and HSC results, on the admission test in the first trimester and on trimester results afterwards. Need-based aid is also available. The waiver percentage by GPA is not published.",
+      "a_bn": "মোট শিক্ষার্থীর ৬% স্কলারশিপ পান: ৩% মুক্তিযোদ্ধাদের সন্তানের জন্য এবং ৩% প্রত্যন্ত এলাকার মেধাবী ও গরিব শিক্ষার্থীদের জন্য। SSC ও HSC ফলাফলের ভিত্তিতে দেওয়া হয়; প্রথম ট্রাইমেস্টারে ভর্তি পরীক্ষার ফলে, পরে ট্রাইমেস্টার ফলাফলে। প্রয়োজনভিত্তিক আর্থিক সহায়তাও আছে। GPA অনুযায়ী ছাড়ের শতাংশ প্রকাশিত নেই।"
+    },
+    {
+      "q_en": "Which programs does PCIU offer?",
+      "q_bn": "কোন কোন বিভাগে কী কী প্রোগ্রাম আছে?",
+      "a_en": "Bachelor's: BBA, LL.B. (Hons.), B.A. (Hons.) in English, B.S.S. (Hons.) in Broadcast & Print Journalism, B.Sc. in CSE, Civil, EEE, Textile Engineering and Fashion Design & Technology. Master's: MBA, Executive MBA, LL.M., M.A. in English, M.S.S. in Journalism, M.S.S. in Economics and MCSE.",
+      "a_bn": "ব্যাচেলর: BBA, LL.B. (Hons.), B.A. (Hons.) English, B.S.S. (Hons.) Broadcast & Print Journalism, B.Sc. CSE, Civil, EEE, Textile Engineering এবং Fashion Design & Technology। মাস্টার্স: MBA, Executive MBA, LL.M., M.A. English, M.S.S. Journalism, M.S.S. Economics ও MCSE।"
     }
   ],
   "knowledge_base_meta": {
