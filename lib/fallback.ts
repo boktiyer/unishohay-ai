@@ -58,7 +58,7 @@ export function fallbackAnswer(question: string, recent: string[], lang: Lang) {
 
   // "Is PCIU good?" / casual chat: balanced, fact-based reply instead of a data dump.
   const st = detectSmallTalk(question);
-  if (st) return { topics: (st === "opinion" ? ["about"] : []) as Topic[], confirm: false, sourced: st === "opinion", text: smallTalkReply(st, lang) };
+  if (st) return { topics: (st === "opinion" ? ["about"] : []) as Topic[], confirm: false, sourced: st === "opinion", text: smallTalkReply(st, lang, question) };
 
   // A close official FAQ match is the best quick answer.
   const top = r.faqMatches[0];

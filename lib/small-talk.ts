@@ -10,7 +10,7 @@ export type SmallTalkKind = "greeting" | "how_are_you" | "identity" | "creator" 
 
 const PATTERNS: [SmallTalkKind, RegExp][] = [
   ["opinion", /(is|how).{0,25}(pciu|port city|university|it|this).{0,20}(good|bad|best|worth|quality|reputation)|should i (study|join|take admission|choose)|worth (it|joining)|ভালো না খারাপ|খারাপ না ভালো|ভালো হবে|খারাপ হবে|কেমন হবে|কেমন ভার্সিটি|কেমন ইউনিভার্সিটি|ভার্সিটি কেমন|ইউনিভার্সিটি কেমন|ভর্তি হওয়া (কি )?উচিত|ভালো কি না|মান কেমন|better than|worse than|vs.?|চেয়ে ভালো|থেকে ভালো|তুলনায় ভালো/i],
-  ["creator", /who (made|built|created|developed) you|তোমাকে কে|তোকে কে|আপনাকে কে|কে বানিয়েছে|কে বানাইছে|কে তৈরি করেছে/i],
+  ["creator", /who (made|built|created|developed|designed) (you|this|unishohay)|who('s| is| are) (your|the) (developers?|creators?|founders?|makers?|team)|who is behind|your (creators?|developers?|founder|makers?|team)\b|তোমাকে কে|তোকে কে|আপনাকে কে|কে বানিয়েছে|কে বানাইছে|কে তৈরি করেছে|নির্মাতা|ডেভেলপার কে|কার তৈরি|টিমে কারা|(chatbot|bot|ai|tomar|তোমার|চ্যাটবট|এআই).{0,15}(founder|ফাউন্ডার)|tomake ke|tomar (developer|creator|founder|maker)|bke (banai|create|toiri|tori|build|develop)|bkar toiri|team ?e kara|tomader team/i],
   ["identity", /your name|who are you|what are you|are you (a )?(bot|human|ai|chatgpt)|তোমার নাম|তোর নাম|আপনার নাম|তুমি কে|তুই কে|আপনি কে|তুমি কি মানুষ|তুমি কি রোবট/i],
   ["how_are_you", /how are you|how r u|how's it going|what's up|কেমন আছ|কেমন আছিস|কেমন আছেন|কি খবর|কী খবর|কি অবস্থা/i],
   ["thanks", /^(thanks|thank you|thx|tnx|ধন্যবাদ|থ্যাংক|থ্যাঙ্ক)/i],
@@ -40,7 +40,16 @@ const OFFER = {
   bn: "পিসিআইইউ নিয়ে যেকোনো প্রশ্ন করুন: বিভাগ, ফি, যোগ্যতা, ভর্তির তারিখ, বৃত্তি বা ক্যাম্পাস জীবন।",
 };
 
-export function smallTalkReply(kind: SmallTalkKind, lang: Lang): string {
+/** Creator answer: names and spellings are fixed, never change them. */
+const CREATOR = {
+  bn: `আমাকে তৈরি করেছেন **Boktiyer Hossen** (CSE 36 B, CR) এবং তাঁর সহযোগী **Iftekhar Bin Nasim** ও **Tridip Chakraborty**। আমরা PCIU শিক্ষার্থীদের সহায়তার উদ্দেশ্যে UniShohayAI তৈরি করেছি।\n\n- Founder & Lead Developer: Boktiyer Hossen (CSE, Batch 36 B, Class Representative)\n- Team Members & Collaborators: Iftekhar Bin Nasim, Tridip Chakraborty\n\n**UniShohayAI — Your Smart University Companion!**`,
+  en: `I was created by **Boktiyer Hossen** (CSE 36 B, CR) along with his collaborators **Iftekhar Bin Nasim** and **Tridip Chakraborty**. We built UniShohayAI to help PCIU students.\n\n- Founder & Lead Developer: Boktiyer Hossen (CSE, Batch 36 B, Class Representative)\n- Team Members & Collaborators: Iftekhar Bin Nasim, Tridip Chakraborty\n\n**UniShohayAI — Your Smart University Companion!**`,
+  banglish: `Amake toiri korechen **Boktiyer Hossen** (CSE 36 B, CR) ebong tar sohojogi **Iftekhar Bin Nasim** o **Tridip Chakraborty**. Amra PCIU students der help korar jonno UniShohayAI toiri korechi.\n\n- Founder & Lead Developer: Boktiyer Hossen (CSE, Batch 36 B, Class Representative)\n- Team Members & Collaborators: Iftekhar Bin Nasim, Tridip Chakraborty\n\n**UniShohayAI — Your Smart University Companion!**`,
+};
+
+const BANGLISH = /\b(ke|kar|kara|tomake|tomar|tomader|korse|koreche|banai\w*|toiri|tori|ache|ei|amake)\b/i;
+
+export function smallTalkReply(kind: SmallTalkKind, lang: Lang, text = ""): string {
   const bn = lang === "bn";
   const d = (v: string | number) => toLangDigits(v, lang);
   switch (kind) {
@@ -50,12 +59,11 @@ export function smallTalkReply(kind: SmallTalkKind, lang: Lang): string {
       return bn ? `আমি ভালো আছি, জিজ্ঞাসা করার জন্য ধন্যবাদ! আপনাকে কীভাবে সাহায্য করতে পারি? ${OFFER.bn}` : `I'm doing well, thanks for asking! How can I help you today? ${OFFER.en}`;
     case "identity":
       return bn
-        ? `আমার নাম **ইউনিসহায় এআই (UnishohayAI)**। আমি একটি এআই চ্যাটবট, মানুষ নই। পিসিআইইউ-এর অফিসিয়াল ওয়েবসাইটের তথ্য থেকে বাংলা ও ইংরেজিতে ভর্তি সংক্রান্ত প্রশ্নের উত্তর দিই। ${OFFER.bn}`
-        : `I'm **UnishohayAI**, an AI chatbot (not a human). I answer PCIU admission questions in Bangla and English using data from the official PCIU website. ${OFFER.en}`;
+        ? `আমার নাম **ইউনিসহায় এআই (UniShohayAI)**। আমি পিসিআইইউ কম্পিউটার ক্লাব হ্যাকাথনের জন্য তৈরি একটি এআই স্টুডেন্ট অ্যাসিস্ট্যান্ট (মানুষ নই, পিসিআইইউ-এর অফিসিয়াল সেবাও নই)। আমাকে তৈরি করেছেন Boktiyer Hossen ও তাঁর টিম। ${OFFER.bn}`
+        : `I'm **UniShohayAI**, an AI-powered student assistant built for the PCIU Computer Club Hackathon (not a human, and not an official PCIU service). I was created by Boktiyer Hossen and his team. ${OFFER.en}`;
     case "creator":
-      return bn
-        ? `আমাকে পিসিআইইউ কম্পিউটার ক্লাব হ্যাকাথনের একটি প্রজেক্ট হিসেবে তৈরি করা হয়েছে। আমি পিসিআইইউ-এর অফিসিয়াল সেবা নই, তাই চূড়ান্ত তথ্য ভর্তি অফিস থেকে নিশ্চিত করে নিন।`
-        : `I was built as a project for the PCIU Computer Club Hackathon. I'm not an official PCIU service, so please confirm final details with the Admission Office.`;
+      if (bn) return CREATOR.bn;
+      return BANGLISH.test(text) ? CREATOR.banglish : CREATOR.en;
     case "thanks":
       return bn ? "আপনাকেও ধন্যবাদ! আর কোনো প্রশ্ন থাকলে নির্দ্বিধায় জিজ্ঞাসা করুন।" : "You're welcome! Feel free to ask if you have any other questions.";
     case "bye":

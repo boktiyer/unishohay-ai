@@ -53,7 +53,7 @@ export async function POST(req: Request) {
   // Casual chat (hi / how are you / your name / thanks / bye / off-topic): answer instantly.
   const smallTalk = detectSmallTalk(last.content);
   if (smallTalk && smallTalk !== "opinion") {
-    return new Response(smallTalkReply(smallTalk, lang), {
+    return new Response(smallTalkReply(smallTalk, lang, last.content), {
       headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-cache", "X-Sourced": "0", "X-Confirm": "0", "X-Sources": "" },
     });
   }
